@@ -26,7 +26,7 @@ footer {
 
 /* Header styling */
 header {
-    height: 150px;
+    height: 100px;
     z-index: 2;
 }
 
@@ -35,10 +35,11 @@ main {
     position: absolute;
     box-sizing: border-box;
     bottom: 100px;
-    /* Height is full view - header and footer */
-    height: calc(100% - 150px - 100px);
+    /* Height is full view - header, instructions bar and footer */
+    height: calc(100% - 125px - 100px);
     background-color: rgb(88, 88, 88);
     border: 3px outset rgb(138, 138, 138);
+    padding: 10px;
 }
 
 /* Instructions section styling */
@@ -48,16 +49,16 @@ main {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 100px;
+    bottom: 75px;
     /* Height is full view - header and footer */
-    height: calc(100% - 150px - 100px);
+    height: calc(100% - 100px - 75px);
     background-color: grey;
     z-index: 1;
     transition: bottom 1s;
 }
 
 .hide-instructions {
-    bottom: calc(100% - 200px);
+    bottom: calc(100% - 150px);
 }
 
 .instructions-content-container {
@@ -94,7 +95,7 @@ main {
 
 /* Footer styling */
 footer {
-    height: 100px;
+    height: 75px;
     bottom: 0;
 }
 
@@ -118,6 +119,37 @@ footer {
 /* Add media query for screens more than 600px wide */
 @media screen and (min-width: 600px) {
 
+    header {
+        height: 150px;
+    }
+
+    footer {
+        height: 100px;
+    }
+
+    /* Instructions section styling */
+    .instructions {
+        bottom: 100px;
+        /* Height is full view - header and footer */
+        height: calc(100% - 150px - 100px);
+    }
+
+    .hide-instructions {
+        bottom: calc(100% - 200px);
+    }
+
+    .instructions-content {
+        margin: auto;
+        height: fit-content;
+        width: 75%;
+    }
+
+    /* Main styling */
+    main {
+        /* Height is full view - header, instructions bar and footer */
+        height: calc(100% - 200px - 100px);
+    }
+
     .game-width {
         width: 600px;
     }
@@ -126,12 +158,12 @@ footer {
         right: calc((100% / 2) - 300px);
     }
 
-    .instructions-content {
-        margin: auto;
-        height: fit-content;
-        width: 600px;
-    }
 
+}
+
+.game-button-interface {
+    height: 100%;
+    width: 100%;
 }
 
 /* Add media query to handle mobile when landscape */
