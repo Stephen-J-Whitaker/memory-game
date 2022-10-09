@@ -11,24 +11,29 @@
     <title>Memory Game</title>
 </head>
 <body>
-    <header></header>
-    <section id="instructions" class="instructions hide-instructions">
-        <div class="instructions-content-container">
+    <!-- Header -->
+    <header class="game-width game-position"></header>
+    <!-- Instructions dropdown -->
+    <section id="instructions" class="instructions hide-instructions game-width game-position">
+        <div class="instructions-content-container game-width game-position">
             <p class="instructions-content">
                 Press start to begin the fun. Memory game will flash a button making a tone and you copy it. If you copy it correctly memory game will add another flash and tone to the sequence for you to copy. Keep copying correctly and memory game will keep increasing the length of the sequence. See how long your sequence gets. 
                 Have Fun !
             </p> 
         </div>
-        <div class="instructions-bar">
+        <div class="instructions-bar game-width game-position">
             <button id="instructions-button">
                 Show Instructions
             </button>
         </div>
     </section>
-    <main>
+    <!-- Main game interface -->
+    <main class="game-width game-position">
 
     </main>
-    <footer></footer>
+    <!-- Footer -->
+    <footer class="game-width game-position"></footer>
+    <!-- Modal to tell users to turn device when screens are not tall enough for the interface when held landscape -->
     <section class="turn-screen-modal">
         <div class="turn-screen-modal-text">
             Turn device portrait

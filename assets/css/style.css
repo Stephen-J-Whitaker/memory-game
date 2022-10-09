@@ -12,11 +12,14 @@ body {
 }
 
 /* Common interface styling */
+.game-width {
+    width: 100%;
+}
+
 header,
 footer {
     position: absolute;
     box-sizing: border-box;
-    width: 100%;
     background-color: rgb(88, 88, 88);
     border: 5px outset rgb(138, 138, 138);
 }
@@ -32,7 +35,6 @@ main {
     position: absolute;
     box-sizing: border-box;
     bottom: 100px;
-    width: 100%;
     /* Height is full view - header and footer */
     height: calc(100% - 150px - 100px);
     background-color: rgb(88, 88, 88);
@@ -49,7 +51,6 @@ main {
     bottom: 100px;
     /* Height is full view - header and footer */
     height: calc(100% - 150px - 100px);
-    width: 100%;
     background-color: grey;
     z-index: 1;
     transition: bottom 1s;
@@ -66,7 +67,6 @@ main {
     align-items: center;
     position: absolute;
     height: calc(100% - 50px);
-    width: 100%;
     top: 0;
 }
 
@@ -88,7 +88,6 @@ main {
     position: absolute;
     bottom: 0;
     height: 50px;
-    width: 100%;
     background-color: rgb(88, 88, 88);
     border: 5px outset rgb(138, 138, 138);
 }
@@ -97,7 +96,6 @@ main {
 footer {
     height: 100px;
     bottom: 0;
-    right: 0;
 }
 
 /* Turn screen modal for when device is in landscape and too narrow for the game interface */
@@ -119,6 +117,14 @@ footer {
 
 /* Add media query for screens more than 600px wide */
 @media screen and (min-width: 600px) {
+
+    .game-width {
+        width: 600px;
+    }
+
+    .game-position {
+        right: calc((100% / 2) - 300px);
+    }
 
     .instructions-content {
         margin: auto;
