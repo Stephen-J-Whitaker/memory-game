@@ -46,12 +46,17 @@ main {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: calc(100% - 200px);
+    bottom: 100px;
     /* height is full view - header and footer */
     height: calc(100% - 150px - 100px);
     width: 100%;
     background-color: grey;
     z-index: 1;
+    transition: bottom 1s;
+}
+
+.hide-instructions {
+    bottom: calc(100% - 200px);
 }
 
 .instructions-content-container {
