@@ -1,4 +1,4 @@
-/* backdrop styling */
+/* Backdrop styling */
 html,
 body {
     height: 100%;
@@ -7,11 +7,11 @@ body {
 
 body {
     position: relative;
-    background-color: grey;
+    background-color: rgb(88, 88, 88);
     margin: 0;
 }
 
-/* common interface styling */
+/* Common interface styling */
 header,
 footer {
     position: absolute;
@@ -21,25 +21,25 @@ footer {
     border: 5px outset rgb(138, 138, 138);
 }
 
-/* header styling */
+/* Header styling */
 header {
     height: 150px;
     z-index: 2;
 }
 
-/* main styling */
+/* Main styling */
 main {
     position: absolute;
     box-sizing: border-box;
     bottom: 100px;
     width: 100%;
-    /* height is full view - header and footer */
+    /* Height is full view - header and footer */
     height: calc(100% - 150px - 100px);
     background-color: rgb(88, 88, 88);
     border: 3px outset rgb(138, 138, 138);
 }
 
-/* instructions section styling */
+/* Instructions section styling */
 .instructions {
     box-sizing: border-box;
     display: flex;
@@ -47,7 +47,7 @@ main {
     align-items: center;
     position: absolute;
     bottom: 100px;
-    /* height is full view - header and footer */
+    /* Height is full view - header and footer */
     height: calc(100% - 150px - 100px);
     width: 100%;
     background-color: grey;
@@ -93,11 +93,28 @@ main {
     border: 5px outset rgb(138, 138, 138);
 }
 
-/* footer styling */
+/* Footer styling */
 footer {
     height: 100px;
     bottom: 0;
     right: 0;
+}
+
+/* Turn screen modal for when device is in landscape and too narrow for the game interface */
+.turn-screen-modal {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(88, 88, 88);
+    z-index: 3;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.turn-screen-modal-text {
+    height: fit-content;
+    width: fit-content;
 }
 
 /* Add media query for screens more than 600px wide */
@@ -107,6 +124,21 @@ footer {
         margin: auto;
         height: fit-content;
         width: 600px;
+    }
+
+}
+
+/* Add media query to handle mobile when landscape */
+@media screen and (max-height: 600px) {
+    
+    .turn-screen-modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .instructions-content {
+        display: none;
     }
 
 }
