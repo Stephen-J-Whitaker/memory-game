@@ -44,5 +44,30 @@ function nameEntered() {
  * Initialises and initiate a run of the game
  */
 function gameStart() {
+    let gameArray = [];
+    let currentScore;
+    let timeout;
+    let counter = 0;
 
+    const yellowButton = {
+        number : 0,
+        frequency : 400
+    };
+
+    const greenButton = {
+        number : 2,
+        frequency : 600
+    };
+
+    const blueButton = {
+        number : 3,
+        frequency : 700
+    };
+
+    const redButton = {
+        number : 1,
+        frequency : 500
+    };
+    
+    
 }
