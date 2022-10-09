@@ -22,11 +22,27 @@ function tone(colourButton) {
  * Makes the button look likes its being pressed by hiding it to show a smaller
  * version of the button underneath
  */
-
 function buttonPress(colourButton) {
 
 }
 
+/**
+ * Checks the finished game score against the leaderboard and call name entry modal if necessary
+ */
 function checkScore() {
+
+}
+
+/**
+ * Updates the leaderboard with a the added name when name entered and done pressed
+ */
+function nameEntered() {
+
+}
+
+/**
+ * Initialises and initiate a run of the game
+ */
+function gameStart() {
 
 }
