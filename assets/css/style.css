@@ -40,12 +40,24 @@ main {
 
 /* instructions section styling */
 .instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 150px;
     /* height is full view - header and footer */
     height: calc(100% - 150px - 100px);
+    width: 100%;
     background-color: grey;
     z-index: 1;
+}
+
+.instructions-content {
+    width: 600px;
+    overflow: auto;
+    font-size: xx-large;
+    text-align: justify;
+    text-align-last: center;
 }
 
 /* footer styling */
