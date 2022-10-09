@@ -60,6 +60,15 @@ main {
     text-align-last: center;
 }
 
+.instructions-bar {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(88, 88, 88);
+    border: 5px outset rgb(138, 138, 138);
+}
+
 /* footer styling */
 footer {
     height: 100px;
