@@ -24,6 +24,7 @@ footer {
 /* header styling */
 header {
     height: 150px;
+    z-index: 2;
 }
 
 /* main styling */
@@ -45,7 +46,7 @@ main {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 150px;
+    bottom: calc(100% - 200px);
     /* height is full view - header and footer */
     height: calc(100% - 150px - 100px);
     width: 100%;
