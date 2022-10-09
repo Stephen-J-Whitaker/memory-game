@@ -105,6 +105,23 @@ main {
     border: 5px outset rgb(138, 138, 138);
 }
 
+/* coloured button colours */
+.yellow-button-pressed {
+    fill: rgb(255, 255, 153);
+}
+
+.green-button-pressed {
+    fill: rgb(151, 255, 151);
+}
+
+.blue-button-pressed {
+    fill: rgb(149, 149, 255);
+}
+
+.red-button-pressed {
+    fill: rgb(255, 162, 162);
+}
+
 /* Footer styling */
 footer {
     height: 75px;
