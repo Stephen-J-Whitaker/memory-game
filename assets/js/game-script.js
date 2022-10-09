@@ -69,5 +69,25 @@ function gameStart() {
         frequency : 500
     };
     
-    
+    // checkAnswer function declared in gameStart to be able to access and modify gameStart
+    // variables gameArray and timeout
+
+    /**
+     * Resets the game timeout that waits for a button press, checks if the button pressed was correct
+     * and responds appropriately
+     */
+    function checkAnswer() {
+
+    }
+
+    // gameSequence function declared in gameStart to be able to access and modify gameStart 
+    // variable gameArray
+
+    /**
+     * Populates game array and displays the sequence to the player then add the coloured button 
+     * listeners ready for the player to copy the sequence
+     */
+    function gameSequence() {
+        
+    }
 }
