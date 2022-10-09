@@ -1,3 +1,4 @@
+/* backdrop styling */
 html,
 body {
     height: 100%;
@@ -6,4 +7,20 @@ body {
 
 body {
     background-color: grey;
+    margin: 0;
+}
+
+/* common game interface styling */
+header,
+footer {
+    background-color: rgb(88, 88, 88);
+}
+
+/* header styling */
+header {
+    height: 150px;
+}
+
+footer {
+    height: 100px;
 }
