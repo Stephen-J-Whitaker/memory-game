@@ -11,7 +11,7 @@ body {
     margin: 0;
 }
 
-/* common game interface styling */
+/* common interface styling */
 header,
 footer {
     box-sizing: border-box;
@@ -33,6 +33,11 @@ main {
     height: calc(100% - 150px - 100px);
     background-color: rgb(88, 88, 88);
     border: 3px outset rgb(138, 138, 138);
+}
+
+/* instructions section styling */
+.instructions {
+    
 }
 
 /* footer styling */
