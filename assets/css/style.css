@@ -6,6 +6,7 @@ body {
 }
 
 body {
+    position: relative;
     background-color: grey;
     margin: 0;
 }
@@ -13,7 +14,10 @@ body {
 /* common game interface styling */
 header,
 footer {
+    box-sizing: border-box;
+    width: 100%;
     background-color: rgb(88, 88, 88);
+    border: 5px outset rgb(138, 138, 138);
 }
 
 /* header styling */
@@ -21,6 +25,20 @@ header {
     height: 150px;
 }
 
+/* main styling */
+main {
+    box-sizing: border-box;
+    width: 100%;
+    /* height is full view - header and footer */
+    height: calc(100% - 150px - 100px);
+    background-color: rgb(88, 88, 88);
+    border: 3px outset rgb(138, 138, 138);
+}
+
+/* footer styling */
 footer {
+    position: absolute;
     height: 100px;
+    bottom: 0;
+    right: 0;
 }
