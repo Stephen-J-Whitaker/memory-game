@@ -68,6 +68,9 @@ function buttonPress(colourButton) {
 
     // Show the button button after 200ms so looks clicked
     setTimeout(function() {document.getElementById(colourButton.name).classList.toggle("visibility-hidden");}, 200);
+
+    //Call tone function
+    tone(colourButton.frequency);
 }
 
 /**
@@ -118,11 +121,26 @@ function gameStart() {
     };
     
     function colourButtonAction() {
-        // case buttonPress(this.id);
         console.log(this.id);
-        
-        //Call tone function
-        // tone(colourButton.frequency);
+
+        let buttonPressed;
+        switch (this.id) {
+            case "yellow" :
+                buttonPressed = yellowButton;
+                break;
+            case "green" :
+                buttonPressed = greenButton;
+                break;
+            case "blue" :
+                buttonPressed = blueButton;
+                break;
+            case "red" :
+                buttonPressed = redButton;
+                break;
+        }    
+         
+        buttonPress(buttonPressed);
+
     }
 
     // checkAnswer function declared in gameStart to be able to access and modify gameStart
@@ -149,19 +167,13 @@ function gameStart() {
         //Variables to create a delay between iterations of the array loop
         let time = new Date();
         let timeNow = time.getTime();
-        let timeNext = time.getTime();
 
         //Generate random sequence of flashes and place in gameArray
         gameArray.push(colourButtonCollection[Math.floor(Math.random() * 4)]);
 
         for (let i = 0; i < gameArray.length; ++i) { 
             //While loop to create a delay between array loop iterations
-            while (timeNext < (timeNow + 250)) {
-                //Construct a new date object each time so that get new time for comparison works
-                let nextTime = new Date();
-                timeNext = nextTime.getTime();
-                console.log(timeNext);
-            }
+            while (new Date().getTime() < (timeNow + 250)) { }
             
             buttonPress(gameArray[i]);   
         
