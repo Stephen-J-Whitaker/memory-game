@@ -121,11 +121,15 @@ function gameStart() {
     };
     
     let colourButtonCollection = [yellowButton, greenButton, blueButton, redButton];
-    
+
+    // checkAnswer function declared in gameStart to be able to access and modify gameStart
+    // variables gameArray and timeout
+
     /**
-     *React to player coloured button presses 
+     * Resets the game timeout that waits for a button press, checks if the button pressed was correct
+     * and responds appropriately
      */
-    function colourButtonAction() {
+    function checkAnswer() {
         console.log(this.id);
 
         let buttonPressed;
@@ -142,30 +146,16 @@ function gameStart() {
             case "red" :
                 buttonPressed = redButton;
                 break;
-        }    
-         
+        }  
+
         // Hide and show button and play tone
         buttonPress(buttonPressed);
-
-        //Check if the players answer is correct
-        checkAnswer(buttonPressed);
-    }
-
-    // checkAnswer function declared in gameStart to be able to access and modify gameStart
-    // variables gameArray and timeout
-
-    /**
-     * Resets the game timeout that waits for a button press, checks if the button pressed was correct
-     * and responds appropriately
-     */
-    function checkAnswer() {
-        
     }
 
     function gameTimeout() {
         console.log("Timeout called")
         for (let i = 0; i < colourButtonCollection.length; ++i) {
-            document.getElementById(colourButtonCollection[i].name).removeEventListener("click", colourButtonAction);
+            document.getElementById(colourButtonCollection[i].name).removeEventListener("click", checkAnswer);
         }
     }
 
@@ -194,12 +184,12 @@ function gameStart() {
         }
 
         for (let i = 0; i < colourButtonCollection.length; ++i) {
-            document.getElementById(colourButtonCollection[i].name).addEventListener("click", colourButtonAction);
+            document.getElementById(colourButtonCollection[i].name).addEventListener("click", checkAnswer);
         }
 
 
         //Set a timeout to end game if no user input for 10 seconds
-        setTimeout(gameTimeout, 10000);
+        timeout = setTimeout(gameTimeout, 10000);
 
     }
 
