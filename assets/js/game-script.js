@@ -89,11 +89,14 @@ function gameStart() {
         frequency : 500
     };
     
+    //Generate random sequence of flashes and place in gameArray
     let colourButtonCollection = [yellowButton, greenButton, blueButton, redButton];
     gameArray.push(colourButtonCollection[Math.floor(Math.random() * 4)]);
-    console.log(gameArray[0]);
-    console.log(yellowButton);
- 
+
+    for (i = 0; i < gameArray.length; ++i) {
+        buttonPress(gameArray[i]);
+        console.log(i);
+    }
     // checkAnswer function declared in gameStart to be able to access and modify gameStart
     // variables gameArray and timeout
 
