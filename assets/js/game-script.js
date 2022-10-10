@@ -90,8 +90,9 @@ function gameStart() {
     };
     
     let colourButtonCollection = [yellowButton, greenButton, blueButton, redButton];
-    let random = Math.floor(Math.random() * 4);
-    console.log(random);
+    gameArray.push(colourButtonCollection[Math.floor(Math.random() * 4)]);
+    console.log(gameArray[0]);
+    console.log(yellowButton);
  
     // checkAnswer function declared in gameStart to be able to access and modify gameStart
     // variables gameArray and timeout
