@@ -160,7 +160,9 @@ function gameStart() {
             buttonPress(gameArray[i]);   
             console.log("finished looping array")
             
-            // while (getTime())
+        for (i = 0; i < colourButtonCollection.length; ++i) {
+            document.getElementById(colourButtonCollection[i].name).addEventListener("click", function() {checkAnswer(colourButtonCollection[i]);});
+        }
         }
 
     }
