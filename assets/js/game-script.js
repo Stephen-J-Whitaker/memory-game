@@ -20,15 +20,19 @@ function startButton() {
         this.classList.toggle("visibility-hidden");
         gameStart()
 
-        /**
-        * Function to toggle button visibility
-        */
-        function buttonVisibility() {
-            startButton.classList.toggle("visibility-hidden");
-        }
-
         // Show the start button after 200ms so looks clicked
-        setTimeout(buttonVisibility, 200);
+        setTimeout(function() {document.getElementById("start").classList.toggle("visibility-hidden")}, 200);
+}
+
+/**
+* Function to toggle start button visibility
+*/
+    function startButtonVisibility(button) {
+        console.log(button);
+    if (button === undefined) {
+        document.getElementById("start").classList.toggle("visibility-hidden");
+    }
+        
 }
 
 /**
