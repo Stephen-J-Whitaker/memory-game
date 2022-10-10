@@ -5,34 +5,23 @@ document.addEventListener("DOMContentLoaded", function() {
     // Triggers dropdown of instructions on click
     document.getElementById("instructions-button").addEventListener("click", function() {
         document.getElementById("instructions").classList.toggle("hide-instructions");
-    })
+    });
 
     // Start the game on click of start button
     document.getElementById("start").addEventListener("click", startButton);
 
-})
+});
 
 /**
  * Starts game and hides then shows start button 
  */
 function startButton() {
-    let startButton = this;
         this.classList.toggle("visibility-hidden");
-        gameStart()
 
         // Show the start button after 200ms so looks clicked
-        setTimeout(function() {document.getElementById("start").classList.toggle("visibility-hidden")}, 200);
-}
+        setTimeout(function() {document.getElementById("start").classList.toggle("visibility-hidden");}, 200);
 
-/**
-* Function to toggle start button visibility
-*/
-    function startButtonVisibility(button) {
-        console.log(button);
-    if (button === undefined) {
-        document.getElementById("start").classList.toggle("visibility-hidden");
-    }
-        
+        setTimeout(gameStart, 1000);
 }
 
 /**
@@ -47,7 +36,9 @@ function tone(colourButton) {
  * version of the button underneath
  */
 function buttonPress(colourButton) {
-
+    document.getElementById(colourButton.name).classList.toggle("visibility-hidden");
+    // Show the button button after 200ms so looks clicked
+    setTimeout(function() {document.getElementById(colourButton.name).classList.toggle("visibility-hidden");}, 200);
 }
 
 /**
@@ -74,33 +65,29 @@ function gameStart() {
     let counter = 0;
         
     const yellowButton = {
+        name : "yellow",
         number : 0,
         frequency : 400
     };
 
     const greenButton = {
+        name : "green",
         number : 2,
         frequency : 600
     };
 
     const blueButton = {
+        name : "blue",
         number : 3,
         frequency : 700
     };
 
     const redButton = {
+        name : "red",
         number : 1,
         frequency : 500
     };
     
-    //Generate random sequence of flashes and place in gameArray
-    let colourButtonCollection = [yellowButton, greenButton, blueButton, redButton];
-    gameArray.push(colourButtonCollection[Math.floor(Math.random() * 4)]);
-
-    for (i = 0; i < gameArray.length; ++i) {
-        buttonPress(gameArray[i]);
-        console.log(i);
-    }
     // checkAnswer function declared in gameStart to be able to access and modify gameStart
     // variables gameArray and timeout
 
@@ -120,7 +107,15 @@ function gameStart() {
      * listeners ready for the player to copy the sequence
      */
     function gameSequence() {
-        gameArray.push()
+        //Generate random sequence of flashes and place in gameArray
+        let colourButtonCollection = [yellowButton, greenButton, blueButton, redButton];
+        gameArray.push(colourButtonCollection[Math.floor(Math.random() * 4)]);
+
+        for (i = 0; i < gameArray.length; ++i) {
+            buttonPress(gameArray[i]);
+            console.log(i);
+        }
+
     }
 
     // Start the game sequence
