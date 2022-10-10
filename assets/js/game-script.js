@@ -29,6 +29,31 @@ function startButton() {
  */
 function tone(colourButton) {
 
+    console.log(colourButton.frequency);
+    //Create audio context and set as interactive for low latency
+    let sound = new AudioContext({latencyHint: "interactive"});
+
+    //Create an oscillator to generate the desired sound
+    let tone = sound.createOscillator();
+    tone.type = "sine";
+    //Set the frequency of the sound
+    tone.frequency.setValueAtTime(colourButton.frequency, sound.currentTime);
+
+    //Create gain node for reduced volume and mute functions
+    let volume = sound.createGain();
+    //Set the gain value
+    volume.gain.value = 0.1;
+
+    //Connect sound to the gain node
+    tone.connect(volume);
+    //Connect the gain node to the output
+    volume.connect(sound.destination);
+
+    //Start playing the sound
+    tone.start();
+
+    //Stop playing the sound after defined time elapsed
+    tone.stop(sound.currentTime + 0.2);
 }
 
 /**
@@ -39,6 +64,9 @@ function buttonPress(colourButton) {
     document.getElementById(colourButton.name).classList.toggle("visibility-hidden");
     // Show the button button after 200ms so looks clicked
     setTimeout(function() {document.getElementById(colourButton.name).classList.toggle("visibility-hidden");}, 200);
+
+    //Call tone function
+    tone(colourButton);
 }
 
 /**
