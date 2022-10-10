@@ -16,10 +16,11 @@ document.addEventListener("DOMContentLoaded", function() {
  * Starts game and hides then shows start button 
  */
 function startButton() {
-    this.classList.toggle("visibility-hidden");
+    let button = this;
 
+    this.classList.toggle("visibility-hidden");
     // Show the start button after 200ms so looks clicked
-    setTimeout(function() {document.getElementById("start").classList.toggle("visibility-hidden");}, 200);
+    setTimeout(function() {button.classList.toggle("visibility-hidden");}, 200);
 
     //Timeout set to 950ms as is short enough to ensure IOS web audio remains unlocked after user interaction
     setTimeout(gameStart, 950);
@@ -63,11 +64,7 @@ function tone(frequency) {
  * version of the button underneath
  */
 function buttonPress(colourButton) {
-    
     document.getElementById(colourButton.name).classList.toggle("visibility-hidden");
-
-    //Call tone function
-    tone(colourButton.frequency);
 
     // Show the button button after 200ms so looks clicked
     setTimeout(function() {document.getElementById(colourButton.name).classList.toggle("visibility-hidden");}, 200);
@@ -120,6 +117,14 @@ function gameStart() {
         frequency : 500
     };
     
+    function colourButtonAction() {
+        // case buttonPress(this.id);
+        console.log(this.id);
+        
+        //Call tone function
+        // tone(colourButton.frequency);
+    }
+
     // checkAnswer function declared in gameStart to be able to access and modify gameStart
     // variables gameArray and timeout
 
@@ -149,21 +154,28 @@ function gameStart() {
         //Generate random sequence of flashes and place in gameArray
         gameArray.push(colourButtonCollection[Math.floor(Math.random() * 4)]);
 
-        for (i = 0; i < gameArray.length; ++i) { 
+        for (let i = 0; i < gameArray.length; ++i) { 
             //While loop to create a delay between array loop iterations
             while (timeNext < (timeNow + 250)) {
                 //Construct a new date object each time so that get new time for comparison works
                 let nextTime = new Date();
                 timeNext = nextTime.getTime();
                 console.log(timeNext);
-            };
-            buttonPress(gameArray[i]);   
-            console.log("finished looping array")
+            }
             
-        for (i = 0; i < colourButtonCollection.length; ++i) {
-            document.getElementById(colourButtonCollection[i].name).addEventListener("click", function() {checkAnswer(colourButtonCollection[i]);});
+            buttonPress(gameArray[i]);   
+        
         }
+
+        for (let i = 0; i < colourButtonCollection.length; ++i) {
+            document.getElementById(colourButtonCollection[i].name).addEventListener("click", colourButtonAction);
         }
+
+
+        //Set a timeout to end game if no user input
+        setTimeout(function() {
+
+        });
 
     }
 
