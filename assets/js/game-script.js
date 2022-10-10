@@ -63,12 +63,14 @@ function tone(frequency) {
  * version of the button underneath
  */
 function buttonPress(colourButton) {
+    
     document.getElementById(colourButton.name).classList.toggle("visibility-hidden");
-    // Show the button button after 200ms so looks clicked
-    setTimeout(function() {document.getElementById(colourButton.name).classList.toggle("visibility-hidden");}, 200);
 
     //Call tone function
     tone(colourButton.frequency);
+
+    // Show the button button after 200ms so looks clicked
+    setTimeout(function() {document.getElementById(colourButton.name).classList.toggle("visibility-hidden");}, 200);
 }
 
 /**
@@ -126,7 +128,7 @@ function gameStart() {
      * and responds appropriately
      */
     function checkAnswer() {
-
+        
     }
 
     // gameSequence function declared in gameStart to be able to access and modify gameStart 
@@ -137,13 +139,28 @@ function gameStart() {
      * listeners ready for the player to copy the sequence
      */
     function gameSequence() {
-        //Generate random sequence of flashes and place in gameArray
         let colourButtonCollection = [yellowButton, greenButton, blueButton, redButton];
+
+        //Variables to create a delay between iterations of the array loop
+        let time = new Date();
+        let timeNow = time.getTime();
+        let timeNext = time.getTime();
+
+        //Generate random sequence of flashes and place in gameArray
         gameArray.push(colourButtonCollection[Math.floor(Math.random() * 4)]);
 
-        for (i = 0; i < gameArray.length; ++i) {
-            buttonPress(gameArray[i]);
-            console.log(i);
+        for (i = 0; i < gameArray.length; ++i) { 
+            //While loop to create a delay between array loop iterations
+            while (timeNext < (timeNow + 250)) {
+                //Construct a new date object each time so that get new time for comparison works
+                let nextTime = new Date();
+                timeNext = nextTime.getTime();
+                console.log(timeNext);
+            };
+            buttonPress(gameArray[i]);   
+            console.log("finished looping array")
+            
+            // while (getTime())
         }
 
     }
