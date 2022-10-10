@@ -8,8 +8,15 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     // Start the game on click of start button
-    document.getElementById("start").addEventListener("click", function() {
-        let startButton = this;
+    document.getElementById("start").addEventListener("click", startButton);
+
+})
+
+/**
+ * Starts game and hides then shows start button 
+ */
+function startButton() {
+    let startButton = this;
         this.classList.toggle("visibility-hidden");
         gameStart()
 
@@ -17,14 +24,12 @@ document.addEventListener("DOMContentLoaded", function() {
         * Function to toggle button visibility
         */
         function buttonVisibility() {
-            console.log();
             startButton.classList.toggle("visibility-hidden");
         }
 
         // Show the start button after 200ms so looks clicked
         setTimeout(buttonVisibility, 200);
-    });
-})
+}
 
 /**
  * Checks if muted and creates a different tone depending on the button pressed
@@ -45,7 +50,7 @@ function buttonPress(colourButton) {
  * Checks the finished game score against the leaderboard and call name entry modal if necessary
  */
 function checkScore() {
-
+    
 }
 
 /**
@@ -86,7 +91,7 @@ function gameStart() {
     
     let colourButtonCollection = [yellowButton, greenButton, blueButton, redButton];
     console.log(colourButtonCollection);
-
+ 
     // checkAnswer function declared in gameStart to be able to access and modify gameStart
     // variables gameArray and timeout
 
