@@ -106,6 +106,28 @@ main {
     border: 5px outset rgb(138, 138, 138);
 }
 
+/* Score bar styling */
+.score-bar {
+    width: 100%;
+    height: 50px;
+    font-family: Arial, Lato, Helvetica, sans-serif;
+    font-size: x-large;
+    color: rgb(151, 151, 151);
+    display: flex;
+    align-items: center;
+}
+
+.current-score-container {
+    height: fit-content;
+    padding-left: 10px;
+}
+
+/* Game interface styling */
+.game-button-interface {
+    height: calc(100% - 50px);
+    width: 100%;
+}
+
 /* coloured button colours */
 .yellow-button-pressed {
     fill: rgb(255, 255, 153);
@@ -190,11 +212,6 @@ footer {
     }
 
 
-}
-
-.game-button-interface {
-    height: 100%;
-    width: 100%;
 }
 
 /* Add media query to handle mobile when landscape */
