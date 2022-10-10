@@ -95,7 +95,7 @@ function gameStart() {
     let currentScore;
     let timeout;
     let counter = 0;
-        
+
     const yellowButton = {
         name : "yellow",
         number : 0,
@@ -120,6 +120,11 @@ function gameStart() {
         frequency : 500
     };
     
+    let colourButtonCollection = [yellowButton, greenButton, blueButton, redButton];
+    
+    /**
+     *React to player coloured button presses 
+     */
     function colourButtonAction() {
         console.log(this.id);
 
@@ -139,8 +144,11 @@ function gameStart() {
                 break;
         }    
          
+        // Hide and show button and play tone
         buttonPress(buttonPressed);
 
+        //Check if the players answer is correct
+        checkAnswer(buttonPressed);
     }
 
     // checkAnswer function declared in gameStart to be able to access and modify gameStart
@@ -154,6 +162,13 @@ function gameStart() {
         
     }
 
+    function gameTimeout() {
+        console.log("Timeout called")
+        for (let i = 0; i < colourButtonCollection.length; ++i) {
+            document.getElementById(colourButtonCollection[i].name).removeEventListener("click", colourButtonAction);
+        }
+    }
+
     // gameSequence function declared in gameStart to be able to access and modify gameStart 
     // variable gameArray
 
@@ -162,7 +177,6 @@ function gameStart() {
      * listeners ready for the player to copy the sequence
      */
     function gameSequence() {
-        let colourButtonCollection = [yellowButton, greenButton, blueButton, redButton];
 
         //Variables to create a delay between iterations of the array loop
         let time = new Date();
@@ -184,10 +198,8 @@ function gameStart() {
         }
 
 
-        //Set a timeout to end game if no user input
-        setTimeout(function() {
-
-        });
+        //Set a timeout to end game if no user input for 10 seconds
+        setTimeout(gameTimeout, 10000);
 
     }
 
