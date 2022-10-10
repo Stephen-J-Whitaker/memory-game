@@ -8,7 +8,22 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     // Start the game on click of start button
-    document.getElementById("start").addEventListener("click", gameStart());
+    document.getElementById("start").addEventListener("click", function() {
+        let startButton = this;
+        this.classList.toggle("visibility-hidden");
+        gameStart()
+
+        /**
+        * Function to toggle button visibility
+        */
+        function buttonVisibility() {
+            console.log();
+            startButton.classList.toggle("visibility-hidden");
+        }
+
+        // Show the start button after 200ms so looks clicked
+        setTimeout(buttonVisibility, 200);
+    });
 })
 
 /**
@@ -48,7 +63,7 @@ function gameStart() {
     let currentScore;
     let timeout;
     let counter = 0;
-
+        
     const yellowButton = {
         number : 0,
         frequency : 400
@@ -69,6 +84,9 @@ function gameStart() {
         frequency : 500
     };
     
+    let colourButtonCollection = [yellowButton, greenButton, blueButton, redButton];
+    console.log(colourButtonCollection);
+
     // checkAnswer function declared in gameStart to be able to access and modify gameStart
     // variables gameArray and timeout
 
