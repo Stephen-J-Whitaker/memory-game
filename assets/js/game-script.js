@@ -16,20 +16,20 @@ document.addEventListener("DOMContentLoaded", function() {
  * Starts game and hides then shows start button 
  */
 function startButton() {
-        this.classList.toggle("visibility-hidden");
+    this.classList.toggle("visibility-hidden");
 
-        // Show the start button after 200ms so looks clicked
-        setTimeout(function() {document.getElementById("start").classList.toggle("visibility-hidden");}, 200);
-
-        setTimeout(gameStart, 1000);
+    // Show the start button after 200ms so looks clicked
+    setTimeout(function() {document.getElementById("start").classList.toggle("visibility-hidden");}, 200);
+    gameStart();
+    // setTimeout(gameStart, 1000);
 }
 
 /**
  * Checks if muted and creates a different tone depending on the button pressed
  */
-function tone(colourButton) {
+function tone(frequency) {
 
-    console.log(colourButton.frequency);
+    console.log(frequency);
     //Create audio context and set as interactive for low latency
     let sound = new AudioContext({latencyHint: "interactive"});
 
@@ -37,7 +37,7 @@ function tone(colourButton) {
     let tone = sound.createOscillator();
     tone.type = "sine";
     //Set the frequency of the sound
-    tone.frequency.setValueAtTime(colourButton.frequency, sound.currentTime);
+    tone.frequency.setValueAtTime(frequency, sound.currentTime);
 
     //Create gain node for reduced volume and mute functions
     let volume = sound.createGain();
@@ -49,6 +49,7 @@ function tone(colourButton) {
     //Connect the gain node to the output
     volume.connect(sound.destination);
 
+    sound.resume();
     //Start playing the sound
     tone.start();
 
@@ -66,7 +67,7 @@ function buttonPress(colourButton) {
     setTimeout(function() {document.getElementById(colourButton.name).classList.toggle("visibility-hidden");}, 200);
 
     //Call tone function
-    tone(colourButton);
+    tone(colourButton.frequency);
 }
 
 /**
