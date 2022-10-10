@@ -20,8 +20,9 @@ function startButton() {
 
     // Show the start button after 200ms so looks clicked
     setTimeout(function() {document.getElementById("start").classList.toggle("visibility-hidden");}, 200);
-    gameStart();
-    // setTimeout(gameStart, 1000);
+
+    //Timeout set to 950ms as is short enough to ensure IOS web audio remains unlocked after user interaction
+    setTimeout(gameStart, 950);
 }
 
 /**
