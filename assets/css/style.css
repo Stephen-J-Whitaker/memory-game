@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
+:root {
+    --main-interface-colour: rgb(88, 88, 88);
+}
+
 /* Backdrop styling */
 html,
 body {
@@ -9,7 +13,7 @@ body {
 
 body {
     position: relative;
-    background-color: rgb(88, 88, 88);
+    background-color: var(--main-interface-colour);
     margin: 0;
 }
 
@@ -22,7 +26,7 @@ header,
 footer {
     position: absolute;
     box-sizing: border-box;
-    background-color: rgb(88, 88, 88);
+    background-color: var(--main-interface-colour);
     border: 5px outset rgb(138, 138, 138);
 }
 
@@ -49,7 +53,7 @@ main {
     bottom: 75px;
     /* Height is full view - header, instructions bar and footer */
     height: calc(100% - 125px - 100px);
-    background-color: rgb(88, 88, 88);
+    background-color: var(--main-interface-colour);
     border: 3px outset rgb(138, 138, 138);
     padding: 10px;
 }
@@ -102,7 +106,7 @@ main {
     position: absolute;
     bottom: 0;
     height: 50px;
-    background-color: rgb(88, 88, 88);
+    background-color: var(--main-interface-colour);
     border: 5px outset rgb(138, 138, 138);
 }
 
@@ -157,7 +161,7 @@ footer {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgb(88, 88, 88);
+    background-color: var(--main-interface-colour);
     z-index: 3;
     font-size: xx-large;
     text-align: center;

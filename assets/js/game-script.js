@@ -88,6 +88,9 @@ function gameStart() {
      * listeners ready for the player to copy the sequence
      */
     function gameSequence() {
-        
+        gameArray.push()
     }
+
+    // Start the game sequence
+    gameSequence();
 }
