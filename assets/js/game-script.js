@@ -22,21 +22,29 @@ function startButton() {
     // Show the start button after 200ms so looks clicked
     setTimeout(function() {button.classList.toggle("visibility-hidden");}, 200);
 
-    //Call tone to unlock web audio on IOS
-    tone(300);
-
     //Timeout set short to ensure IOS web audio remains unlocked after user interaction
-    setTimeout(gameStart, 100);
+    setTimeout(startGame, 100);
+}
+
+/**
+ * Start the game by creating its audio context and creating a tone in response to a button 
+ * press to unlock web audio on IOS. Pass the audio context as a parameter through the
+ * functions to where it's needed
+ */
+function startGame() {  
+    //Create audio context and set as interactive for low latency
+    let sound = new AudioContext({latencyHint: "interactive"});
+
+    tone(300, sound);
+    gameStart(sound);
 }
 
 /**
  * Checks if muted and creates a different tone depending on the button pressed
  */
-function tone(frequency) {
-
+function tone(frequency, sound) {
     console.log(frequency);
-    //Create audio context and set as interactive for low latency
-    let sound = new AudioContext({latencyHint: "interactive"});
+    console.log(sound);  
 
     //Create an oscillator to generate the desired sound
     let tone = sound.createOscillator();
@@ -65,14 +73,14 @@ function tone(frequency) {
  * Makes the button look likes its being pressed by hiding it to show a smaller
  * version of the button underneath
  */
-function buttonPress(colourButton) {
+function buttonPress(colourButton, sound) {
     document.getElementById(colourButton.name).classList.toggle("visibility-hidden");
 
     // Show the button button after 200ms so looks clicked
     setTimeout(function() {document.getElementById(colourButton.name).classList.toggle("visibility-hidden");}, 200);
 
     //Call tone function
-    tone(colourButton.frequency);
+    tone(colourButton.frequency, sound);
 }
 
 /**
@@ -92,12 +100,11 @@ function nameEntered() {
 /**
  * Initialises and initiate a run of the game
  */
-function gameStart() {
+function gameStart(sound) {
     let gameArray = [];
     let currentScore;
     let timeout;
     let counter = 0;
-    let alertShow = false;
 
     const yellowButton = {
         name : "yellow",
@@ -167,7 +174,7 @@ function gameStart() {
 
             console.log("correct button pressed and but not at end of array");
             // Hide and show button and play tone
-            buttonPress(buttonPressed); 
+            buttonPress(buttonPressed, sound); 
 
             //Set a timeout to end game if no user input for 10 seconds
             timeout = setTimeout(gameTimeout, 10000);
@@ -176,7 +183,7 @@ function gameStart() {
             counter = 0;
 
             // Hide and show button and play tone
-            buttonPress(buttonPressed);
+            buttonPress(buttonPressed, sound);
 
             console.log("correct button pressed and at end of array");
             //remove coloured button listeners as about to run a game sequence and no buttons are to be pressed
@@ -229,7 +236,6 @@ function gameStart() {
      * listeners ready for the player to copy the sequence
      */
     function gameSequence() {
-
         //Delay loop variable
         let i = 0;
         //Generate random sequence of flashes and place in gameArray
@@ -241,9 +247,7 @@ function gameStart() {
          * setInterval 
          */
         function arrayLoop() {
-            if ((i === 0) && (alertShow === false)) {alert("Sound is on")};  
-            alertShow = true;
-            buttonPress(gameArray[i]);
+            buttonPress(gameArray[i], sound);
             i++;
             if (i === gameArray.length) {clearInterval(interval);} // If end of array reached then no more buttonPress calls required
         }
