@@ -131,6 +131,11 @@ function gameStart() {
      */
     function checkAnswer() {
         console.log(this.id);
+        console.log(gameArray);
+
+        //Clear the timout because a button was pressed
+        clearTimeout(timeout);
+        console.log("timeout cleared")
 
         let buttonPressed;
         switch (this.id) {
@@ -150,6 +155,8 @@ function gameStart() {
 
         // Hide and show button and play tone
         buttonPress(buttonPressed);
+
+        gameSequence();
     }
 
     function gameTimeout() {
@@ -168,21 +175,24 @@ function gameStart() {
      */
     function gameSequence() {
 
-        //Variables to create a delay between iterations of the array loop
-        let time = new Date();
-        let timeNow = time.getTime();
-
+        //Delay loop variable
+        let i = 0;
         //Generate random sequence of flashes and place in gameArray
         gameArray.push(colourButtonCollection[Math.floor(Math.random() * 4)]);
 
-        for (let i = 0; i < gameArray.length; ++i) { 
-            //While loop to create a delay between array loop iterations
-            while (new Date().getTime() < (timeNow + 250)) { }
-            
-            buttonPress(gameArray[i]);   
-        
+        /**
+         * Call the buttonPress function once for each array element present
+         * and have an interval of 1 second between iterations. If at end of the array then clear
+         * setInterval 
+         */
+        function arrayLoop() {
+            buttonPress(gameArray[i]);
+            i++;
+            if (i === gameArray.length) {clearInterval(interval);} // If end of array reached then no more buttonPress calls required
         }
 
+        let interval = setInterval(arrayLoop, 1000); // Every 1 second, call arrayLoop to read the next element of the array and call button press
+      
         for (let i = 0; i < colourButtonCollection.length; ++i) {
             document.getElementById(colourButtonCollection[i].name).addEventListener("click", checkAnswer);
         }
