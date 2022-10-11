@@ -86,6 +86,8 @@ function buttonPress(colourButton, sound) {
  * Checks the finished game score against the leaderboard and call name entry modal if necessary
  */
 function checkScore(finalScore) {
+    let topTen = [];
+
     console.log("Hello from in checkscore")
     console.log(finalScore)
 }
@@ -195,12 +197,10 @@ function gameStart(sound) {
 
             console.log("correct button pressed and at end of array");
             //remove coloured button listeners as about to run a game sequence and no buttons are to be pressed
-            for (let i = 0; i < colourButtonCollection.length; ++i) {
-                document.getElementById(colourButtonCollection[i].name).removeEventListener("click", checkAnswer);
-            }
+            removeListeners();
             
             //Call game sequence to add another element to the array
-            gameSequence();
+            setTimeout(gameSequence(), 200);
         } else {
             
             console.log("user input" + buttonPressed.number)
@@ -257,14 +257,18 @@ function gameStart(sound) {
         function arrayLoop() {
             buttonPress(gameArray[i], sound);
             i++;
-            if (i === gameArray.length) {clearInterval(interval);} // If end of array reached then no more buttonPress calls required
+            if (i === gameArray.length) {
+                clearInterval(interval); // If end of array reached then no more buttonPress calls required
+                // Create listeners at the end of the array loop so no presses possible during loop
+                for (let i = 0; i < colourButtonCollection.length; ++i) {
+                    document.getElementById(colourButtonCollection[i].name).addEventListener("click", checkAnswer);
+                }
+            } 
         }
 
         let interval = setInterval(arrayLoop, 1000); // Every 1 second, call arrayLoop to read the next element of the array and call button press
       
-        for (let i = 0; i < colourButtonCollection.length; ++i) {
-            document.getElementById(colourButtonCollection[i].name).addEventListener("click", checkAnswer);
-        }
+
 
         //Set a timeout to end game if no user input for 10 seconds
         timeout = setTimeout(gameTimeout, 10000);
