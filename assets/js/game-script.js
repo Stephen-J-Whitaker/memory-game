@@ -130,12 +130,10 @@ function gameStart() {
      * and responds appropriately
      */
     function checkAnswer() {
-        console.log(this.id);
         console.log(gameArray);
 
         //Clear the timout because a button was pressed
         clearTimeout(timeout);
-        console.log("timeout cleared")
 
         let buttonPressed;
         switch (this.id) {
@@ -153,10 +151,27 @@ function gameStart() {
                 break;
         }  
 
-        // Hide and show button and play tone
-        buttonPress(buttonPressed);
+        if ((gameArray[counter].number === buttonPressed.number) && (counter < gameArray.length)) {
+            ++counter;
+            
+            // Hide and show button and play tone
+            buttonPress(buttonPressed); 
 
-        gameSequence();
+            //Set a timeout to end game if no user input for 10 seconds
+            timeout = setTimeout(gameTimeout, 10000);
+
+        } else if ((gameArray[counter].number === buttonPressed.number) && (counter === gameArray.length)) {
+
+                //remove coloured button listeners as about to run a game sequence and no buttons are to be pressed
+                for (let i = 0; i < colourButtonCollection.length; ++i) {
+                    document.getElementById(colourButtonCollection[i].name).removeEventListener("click", checkAnswer);
+                }
+                
+                //Call game sequence to add another element to the array
+                gameSequence();
+        } else {
+            console.log("test")
+        }
     }
 
     function gameTimeout() {
@@ -201,6 +216,8 @@ function gameStart() {
         //Set a timeout to end game if no user input for 10 seconds
         timeout = setTimeout(gameTimeout, 10000);
 
+        //Game over, check the score
+        checkScore();
     }
 
     // Start the game sequence
