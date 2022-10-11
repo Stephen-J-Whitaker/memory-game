@@ -1,5 +1,4 @@
 // When DOM fully loaded add listeners to handle user interface events
-
 document.addEventListener("DOMContentLoaded", function() {
 
     // Triggers dropdown of instructions on click
@@ -86,8 +85,16 @@ function buttonPress(colourButton, sound) {
 /**
  * Checks the finished game score against the leaderboard and call name entry modal if necessary
  */
-function checkScore() {
+function checkScore(finalScore) {
     console.log("Hello from in checkscore")
+    console.log(finalScore)
+}
+
+/**
+ * Update the score on the user interface 
+ */
+function setScore(score) {
+    document.getElementById("current-score").innerText = score;
 }
 
 /**
@@ -105,6 +112,7 @@ function gameStart(sound) {
     let currentScore;
     let timeout;
     let counter = 0;
+    let score = 0;
 
     const yellowButton = {
         name : "yellow",
@@ -161,20 +169,20 @@ function gameStart(sound) {
                 break;
         }  
 
-
-
         console.log("game array" + gameArray[counter].number);
         console.log(counter + "counter");
         console.log(gameArray.length + "game array length")
 
+        // Hide and show button and play tone
+        buttonPress(buttonPressed, sound);
+
         if ((parseInt(gameArray[counter].number) === buttonPressed.number) && (counter < (gameArray.length - 1))) {
             console.log(counter + "counter");
             ++counter;
+
             console.log(gameArray.length + "gamearray length");
 
             console.log("correct button pressed and but not at end of array");
-            // Hide and show button and play tone
-            buttonPress(buttonPressed, sound); 
 
             //Set a timeout to end game if no user input for 10 seconds
             timeout = setTimeout(gameTimeout, 10000);
@@ -182,8 +190,8 @@ function gameStart(sound) {
         } else if ((parseInt(gameArray[counter].number) === buttonPressed.number) && (counter === (gameArray.length - 1))) {
             counter = 0;
 
-            // Hide and show button and play tone
-            buttonPress(buttonPressed, sound);
+            //Update the score
+            setScore(++score);
 
             console.log("correct button pressed and at end of array");
             //remove coloured button listeners as about to run a game sequence and no buttons are to be pressed
@@ -194,15 +202,15 @@ function gameStart(sound) {
             //Call game sequence to add another element to the array
             gameSequence();
         } else {
-
+            
             console.log("user input" + buttonPressed.number)
             //Remove listeners
             removeListeners();
 
-            console.log("game end due to wrong answer");
+            console.log("game end due to wrong answer " + counter);
 
             //Check the final score against score board
-            checkScore();
+            setTimeout(checkScore(counter), 300);
         }
     }
 
@@ -211,12 +219,12 @@ function gameStart(sound) {
      */
     function gameTimeout() {
 
-        console.log("Timeout called")
+        console.log("Timeout called : counter " + counter)
         //Remove the listeners for the coloured buttons
         removeListeners();
         
         //Game over, check the score
-        checkScore();
+        checkScore(counter);
     }
 
     /**
@@ -257,7 +265,6 @@ function gameStart(sound) {
         for (let i = 0; i < colourButtonCollection.length; ++i) {
             document.getElementById(colourButtonCollection[i].name).addEventListener("click", checkAnswer);
         }
-
 
         //Set a timeout to end game if no user input for 10 seconds
         timeout = setTimeout(gameTimeout, 10000);
