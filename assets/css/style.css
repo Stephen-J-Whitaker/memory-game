@@ -82,6 +82,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     position: absolute;
     height: calc(100% - 50px);
     top: 0;
@@ -138,6 +139,10 @@ main {
     height: 100%;
     width: 100%;
     z-index: 2;
+}
+
+.top-ten-table {
+    text-transform: uppercase;
 }
 
 /* Game interface styling */

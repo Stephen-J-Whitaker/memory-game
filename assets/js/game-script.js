@@ -23,16 +23,23 @@ document.addEventListener("DOMContentLoaded", function() {
     /**
      * Function to get scores from local store if any exist and build top ten table with data present 
      */
-    (function collectFromLocalStore() {
+     (function collectFromLocalStore() {
         let topTen = [];
-
+    
         if (localStorage.length > 0) {
             for (let i = 0; i < localStorage.length; ++i) {
                 topTen.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]);
             }
+        } else {
+            let table = document.getElementsByTagName("table");
+            console.log(table[0]);
+            for (let i = 0; i < 10; ++i) {
+ 
+                console.log(table[0]);
+            }
         }
-    })
-});
+    }) ()
+})
 
 /**
  * Starts game and hides then shows start button 
@@ -45,7 +52,7 @@ function startButton() {
     setTimeout(function() {button.classList.toggle("visibility-hidden");}, 200);
 
     //Timeout set short to ensure IOS web audio remains unlocked after user interaction
-    setTimeout(startGame, 100);
+    setTimeout(gameStart, 100);
 }
 
 /**
@@ -137,13 +144,19 @@ function nameEntered() {
 /**
  * Initialises and initiate a run of the game
  */
-function gameStart(sound) {
-    let gameArray = [];
+function gameStart() {
+    //Create audio context and set as interactive for low latency
+    const sound = new AudioContext({latencyHint: "interactive"});
+
+    tone(300, sound);
+
+    const gameArray = [];
     let currentScore;
     let timeout;
     let counter = 0;
     let score = 0;
 
+    //Coloured button objects with associated properties
     const yellowButton = {
         name : "yellow",
         number : 0,
@@ -168,6 +181,7 @@ function gameStart(sound) {
         frequency : 700
     };
     
+    //Array of coloured buttons to select a random button from
     let colourButtonCollection = [yellowButton, greenButton, blueButton, redButton];
 
     // checkAnswer function declared in gameStart to be able to access and modify gameStart
