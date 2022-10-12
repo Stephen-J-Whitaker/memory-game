@@ -127,8 +127,13 @@ main {
     padding-left: 10px;
 }
 
-.top-ten {
+.top-ten-button {
     margin-right: 30px;
+}
+
+/* Top ten modal */
+.top-ten-modal {
+    background-color: grey;
 }
 
 /* Game interface styling */
@@ -154,9 +159,14 @@ main {
     fill: rgb(255, 162, 162);
 }
 
-/* hide button on click style */
+/* Hide button on click style */
 .visibility-hidden {
     visibility: hidden;
+}
+
+/* Dont display componenet on click style */
+.disply-none {
+    display: none;
 }
 
 /* Footer styling */
