@@ -119,11 +119,16 @@ main {
     color: rgb(151, 151, 151);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .current-score-container {
     height: fit-content;
     padding-left: 10px;
+}
+
+.top-ten {
+    margin-right: 30px;
 }
 
 /* Game interface styling */
