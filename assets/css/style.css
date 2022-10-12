@@ -133,7 +133,11 @@ main {
 
 /* Top ten modal */
 .top-ten-modal {
+    position: absolute;
     background-color: grey;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
 }
 
 /* Game interface styling */
@@ -165,7 +169,7 @@ main {
 }
 
 /* Dont display componenet on click style */
-.disply-none {
+.display-none {
     display: none;
 }
 
