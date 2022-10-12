@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("instructions").classList.toggle("hide-instructions");
     });
 
+    //Show top ten modal when top ten button pressed
+    document.getElementById("top-ten-button").addEventListener("click", function() {
+        document.getElementById("").classList.toggle("display-none");
+    })
+
     // Start the game on click of start button
     document.getElementById("start").addEventListener("click", startButton);
 
