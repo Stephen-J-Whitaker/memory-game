@@ -87,9 +87,13 @@ function buttonPress(colourButton, sound) {
  */
 function checkScore(finalScore) {
     let topTen = [];
+    console.log("top ten " + topTen);
+    console.log("Hello from in checkscore");
+    console.log(finalScore);
 
-    console.log("Hello from in checkscore")
-    console.log(finalScore)
+    topTen.unshift(["Test", 1]);
+    console.log("top ten " + topTen);
+    console.log("final score " + finalScore);
 }
 
 /**
@@ -173,7 +177,7 @@ function gameStart(sound) {
 
         console.log("game array" + gameArray[counter].number);
         console.log(counter + "counter");
-        console.log(gameArray.length + "game array length")
+        console.log(gameArray.length + "game array length");
 
         // Hide and show button and play tone
         buttonPress(buttonPressed, sound);
@@ -203,7 +207,7 @@ function gameStart(sound) {
             setTimeout(gameSequence(), 200);
         } else {
             
-            console.log("user input" + buttonPressed.number)
+            console.log("user input" + buttonPressed.number);
             //Remove listeners
             removeListeners();
 
@@ -219,7 +223,7 @@ function gameStart(sound) {
      */
     function gameTimeout() {
 
-        console.log("Timeout called : counter " + counter)
+        console.log("Timeout called : counter " + counter);
         //Remove the listeners for the coloured buttons
         removeListeners();
         
