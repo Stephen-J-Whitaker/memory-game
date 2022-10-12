@@ -4,11 +4,16 @@ document.addEventListener("DOMContentLoaded", function() {
     // Triggers dropdown of instructions on click
     document.getElementById("instructions-button").addEventListener("click", function() {
         document.getElementById("instructions").classList.toggle("hide-instructions");
-    });
+    })
 
     //Show top ten modal when top ten button pressed
     document.getElementById("top-ten-button").addEventListener("click", function() {
-        document.getElementById("").classList.toggle("display-none");
+        document.getElementById("top-ten-modal").classList.toggle("display-none");
+    })
+
+    //Close top ten modal on press of "DONE" on the modal
+    document.getElementById("close-top-ten").addEventListener("click", function() {
+        document.getElementById("top-ten-modal").classList.toggle("display-none");
     })
 
     // Start the game on click of start button
@@ -18,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     /**
      * Function to get scores from local store if any exist and build top ten table with data present 
      */
-    (function collectFromLocalStore(tableId) {
+    (function collectFromLocalStore() {
         let topTen = [];
 
         if (localStorage.length > 0) {
@@ -26,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 topTen.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]);
             }
         }
-    }) (topTen)
+    })
 });
 
 /**
