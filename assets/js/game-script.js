@@ -9,6 +9,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // Start the game on click of start button
     document.getElementById("start").addEventListener("click", startButton);
 
+    // Self invoking function to retrieve local store once and build top 10 table on page load
+    /**
+     * Function to get scores from local store if any exist and build top ten table with data present 
+     */
+    (function collectFromLocalStore(tableId) {
+        let topTen = [];
+
+        if (localStorage.length > 0) {
+            for (let i = 0; i < localStorage.length; ++i) {
+                topTen.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]);
+            }
+        }
+    }) (topTen)
 });
 
 /**
@@ -87,11 +100,12 @@ function buttonPress(colourButton, sound) {
  */
 function checkScore(finalScore) {
     let topTen = [];
+
     console.log("top ten " + topTen);
     console.log("Hello from in checkscore");
     console.log(finalScore);
 
-    topTen.unshift(["Test", 1]);
+    topTen.push(["Test", finalScore]);
     console.log("top ten " + topTen);
     console.log("final score " + finalScore);
 }
@@ -211,10 +225,10 @@ function gameStart(sound) {
             //Remove listeners
             removeListeners();
 
-            console.log("game end due to wrong answer " + counter);
+            console.log("game end due to wrong answer " + score);
 
             //Check the final score against score board
-            setTimeout(checkScore(counter), 300);
+            setTimeout(checkScore(score), 300);
         }
     }
 
@@ -228,7 +242,7 @@ function gameStart(sound) {
         removeListeners();
         
         //Game over, check the score
-        checkScore(counter);
+        checkScore(score);
     }
 
     /**
@@ -270,7 +284,7 @@ function gameStart(sound) {
             } 
         }
 
-        let interval = setInterval(arrayLoop, 1000); // Every 1 second, call arrayLoop to read the next element of the array and call button press
+        let interval = setInterval(arrayLoop, 750); // Every 1 second, call arrayLoop to read the next element of the array and call button press
       
 
 
