@@ -144,6 +144,15 @@ function checkScore(finalScore) {
         console.log(topTen);
     }
 
+    // If the final score is greater than the lowest score from the old top ten then replace
+    // the lowest score and ask the user to enter their name
+    if (finalScore > topTen[9][2]) {
+        topTen[9][2] = finalScore;
+    }
+
+    // Sort the array with the new score and update the table on the top ten modal
+    
+
     console.log("top ten " + topTen);
     console.log("Hello from in checkscore");
     console.log(finalScore);
