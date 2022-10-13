@@ -23,22 +23,41 @@ document.addEventListener("DOMContentLoaded", function() {
     /**
      * Function to get scores from local store if any exist and build top ten table with data present 
      */
-     (function collectFromLocalStore() {
-        let topTen = [];
-    
-        if (localStorage.length > 0) {
-            for (let i = 0; i < localStorage.length; ++i) {
-                topTen.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]);
+    (function collectFromLocalStore(numberOfRows) {
+        const topTen = [];
+        let tableSlot = 1;
+        let rowConstruct;
+        let tableElements;
+
+        let table = document.getElementsByTagName("table");
+        
+        console.log(table[0]);
+        console.log(rowConstruct);
+
+        for (let i = 0; i < numberOfRows; ++i) {  
+            rowConstruct = document.createElement("tr");  
+            for (let i = 0; i < 3; ++i) {
+                tableElements = document.createElement("td");
+                if (i === 0) {
+                    tableElements.innerText = tableSlot;
+                    tableSlot++; // Insert a row number
+                } else if (i === 1) {
+                    tableElements.innerText = "Empty Slot";
+                }
+                rowConstruct.appendChild(tableElements);
             }
-        } else {
-            let table = document.getElementsByTagName("table");
-            console.log(table[0]);
-            for (let i = 0; i < 10; ++i) {
- 
-                console.log(table[0]);
-            }
+            table[0].appendChild(rowConstruct); // Append in HTML
         }
-    }) ()
+
+            console.log(table[0]);
+
+
+        // if (localStorage.length > 0) {
+        //     for (let i = 0; i < localStorage.length; ++i) {
+        //         topTen.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]);
+        //     }
+        // }
+    }) (10)
 })
 
 /**
@@ -212,6 +231,8 @@ function gameStart() {
                 buttonPressed = redButton;
                 break;
         }  
+
+        console.log(buttonPressed + " buttonPressed");
 
         console.log("game array" + gameArray[counter].number);
         console.log(counter + "counter");
