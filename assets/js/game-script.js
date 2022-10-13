@@ -133,6 +133,7 @@ function buttonPress(colourButton, sound) {
 function checkScore(finalScore) {
     const topTen = [];
     let tableRow = [];
+    const abortSignal = new AbortController;
 
     let topTenTableRows = document.getElementsByTagName("tr");
 
@@ -146,19 +147,28 @@ function checkScore(finalScore) {
 
     // If the final score is greater than the lowest score from the old top ten then replace
     // the lowest score and ask the user to enter their name
-    if (finalScore > topTen[9][2]) {
-        topTen[9][2] = finalScore;
+    if (finalScore > topTen[9][1]) {
+        topTen[9][1] = finalScore;
     }
-   
+
+    // Add listener to get new top ten name when modal button pressed.
+    document.getElementById("submit-top-ten-name").addEventListener("click", function() {
+        let topTenName = document.getElementById("player-name").value;
+        if (topTenName === "") {
+            alert("Please enter your name");
+        } else {
+            topTen[9][0] = topTenName;
+            console.log(topTen);
+            abortSignal.abort(); //Remove the listener as no longer needed
+        }
+    }, {signal : abortSignal.signal})
 
     // Sort the array with the new score and update the table on the top ten modal
-
 
     console.log("top ten " + topTen);
     console.log("Hello from in checkscore");
     console.log(finalScore);
 
-    topTen.push(["Test", finalScore]);
     console.log("top ten " + topTen);
     console.log("final score " + finalScore);
 }
