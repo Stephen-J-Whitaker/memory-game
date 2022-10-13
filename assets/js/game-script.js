@@ -40,6 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     tableSlot++; // Insert a row number
                 } else if (i === 1) {
                     tableElements.innerText = "Empty Slot";
+                } else {
+                    tableElements.innerText = "0";
                 }
                 rowConstruct.appendChild(tableElements);
             }
@@ -129,7 +131,18 @@ function buttonPress(colourButton, sound) {
  * Checks the finished game score against the leaderboard and call name entry modal if necessary
  */
 function checkScore(finalScore) {
-    let topTen = [];
+    const topTen = [];
+    let tableRow = [];
+
+    let topTenTableRows = document.getElementsByTagName("tr");
+
+    // Pull the data from the current top ten table into an array 
+    for (let i = 1; i < 11; ++i) {
+        console.log(topTenTableRows[i].getElementsByTagName("td")[1]);
+        tableRow = [topTenTableRows[i].getElementsByTagName("td")[1].innerText, topTenTableRows[i].getElementsByTagName("td")[2].innerText];
+        topTen.push(tableRow);
+        console.log(topTen);
+    }
 
     console.log("top ten " + topTen);
     console.log("Hello from in checkscore");
@@ -164,7 +177,6 @@ function gameStart() {
     tone(300, sound);
 
     const gameArray = [];
-    let currentScore;
     let timeout;
     let counter = 0;
     let score = 0;
