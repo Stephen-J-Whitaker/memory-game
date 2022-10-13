@@ -149,9 +149,10 @@ function checkScore(finalScore) {
     if (finalScore > topTen[9][2]) {
         topTen[9][2] = finalScore;
     }
+   
 
     // Sort the array with the new score and update the table on the top ten modal
-    
+
 
     console.log("top ten " + topTen);
     console.log("Hello from in checkscore");
