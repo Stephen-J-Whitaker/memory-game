@@ -30,9 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
         let tableElements;
 
         let table = document.getElementsByTagName("table");
-        
-        console.log(table[0]);
-        console.log(rowConstruct);
 
         for (let i = 0; i < numberOfRows; ++i) {  
             rowConstruct = document.createElement("tr");  
@@ -48,9 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             table[0].appendChild(rowConstruct); // Append in HTML
         }
-
-            console.log(table[0]);
-
 
         // if (localStorage.length > 0) {
         //     for (let i = 0; i < localStorage.length; ++i) {
@@ -216,21 +210,7 @@ function gameStart() {
         //Clear the timout because a button was pressed
         clearTimeout(timeout);
 
-        let buttonPressed;
-        switch (this.id) {
-            case "yellow" :
-                buttonPressed = yellowButton;
-                break;
-            case "green" :
-                buttonPressed = greenButton;
-                break;
-            case "blue" :
-                buttonPressed = blueButton;
-                break;
-            case "red" :
-                buttonPressed = redButton;
-                break;
-        }  
+        let buttonPressed = eval(this.id + "Button");
 
         console.log(buttonPressed + " buttonPressed");
 
