@@ -189,21 +189,36 @@ function checkScore(finalScore) {
                 topTen.sort(function (a, b){return b[1] - a[1]});
                 console.log("Sorted array " + topTen);
 
-                //Build the new top ten table
-                buildTopTen(topTen);
+                //Update the top ten table
+                updateTopTenTable(topTen);
             }
         }, {signal : abortSignal.signal})
     }
-
-    // Sort the array with the new score and update the table on the top ten modal
-
-
     console.log("top ten " + topTen);
     console.log("Hello from in checkscore");
     console.log(finalScore);
 
     console.log("top ten " + topTen);
     console.log("final score " + finalScore);
+}
+
+/**
+ * Update the top ten table
+ */
+function updateTopTenTable(topTen) {
+    let rowConstruct;
+    let tableData;
+    let tableRow;
+
+    let table = document.getElementsByTagName("tr");
+
+    for (tableRow = 1; tableRow < 11; ++tableRow) {  
+        rowConstruct = table[tableRow];  
+        for (let i = 1; i < 3; ++i) {
+            tableData = rowConstruct.getElementsByTagName("td");
+            tableData[i].innerText = topTen[tableRow - 1][i - 1]; // Enter the player name in the table  
+        }
+    }
 }
 
 /**
