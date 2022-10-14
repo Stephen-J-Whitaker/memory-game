@@ -156,26 +156,39 @@ function checkScore(finalScore) {
 
     // If the final score is greater than the lowest score from the old top ten then replace
     // the lowest score and ask the user to enter their name
-    if (finalScore > topTen[9][1]) {
+    if (finalScore > parseInt(topTen[9][1])) {
         topTen[9][1] = finalScore;
+        console.log(topTen[9][1]);
+        
+        console.log("get name");
+        getName();
+    } else {
+        //Commiserate player as not on the top ten
+        alert("Sorry to say you didnt make it to the top ten this time");
     }
 
-    // Add listener to get new top ten name when modal button pressed.
-    document.getElementById("submit-top-ten-name").addEventListener("click", function() {
-        let topTenName = document.getElementById("player-name").value;
-        if (topTenName === "") {
-            alert("Please enter your name");
-        } else {
-            topTen[9][0] = topTenName;
-            console.log(topTen);
-            abortSignal.abort(); //Remove the listener as no longer needed
-        }
-    }, {signal : abortSignal.signal})
+    /**
+     * Get the name of the person entering the top ten
+     */
+    function getName() {
+        console.log("in get name");
+
+        // Add listener to get new top ten name when modal button pressed.
+        document.getElementById("submit-top-ten-name").addEventListener("click", function() {
+            let topTenName = document.getElementById("player-name").value;
+            if (topTenName === "") {
+                alert("Please enter your name");
+            } else {
+                topTen[9][0] = topTenName;
+                console.log(topTen);
+                abortSignal.abort(); //Remove the listener as no longer needed
+                buildTopTen(topTen);
+            }
+        }, {signal : abortSignal.signal})
+    }
 
     // Sort the array with the new score and update the table on the top ten modal
-    
 
-    buildTopTen(topTen);
 
     console.log("top ten " + topTen);
     console.log("Hello from in checkscore");
