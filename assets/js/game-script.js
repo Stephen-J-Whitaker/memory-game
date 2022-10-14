@@ -186,7 +186,7 @@ function checkScore(finalScore) {
                 abortSignal.abort(); //Remove the listener as no longer needed
 
                 //Sort the array with the new score
-                topTen.sort(function (a, b){return b - a});
+                topTen.sort(function (a, b){return b[1] - a[1]});
                 console.log("Sorted array " + topTen);
 
                 //Build the new top ten table
