@@ -142,7 +142,7 @@ function buildTopTen(topTen) {
 function checkScore(finalScore) {
     const topTen = [];
     let tableRow = [];
-    const abortSignal = new AbortController;
+    const abortSignal = new AbortController();
 
     let topTenTableRows = document.getElementsByTagName("tr");
 
@@ -175,7 +175,8 @@ function checkScore(finalScore) {
         //Personalise top ten modal message
         document.getElementById("top-ten-message").innerText = `You're score of ${finalScore} gets you in the top ten!`;
         // Add listener to get new top ten name when modal button pressed.
-        document.getElementById("submit-top-ten-name").addEventListener("click", function() {
+        document.getElementById("top-ten-name-form").addEventListener("submit", function() {
+            event.preventDefault(); //Prevent default form action of call page
             let topTenName = document.getElementById("player-name").value;
             if (topTenName === "") {
                 alert("Please enter your name");
@@ -268,7 +269,21 @@ function gameStart() {
         //Clear the timout because a button was pressed
         clearTimeout(timeout);
 
-        let buttonPressed = eval(this.id + "Button");
+        let buttonPressed;
+        switch (this.id) {
+            case "yellow" :
+                buttonPressed = yellowButton;
+                break;
+            case "green" :
+                buttonPressed = greenButton;
+                break;
+            case "blue" :
+                buttonPressed = blueButton;
+                break;
+            case "red" :
+                buttonPressed = redButton;
+                break;
+        }  
 
         console.log(buttonPressed + " buttonPressed");
 

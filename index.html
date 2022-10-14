@@ -120,8 +120,11 @@
             <p id="top-ten-message">Youre in the top ten.</p>
             <p>Please enter your name</p>
         </div>
-        <input type="text" id="player-name" placeholder="Your Name">
-        <button id="submit-top-ten-name">DONE</button>
+        <!-- form added to handle validation -->
+        <form id="top-ten-name-form">
+            <input type="text" id="player-name" pattern="[A-Za-z]+" placeholder="Your Name" required>
+            <button id="submit-top-ten-name" type="submit">DONE</button>
+        </form>
     </section>
     <script src="assets/js/game-script.js"></script>
 </body>
