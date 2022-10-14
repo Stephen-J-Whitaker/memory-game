@@ -23,17 +23,18 @@ document.addEventListener("DOMContentLoaded", function() {
     /**
      * Function to get scores from local store if any exist and build top ten table with data present 
      */
-    (function collectFromLocalStore(numberOfRows) {
-        // const topTen = [];
+    (function collectFromLocalStore() {
+        const topTen = [];
 
-        // if (localStorage.length > 0) {
-        //     for (let i = 0; i < numberOfRows; ++i) {
-        //         topTen.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]);
-        //     }
-        // }
+        if (localStorage.length > 0) {
+            for (let i = 0; i < 10; ++i) {
+                topTen.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]);
+                console.log(topTen);
+            }
+        }
 
-        buildTopTen();
-    }) (10)
+        buildTopTen(topTen);
+    }) ()
 })
 
 /**
@@ -220,8 +221,8 @@ function updateTopTenTable(topTen) {
 
             localStorage.clear(); // Clear all old data from local storage
 
-                // Update the local storage with this rows player name and score as the local store name and value pair
-                localStorage.setItem(topTen[tableRow - 1][i - 1], topTen[tableRow - 1][i - 1]);
+            // Update the local storage with this rows player name and score as the local store name and value pair
+            localStorage.setItem(topTen[tableRow - 1][i - 1], topTen[tableRow - 1][i - 1]);
         }
     }
 }
