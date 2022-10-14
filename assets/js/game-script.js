@@ -26,13 +26,22 @@ document.addEventListener("DOMContentLoaded", function() {
     (function collectFromLocalStore() {
         const topTen = [];
 
+        // If there is any data in the local storage then retrieve it into topTen
         if (localStorage.length > 0) {
             for (let i = 0; i < 10; ++i) {
                 topTen.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]);
                 console.log(topTen);
             }
+        
+        // Else populate an empty topTen array
+        } else {
+            for (let i = 0; i < 10; ++i) {
+                topTen.push(["Empty Slot", 0]);
+                console.log(topTen);
+            }
         }
 
+        // Call function to build the top ten table on the top ten modal
         buildTopTen(topTen);
     }) ()
 })
@@ -115,24 +124,25 @@ function buildTopTen(topTen) {
     let tableSlot = 1;
     let rowConstruct;
     let tableElements;
+    let rowNumber;
 
     let table = document.getElementsByTagName("table");
 
-    for (let i = 0; i < 10; ++i) {  
+    for (rowNumber = 0; rowNumber < 10; ++rowNumber) {  // Loop through to create 10 rows
         rowConstruct = document.createElement("tr");  
-        for (let i = 0; i < 3; ++i) {
+        for (let i = 0; i < 3; ++i) { // Three data elements per row
             tableElements = document.createElement("td");
             if (i === 0) {
-                tableElements.innerText = tableSlot;
+                tableElements.innerText = tableSlot; // Insert a row number
                 tableSlot++; // Insert a row number
             } else if (i === 1) {
-                tableElements.innerText = "Empty Slot";
+                    tableElements.innerText = topTen[rowNumber][0]; // Put data from topTen array into the td element
             } else {
-                tableElements.innerText = "0";
+                    tableElements.innerText = topTen[rowNumber][1];  // Put data from top ten array into the td element
             }
             rowConstruct.appendChild(tableElements);
         }
-        table[0].appendChild(rowConstruct); // Append in HTML
+        table[0].appendChild(rowConstruct); // Append the new table onto the top ten modal
         console.log("build top ten")
     }
 }
@@ -162,8 +172,11 @@ function checkScore(finalScore) {
         console.log(topTen[9][1]);
         
         console.log("get name");
-        getName(); // Get the players name
+
+        // Get the players name
+        getName(); 
     } else {
+
         //Commiserate player as not on the top ten
         alert("Sorry to say you didnt make it to the top ten this time");
     }
@@ -173,18 +186,24 @@ function checkScore(finalScore) {
      */
     function getName() {
         console.log("in get name");
+
         //Personalise top ten modal message
         document.getElementById("top-ten-message").innerText = `You're score of ${finalScore} gets you in the top ten!`;
+
         // Add listener to get new top ten name when modal button pressed.
         document.getElementById("top-ten-name-form").addEventListener("submit", function() {
-            event.preventDefault(); //Prevent default form action of call page
+
+            //Prevent default form action of call page
+            event.preventDefault(); 
             let topTenName = document.getElementById("player-name").value;
             if (topTenName === "") {
                 alert("Please enter your name");
             } else {
                 topTen[9][0] = topTenName;
                 console.log(topTen);
-                abortSignal.abort(); //Remove the listener as no longer needed
+
+                //Remove the listener as no longer needed
+                abortSignal.abort(); 
 
                 //Sort the array with the new score
                 topTen.sort(function (a, b){return b[1] - a[1]});
@@ -219,7 +238,8 @@ function updateTopTenTable(topTen) {
             tableData = rowConstruct.getElementsByTagName("td");
             tableData[i].innerText = topTen[tableRow - 1][i - 1]; // Enter the player name in the table
 
-            localStorage.clear(); // Clear all old data from local storage
+            // Clear all old data from local storage
+            localStorage.clear(); 
 
             // Update the local storage with this rows player name and score as the local store name and value pair
             localStorage.setItem(topTen[tableRow - 1][i - 1], topTen[tableRow - 1][i - 1]);
@@ -321,6 +341,8 @@ function gameStart() {
         // Hide and show button and play tone
         buttonPress(buttonPressed, sound);
 
+        // If the random data in the game array is exactly equal to the button pressed and not at the end of the 
+        // game array then do the following
         if ((parseInt(gameArray[counter].number) === buttonPressed.number) && (counter < (gameArray.length - 1))) {
             console.log(counter + "counter");
             ++counter;
@@ -331,7 +353,9 @@ function gameStart() {
 
             //Set a timeout to end game if no user input for 10 seconds
             timeout = setTimeout(gameTimeout, 10000);
-
+        
+        // Else if the random data in the game array is exactly equal to the button pressed and at the end of the game 
+        // array the do the following
         } else if ((parseInt(gameArray[counter].number) === buttonPressed.number) && (counter === (gameArray.length - 1))) {
             counter = 0;
 
@@ -344,6 +368,8 @@ function gameStart() {
             
             //Call game sequence to add another element to the array
             setTimeout(gameSequence(), 200);
+
+        // Else the player submitted the wrong answer so do the following
         } else {
             
             console.log("user input" + buttonPressed.number);
@@ -402,6 +428,7 @@ function gameStart() {
             i++;
             if (i === gameArray.length) {
                 clearInterval(interval); // If end of array reached then no more buttonPress calls required
+
                 // Create listeners at the end of the array loop so no presses possible during loop
                 for (let i = 0; i < colourButtonCollection.length; ++i) {
                     document.getElementById(colourButtonCollection[i].name).addEventListener("click", checkAnswer);
@@ -411,8 +438,6 @@ function gameStart() {
 
         let interval = setInterval(arrayLoop, 750); // Every 1 second, call arrayLoop to read the next element of the array and call button press
       
-
-
         //Set a timeout to end game if no user input for 10 seconds
         timeout = setTimeout(gameTimeout, 10000);
     }
