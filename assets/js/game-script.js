@@ -19,40 +19,20 @@ document.addEventListener("DOMContentLoaded", function() {
     // Start the game on click of start button
     document.getElementById("start").addEventListener("click", startButton);
 
-    // Self invoking function to retrieve local store once and build top 10 table on page load
+    // Self invoking function to retrieve local store once and call function to build top 10 table on page load
     /**
      * Function to get scores from local store if any exist and build top ten table with data present 
      */
     (function collectFromLocalStore(numberOfRows) {
-        const topTen = [];
-        let tableSlot = 1;
-        let rowConstruct;
-        let tableElements;
-
-        let table = document.getElementsByTagName("table");
-
-        for (let i = 0; i < numberOfRows; ++i) {  
-            rowConstruct = document.createElement("tr");  
-            for (let i = 0; i < 3; ++i) {
-                tableElements = document.createElement("td");
-                if (i === 0) {
-                    tableElements.innerText = tableSlot;
-                    tableSlot++; // Insert a row number
-                } else if (i === 1) {
-                    tableElements.innerText = "Empty Slot";
-                } else {
-                    tableElements.innerText = "0";
-                }
-                rowConstruct.appendChild(tableElements);
-            }
-            table[0].appendChild(rowConstruct); // Append in HTML
-        }
+        // const topTen = [];
 
         // if (localStorage.length > 0) {
-        //     for (let i = 0; i < localStorage.length; ++i) {
+        //     for (let i = 0; i < numberOfRows; ++i) {
         //         topTen.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]);
         //     }
         // }
+
+        buildTopTen();
     }) (10)
 })
 
@@ -128,6 +108,35 @@ function buttonPress(colourButton, sound) {
 }
 
 /**
+ * Build the top ten table on the top ten modal
+ */
+function buildTopTen(topTen) {
+    let tableSlot = 1;
+    let rowConstruct;
+    let tableElements;
+
+    let table = document.getElementsByTagName("table");
+
+    for (let i = 0; i < 10; ++i) {  
+        rowConstruct = document.createElement("tr");  
+        for (let i = 0; i < 3; ++i) {
+            tableElements = document.createElement("td");
+            if (i === 0) {
+                tableElements.innerText = tableSlot;
+                tableSlot++; // Insert a row number
+            } else if (i === 1) {
+                tableElements.innerText = "Empty Slot";
+            } else {
+                tableElements.innerText = "0";
+            }
+            rowConstruct.appendChild(tableElements);
+        }
+        table[0].appendChild(rowConstruct); // Append in HTML
+        console.log("build top ten")
+    }
+}
+
+/**
  * Checks the finished game score against the leaderboard and call name entry modal if necessary
  */
 function checkScore(finalScore) {
@@ -164,6 +173,9 @@ function checkScore(finalScore) {
     }, {signal : abortSignal.signal})
 
     // Sort the array with the new score and update the table on the top ten modal
+    
+
+    buildTopTen(topTen);
 
     console.log("top ten " + topTen);
     console.log("Hello from in checkscore");
