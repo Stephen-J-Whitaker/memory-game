@@ -161,7 +161,7 @@ function checkScore(finalScore) {
         console.log(topTen[9][1]);
         
         console.log("get name");
-        getName();
+        getName(); // Get the players name
     } else {
         //Commiserate player as not on the top ten
         alert("Sorry to say you didnt make it to the top ten this time");
@@ -184,6 +184,12 @@ function checkScore(finalScore) {
                 topTen[9][0] = topTenName;
                 console.log(topTen);
                 abortSignal.abort(); //Remove the listener as no longer needed
+
+                //Sort the array with the new score
+                topTen.sort(function (a, b){return b - a});
+                console.log("Sorted array " + topTen);
+
+                //Build the new top ten table
                 buildTopTen(topTen);
             }
         }, {signal : abortSignal.signal})
