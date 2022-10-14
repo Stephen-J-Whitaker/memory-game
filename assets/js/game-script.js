@@ -216,7 +216,12 @@ function updateTopTenTable(topTen) {
         rowConstruct = table[tableRow];  
         for (let i = 1; i < 3; ++i) {
             tableData = rowConstruct.getElementsByTagName("td");
-            tableData[i].innerText = topTen[tableRow - 1][i - 1]; // Enter the player name in the table  
+            tableData[i].innerText = topTen[tableRow - 1][i - 1]; // Enter the player name in the table
+
+            localStorage.clear(); // Clear all old data from local storage
+
+                // Update the local storage with this rows player name and score as the local store name and value pair
+                localStorage.setItem(topTen[tableRow - 1][i - 1], topTen[tableRow - 1][i - 1]);
         }
     }
 }
