@@ -172,7 +172,8 @@ function checkScore(finalScore) {
      */
     function getName() {
         console.log("in get name");
-
+        //Personalise top ten modal message
+        document.getElementById("top-ten-message").innerText = `You're score of ${finalScore} gets you in the top ten!`;
         // Add listener to get new top ten name when modal button pressed.
         document.getElementById("submit-top-ten-name").addEventListener("click", function() {
             let topTenName = document.getElementById("player-name").value;
