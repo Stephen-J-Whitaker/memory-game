@@ -192,7 +192,7 @@ function checkScore(finalScore) {
         console.log(topTen);
     }
 
-    // If the final score is greater than the lowest score from the old top ten then replace
+    // If the final score is greater than the lowest score from the old top then then replace
     // the lowest score and ask the user to enter their name
     if (finalScore > parseInt(topTen[9][1])) {
         topTen[9][1] = finalScore;
@@ -226,11 +226,14 @@ function checkScore(finalScore) {
             if (topTenName === "") {
                 alert("Please enter your name");
             } else {
-                topTen[9][0] = topTenName;
+                topTen[9][0] = topTenName; // Add the new name to the score array
                 console.log(topTen);
 
                 //Remove the listener as no longer needed
                 abortSignal.abort(); 
+
+                // Clear the name input box
+                document.getElementById("player-name").value = "";
 
                 //Sort the array with the new score
                 topTen.sort(function (a, b){return b[1] - a[1]});
