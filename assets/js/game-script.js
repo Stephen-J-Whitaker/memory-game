@@ -17,7 +17,17 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     // Mute or unmute the sound
-    document.getElementById("mute").addEventListener("click", muteButton);
+    document.getElementById("mute-button").addEventListener("click", function() {
+        if (this.getAttribute("data-mute-status") === "unmuted") {
+            console.log(this);
+            this.setAttribute("data-mute-status", "muted");
+            this.innerHTML = '<img class="mute-icon" data-mute-status="muted" src="assets/images/game-interface-muted.svg" alt="Mute button">';
+        } else {
+            console.log(this);
+            this.setAttribute("data-mute-status", "unmuted");
+            this.innerHTML = '<img class="mute-icon" data-mute-status="unmuted" src="assets/images/game-interface-unmuted.svg" alt="Mute button">';
+        }
+    });
 
     // Start the game on click of start button
     document.getElementById("start").addEventListener("click", startButton);
@@ -43,33 +53,20 @@ document.addEventListener("DOMContentLoaded", function() {
         // If there is any data in the local storage then retrieve it into topTen array
         if (localStorage.length > 0) {
             for (let i = 0; i < localStorage.length; ++i) {
-                localStorageContent.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]); // for debugging
-                // console.log(localStorageContent);
                 // Add data from local storage to the beginning of the array
                 if (i % 2 === 0) {
-                    // console.log(arrayCounter);
-                    console.log(" top ten " + topTen);
                     localStorageKey = arrayCounter + "Name"; 
                     topTen[arrayCounter][0] = localStorage.getItem(localStorageKey); // Get scoreboard name from local store  
-                    console.log("local storage key" + localStorageKey);
-                    console.log("array content at this point" + topTen[arrayCounter][0]);
                 } else {
-                    console.log(arrayCounter);
                     localStorageKey = arrayCounter + "Score";
                     topTen[arrayCounter][1] = localStorage.getItem(localStorageKey); // Get corresponding scoreboard score from local store
-                    console.log("local storage key" + localStorageKey);
-                    console.log("array content at this point" + topTen[arrayCounter][1]);
                     arrayCounter++; // Move to next array index
                 }
             }
-            console.log("Top ten" + topTen);
-
-            console.log("After local storage call" + topTen);
         }
 
         // Sort the top ten array
         topTen.sort(function (a, b){return b[1] - a[1]});
-        console.log("sorted array" + topTen);
 
         // Call function to build the top ten table on the top ten modal
         buildTopTen(topTen);
@@ -92,22 +89,14 @@ function startButton() {
 }
 
 /**
- * Mute the game on button press.
- */
-const muteButton = () => {
-    
-} 
-
-/**
  * Checks if muted and creates a different tone depending on the button pressed
  */
 function tone(frequency, sound) {
-    console.log(frequency);
-    console.log(sound);  
 
     //Create an oscillator to generate the desired sound
     let tone = sound.createOscillator();
     tone.type = "sine";
+
     //Set the frequency of the sound
     tone.frequency.setValueAtTime(frequency, sound.currentTime);
 
@@ -357,7 +346,7 @@ function gameStart() {
 
         //Clear the timout because a button was pressed
         clearTimeout(timeout);
-
+        console.log(this);
         let buttonPressed;
         switch (this.id) {
             case "yellow" :
