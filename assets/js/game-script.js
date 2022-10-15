@@ -103,7 +103,8 @@ function tone(frequency, sound) {
     //Create gain node for reduced volume and mute functions
     let volume = sound.createGain();
     //Set the gain value
-    volume.gain.value = 0.1;
+    volume.gain.value = getMuteStatus();
+    console.log("current gain" + volume.gain.value);
 
     //Connect sound to the gain node
     tone.connect(volume);
@@ -115,6 +116,17 @@ function tone(frequency, sound) {
 
     //Stop playing the sound after defined time elapsed
     tone.stop(sound.currentTime + 0.2);
+}
+
+/**
+ * Get mute status from html button data-mute-status attribute
+ */
+const getMuteStatus = () => {
+    if (document.getElementById("mute-button").getAttribute("data-mute-status") === "muted") {
+        return 0;
+    } else {
+        return 0.1;
+    }
 }
 
 /**
