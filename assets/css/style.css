@@ -49,9 +49,7 @@ header {
 }
 
 /* Main styling */
-main,
-.top-ten-modal,
-.name-entry-modal {
+main {
     position: absolute;
     box-sizing: border-box;
     bottom: 75px;
@@ -60,6 +58,29 @@ main,
     background-color: var(--main-interface-colour);
     border: 3px outset rgb(138, 138, 138);
     padding: 10px;
+}
+
+/* Top ten modal */
+.top-ten-button {
+    margin-right: 30px;
+}
+
+.top-ten-modal {
+    position: absolute;
+    background-color: grey;
+    z-index: 2;
+}
+
+.top-ten-table {
+    text-transform: uppercase;
+}
+
+.top-ten-modal,
+.name-entry-modal {
+    border: 3px outset rgb(138, 138, 138);
+    box-sizing: border-box;
+    bottom: 75px;
+    height: calc(100% - 100px - 75px);
 }
 
 /* Instructions section styling */
@@ -130,23 +151,6 @@ main,
 .current-score-container {
     height: fit-content;
     padding-left: 10px;
-}
-
-.top-ten-button {
-    margin-right: 30px;
-}
-
-/* Top ten modal */
-.top-ten-modal {
-    position: absolute;
-    background-color: grey;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-}
-
-.top-ten-table {
-    text-transform: uppercase;
 }
 
 /* Game interface styling */
@@ -260,12 +264,16 @@ footer {
     }
 
     /* Main styling */
-    main,
-    .top-ten-modal,
-    .name-entry-modal {
+    main {
         bottom: 100px;
         /* Height is full view - header, instructions bar and footer */
         height: calc(100% - 200px - 100px);
+    }
+
+    .top-ten-modal,
+    .name-entry-modal {
+        bottom: 100px;
+        height: calc(100% - 100px - 150px);
     }
 
     .game-width,
