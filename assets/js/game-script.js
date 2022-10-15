@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("top-ten-modal").classList.toggle("display-none");
     })
 
+    // Mute or unmute the sound
+    document.getElementById("mute").addEventListener("click", muteButton);
+
     // Start the game on click of start button
     document.getElementById("start").addEventListener("click", startButton);
 
@@ -79,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function startButton() {
     let button = this;
 
+    // this refers to the button that triggered the event handler and was passed to startButton
     this.classList.toggle("visibility-hidden");
     // Show the start button after 200ms so looks clicked
     setTimeout(function() {button.classList.toggle("visibility-hidden");}, 200);
@@ -86,6 +90,13 @@ function startButton() {
     //Timeout set short to ensure IOS web audio remains unlocked after user interaction
     setTimeout(gameStart, 100);
 }
+
+/**
+ * Mute the game on button press.
+ */
+const muteButton = () => {
+    
+} 
 
 /**
  * Checks if muted and creates a different tone depending on the button pressed
