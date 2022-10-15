@@ -25,21 +25,36 @@ document.addEventListener("DOMContentLoaded", function() {
      */
     (function collectFromLocalStore() {
         const topTen = [];
+        const localStoreContent = [];
+
+        // Pre populte the top ten array in case no data in local storage
+        for (let i = 0; i < 10; ++i) {
+            topTen.push(["Empty Slot", 0]);
+            console.log(topTen);
+        }
 
         // If there is any data in the local storage then retrieve it into topTen
         if (localStorage.length > 0) {
-            for (let i = 0; i < 10; ++i) {
-                topTen.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]);
-                console.log(topTen);
+            for (let i = 0; i < localStorage.length; ++i) {
+                // Add data from local storage to the beginning of the array
+                console.log("store key" + localStorage.key(i));
+                localStoreContent.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]);
             }
-        
-        // Else populate an empty topTen array
-        } else {
-            for (let i = 0; i < 10; ++i) {
-                topTen.push(["Empty Slot", 0]);
-                console.log(topTen);
-            }
+            console.log("local store content" + localStoreContent);
+
+                // topTen.unshift([localStorage.getItem(localStorage.key(i)), localStorage.getItem(localStorage.key(i + 1))]);
+                // i++;
+
+                // Pop the last element off the array to keeping the array length ten
+                // topTen.pop();
+                console.log("After local storage call" + topTen);
+                localStorage.clear(); // Clear the local storage
+            // }
         }
+
+        //Sort the array
+        // topTen.sort(function (a, b){return b[1] - a[1]});
+        console.log("sorted array" + topTen);
 
         // Call function to build the top ten table on the top ten modal
         buildTopTen(topTen);
@@ -232,17 +247,24 @@ function updateTopTenTable(topTen) {
 
     let table = document.getElementsByTagName("tr");
 
+    // Clear all old data from local storage
+    localStorage.clear(); 
+
     for (tableRow = 1; tableRow < 11; ++tableRow) {  
         rowConstruct = table[tableRow];  
         for (let i = 1; i < 3; ++i) {
             tableData = rowConstruct.getElementsByTagName("td");
-            tableData[i].innerText = topTen[tableRow - 1][i - 1]; // Enter the player name in the table
-
-            // Clear all old data from local storage
-            localStorage.clear(); 
+            tableData[i].innerText = topTen[tableRow - 1][i - 1]; // Enter the player name or score in the table
 
             // Update the local storage with this rows player name and score as the local store name and value pair
-            localStorage.setItem(topTen[tableRow - 1][i - 1], topTen[tableRow - 1][i - 1]);
+            // localStorage.setItem(topTen[tableRow - 1][i - 1], topTen[tableRow - 1][i]);
+            if (i === 1) {
+                localStorage.setItem(tableRow + "Name", topTen[tableRow - 1][i - 1]);
+            } 
+            
+            if (i === 2) {
+                localStorage.setItem(tableRow + "Score", topTen[tableRow - 1][i - 1]);
+            }  
         }
     }
 }
