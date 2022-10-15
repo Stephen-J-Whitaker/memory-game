@@ -18,7 +18,9 @@ body {
 }
 
 /* Common interface styling */
-.game-width {
+.game-width,
+.top-ten-modal,
+.name-entry-modal {
     width: 100%;
 }
 
@@ -47,7 +49,9 @@ header {
 }
 
 /* Main styling */
-main {
+main,
+.top-ten-modal,
+.name-entry-modal {
     position: absolute;
     box-sizing: border-box;
     bottom: 75px;
@@ -173,7 +177,7 @@ main {
     visibility: hidden;
 }
 
-/* Dont display componenet on click style */
+/* Dont display component on click style */
 .display-none {
     display: none;
 }
@@ -256,17 +260,23 @@ footer {
     }
 
     /* Main styling */
-    main {
+    main,
+    .top-ten-modal,
+    .name-entry-modal {
         bottom: 100px;
         /* Height is full view - header, instructions bar and footer */
         height: calc(100% - 200px - 100px);
     }
 
-    .game-width {
+    .game-width,
+    .top-ten-modal,
+    .name-entry-modal {
         width: 600px;
     }
 
-    .game-position {
+    .game-position,
+    .top-ten-modal,
+    .name-entry-modal {
         right: calc((100% / 2) - 300px);
     }
 

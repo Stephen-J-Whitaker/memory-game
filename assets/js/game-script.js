@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     // Triggers dropdown of instructions on click
-    document.getElementById("instructions-button").addEventListener("click", function() {
+    document.getElementById("instructions-button").addEventListener("click", () => {
         document.getElementById("instructions").classList.toggle("hide-instructions");
     })
 
