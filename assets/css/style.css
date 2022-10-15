@@ -3,6 +3,7 @@
 :root {
     --main-interface-colour: rgb(88, 88, 88);
     --game-interface-width: 50%;
+    --main-content-font-family: Arial, Lato, Helvetica, sans-serif;
 }
 
 /* Backdrop styling */
@@ -120,7 +121,7 @@ main {
     height: 100%;
     margin: 0;
     overflow: auto;
-    font-family: Arial, Lato, Helvetica, sans-serif;
+    font-family: var(--main-content-font-family);
     font-size: xx-large;
     text-align: justify;
     text-align-last: center;
