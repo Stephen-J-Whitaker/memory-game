@@ -42,7 +42,7 @@ header {
 .logo {
     font-family: Orbitron, Arial, Lato, Helvetica, sans-serif;
     font-weight: 900;
-    font-size: xxx-large;
+    font-size: xx-large;
     color: rgb(204, 204, 204);
 }
 
@@ -218,6 +218,10 @@ footer {
 
     header {
         height: 150px;
+    }
+
+    .logo {
+        font-size: xxx-large;
     }
 
     footer {
