@@ -88,19 +88,6 @@ function startButton() {
 }
 
 /**
- * Start the game by creating its audio context and creating a tone in response to a button 
- * press to unlock web audio on IOS. Pass the audio context as a parameter through the
- * functions to where it's needed
- */
-function startGame() {  
-    //Create audio context and set as interactive for low latency
-    let sound = new AudioContext({latencyHint: "interactive"});
-
-    tone(300, sound);
-    gameStart(sound);
-}
-
-/**
  * Checks if muted and creates a different tone depending on the button pressed
  */
 function tone(frequency, sound) {
@@ -204,8 +191,15 @@ function checkScore(finalScore) {
         getName(); 
     } else {
 
-        //Commiserate player as not on the top ten
-        alert("Sorry to say you didn't make it to the top ten this time");
+        //Call commiserate player from set timeout so happens after button flashed
+        setTimeout(commiserate, 500);
+
+        /**
+         * Commiserate player as not on the top ten
+         */
+        function commiserate() {
+            alert("Sorry to say you didn't make it to the top ten this time");
+        }
     }
 
     /**
@@ -218,8 +212,9 @@ function checkScore(finalScore) {
         document.getElementById("top-ten-message").innerText = `You're score of ${finalScore} gets you in the top ten!`;
 
         // Add listener to get new top ten name when modal button pressed.
-        document.getElementById("top-ten-name-form").addEventListener("submit", function() {
-
+        // Abort signal to clear submit button event listener when no longer needed
+        document.getElementById("top-ten-name-form").addEventListener("submit", function() {  
+ 
             //Prevent default form action of call page
             event.preventDefault(); 
             let topTenName = document.getElementById("player-name").value;
@@ -242,7 +237,7 @@ function checkScore(finalScore) {
                 //Update the top ten table
                 updateTopTenTable(topTen);
             }
-        }, {signal : abortSignal.signal}) // abort signal to clear submit button event listener when no longer needed
+        }, {signal : abortSignal.signal})
     }
     console.log("top ten " + topTen);
     console.log("Hello from in checkscore");
@@ -291,17 +286,13 @@ function setScore(score) {
 }
 
 /**
- * Updates the leaderboard with a the added name when name entered and done pressed
- */
-function nameEntered() {
-
-}
-
-/**
  * Initialises and initiate a run of the game
  */
 function gameStart() {
-    //Create audio context and set as interactive for low latency
+    // Start the game by creating its audio context and creating a tone in response to a button 
+    // press to unlock web audio on IOS. Pass the audio context as a parameter through the
+    // functions to where it's needed
+    // Create audio context and set as interactive for low latency
     const sound = new AudioContext({latencyHint: "interactive"});
 
     tone(300, sound);
