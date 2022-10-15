@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     //Show top ten modal when top ten button pressed
-    document.getElementById("top-ten-button").addEventListener("click", function() {
+    document.getElementById("top-ten-button").addEventListener("click", () => {
         document.getElementById("top-ten-modal").classList.toggle("display-none");
     })
 
     //Close top ten modal on press of "DONE" on the modal
-    document.getElementById("close-top-ten").addEventListener("click", function() {
+    document.getElementById("close-top-ten").addEventListener("click", () => {
         document.getElementById("top-ten-modal").classList.toggle("display-none");
     })
 
@@ -220,6 +220,9 @@ function checkScore(finalScore) {
     function getName() {
         console.log("in get name");
 
+        // Display name entry modal
+        document.getElementById("name-entry-modal").classList.toggle("display-none");
+
         //Personalise top ten modal message
         document.getElementById("top-ten-message").innerText = `You're score of ${finalScore} gets you in the top ten!`;
 
@@ -252,6 +255,12 @@ function checkScore(finalScore) {
 
                 //Update the top ten table
                 updateTopTenTable(topTen);
+
+                // Remove name entry modal
+                document.getElementById("name-entry-modal").classList.toggle("display-none");
+
+                // Show the top ten to show where player got to in table
+                document.getElementById("top-ten-modal").classList.toggle("display-none");
             }
         }
     }
