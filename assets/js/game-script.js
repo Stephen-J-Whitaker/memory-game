@@ -82,7 +82,10 @@ function startButton() {
     // this refers to the button that triggered the event handler and was passed to startButton
     this.classList.toggle("visibility-hidden");
     // Show the start button after 200ms so looks clicked
-    setTimeout(function() {button.classList.toggle("visibility-hidden");}, 200);
+    setTimeout(function() {button.classList.toggle("visibility-hidden")}, 200);
+    
+    //Cover the start button with a blank without start written on it whilst in play
+    setTimeout(function() {document.getElementById("start-blank").classList.toggle("visibility-hidden");}, 200);
 
     //Timeout set short to ensure IOS web audio remains unlocked after user interaction
     setTimeout(gameStart, 100);
@@ -211,6 +214,9 @@ function checkScore(finalScore) {
          */
         function commiserate() {
             alert("Sorry to say you didn't make it to the top ten this time");
+
+            // Unblank start button
+            document.getElementById("start-blank").classList.toggle("visibility-hidden");
         }
     }
 
@@ -261,6 +267,9 @@ function checkScore(finalScore) {
 
                 // Show the top ten to show where player got to in table
                 document.getElementById("top-ten-modal").classList.toggle("display-none");
+
+                // Unblank start button
+                document.getElementById("start-blank").classList.toggle("visibility-hidden");
             }
         }
     }
