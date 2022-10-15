@@ -2,6 +2,7 @@
 
 :root {
     --main-interface-colour: rgb(88, 88, 88);
+    --game-interface-width: 50%;
 }
 
 /* Backdrop styling */
@@ -45,6 +46,7 @@ header {
     font-family: Orbitron, Arial, Lato, Helvetica, sans-serif;
     font-weight: 900;
     font-size: xx-large;
+    text-align: center;
     color: rgb(204, 204, 204);
 }
 
@@ -57,7 +59,7 @@ main {
     height: calc(100% - 125px - 100px);
     background-color: var(--main-interface-colour);
     border: 3px outset rgb(138, 138, 138);
-    padding: 10px;
+    padding: 3%;
 }
 
 /* Top ten modal */
@@ -226,8 +228,8 @@ footer {
     width: fit-content;
 }
 
-/* Add media query for screens more than 600px wide */
-@media screen and (min-width: 600px) {
+/* Add media query for screens more than 1000px wide */
+@media screen and (min-width: 1000px) {
 
     header {
         height: 150px;
@@ -279,15 +281,19 @@ footer {
     .game-width,
     .top-ten-modal,
     .name-entry-modal {
-        width: 600px;
+        width: var(--game-interface-width);
     }
 
     .game-position,
     .top-ten-modal,
     .name-entry-modal {
-        right: calc((100% / 2) - 300px);
+        right: calc((100% / 2) - (50% / 2));
     }
 
+    .instructions-bar {
+        width: 50vw;
+        right: calc((100% / 2) - (50vw / 2));
+    }
 
 }
 
