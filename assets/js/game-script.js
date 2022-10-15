@@ -213,10 +213,14 @@ function checkScore(finalScore) {
 
         // Add listener to get new top ten name when modal button pressed.
         // Abort signal to clear submit button event listener when no longer needed
-        document.getElementById("top-ten-name-form").addEventListener("submit", function() {  
- 
+        document.getElementById("top-ten-name-form").addEventListener("submit", nameInput, {signal : abortSignal.signal});
+        
+        /**
+         * Act of the submission of the top ten player name
+         */
+        function nameInput(thisEvent) {
             //Prevent default form action of call page
-            event.preventDefault(); 
+            thisEvent.preventDefault(); 
             let topTenName = document.getElementById("player-name").value;
             if (topTenName === "") {
                 alert("Please enter your name");
@@ -237,7 +241,7 @@ function checkScore(finalScore) {
                 //Update the top ten table
                 updateTopTenTable(topTen);
             }
-        }, {signal : abortSignal.signal})
+        }
     }
     console.log("top ten " + topTen);
     console.log("Hello from in checkscore");
