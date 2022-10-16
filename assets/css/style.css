@@ -6,6 +6,7 @@
     --game-interface-width: 50%;
     --button-background-colour: rgb(90, 90, 90);
     --button-font-colour: rgba(204, 204, 204, 0.8);
+    --dark-font-colour: rgb(70, 70, 70);
     /* Lato font imported from Google Fonts : https://fonts.google.com/ */
     --main-content-font-family: Arial, Lato, Helvetica, sans-serif;
 }
@@ -32,12 +33,13 @@ body {
 
 h2,
 p {
-    color: rgb(70, 70, 70);
+    color: rgb(61, 61, 61);
 }
 
 h2 {
     font-size: xx-large;
     font-family: var(--main-content-font-family);
+    text-align: center;
 }
 
 p {
@@ -47,7 +49,7 @@ p {
 button {
     background-color: var(--button-background-colour );
     color: var(--button-font-colour);
-    font-size: x-large;  
+    font-size: large;  
 }
 
 /* Button click styling */
@@ -98,12 +100,11 @@ main {
 }
 
 /* Top ten modal */
-.top-ten-button {
-    margin-right: 30px;
-}
-
 .top-ten-modal,
 .name-entry-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
     background-color: grey;
     z-index: 2;
@@ -113,8 +114,38 @@ main {
     height: calc(100% - 100px - 75px);
 }
 
+.top-ten-header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.top-ten-modal-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .top-ten-table {
     text-transform: uppercase;
+    color: rgb(61, 61, 61);
+    font-size: large;
+    width: 75%;
+}
+
+th,
+tr,
+td {
+    border: 3px inset var(--main-interface-colour);
+    padding: 3px;
+}
+
+.top-ten-button {
+    margin-top: 20px;
+    width: 200px;
+}
+
+th {
+    text-align: center;
 }
 
 .name-entry-modal {
