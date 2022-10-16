@@ -71,7 +71,8 @@ main {
     margin-right: 30px;
 }
 
-.top-ten-modal {
+.top-ten-modal,
+.name-entry-modal {
     position: absolute;
     background-color: grey;
     z-index: 2;
