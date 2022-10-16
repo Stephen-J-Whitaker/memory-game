@@ -312,8 +312,6 @@ footer {
     width: 100%;
 }
 
-/* Media queries */
-
 /* Turn screen modal for when device is in landscape and too narrow for the game interface */
 .turn-screen-modal {
     display: none;
@@ -335,6 +333,8 @@ footer {
     height: fit-content;
     width: fit-content;
 }
+
+/* Media queries */
 
 /* Add media query for screens more than 1000px wide */
 @media screen and (min-width: 1000px) {
@@ -406,7 +406,7 @@ footer {
 }
 
 /* Add media query to handle mobile when landscape */
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 400px) {
     
     .turn-screen-modal {
         display: flex;
