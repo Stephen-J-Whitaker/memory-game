@@ -127,16 +127,19 @@
         <button id="close-top-ten">DONE</button>
     </section>
     <!-- Enter name modal -->
-    <section id="name-entry-modal" class="name-entry-modal display-none">
+
+    <!-- debug -->
+    <section id="name-entry-modal" class="name-entry-modal">
+    <!-- <section id="name-entry-modal" class="name-entry-modal display-none"> -->
         <div id="name-entry-modal-input" class="entry-modal-input">
             <h2>Contratulations!</h2>
             <p id="top-ten-message">Youre in the top ten.</p>
             <p>Please enter your name</p>
         </div>
         <!-- form added to handle validation -->
-        <form id="top-ten-name-form">
-            <input type="text" id="player-name" pattern="[A-Za-z\s]+" placeholder="Your Name" maxlength="15" title="The name should only contain letters." required>
-            <button id="submit-top-ten-name" type="submit">DONE</button>
+        <form class="name-entry-form" id="top-ten-name-form">
+            <input type="text" id="player-name" class="name-entry-input" pattern="[A-Za-z\s]+" placeholder="Your Name" maxlength="15" title="The name should only contain letters." required>
+            <button id="submit-top-ten-name" class="name-entry-button" type="submit">DONE</button>
         </form>
     </section>
     <script src="assets/js/game-script.js"></script>
