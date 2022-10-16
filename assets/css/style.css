@@ -37,6 +37,7 @@ p {
 
 h2 {
     font-size: xx-large;
+    font-family: var(--main-content-font-family);
 }
 
 p {
@@ -182,6 +183,7 @@ main {
     position: absolute;
     height: calc(100% - 50px);
     top: 0;
+    width: 95%;
 }
 
 .instructions-content {
@@ -331,7 +333,7 @@ footer {
     .instructions-content {
         margin: auto;
         height: fit-content;
-        width: 75%;
+        width: 95%;
     }
 
     /* Main styling */
