@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         setTimeout(function() {instructionsButton.classList.toggle("button");}, 200);
         document.getElementById("instructions").classList.toggle("hide-instructions");
-    })
+    });
 
     //Show top ten modal when top ten button pressed
     document.getElementById("top-ten-button").addEventListener("click", function() {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         setTimeout(function() {topTenButton.classList.toggle("button");}, 200);
         document.getElementById("top-ten-modal").classList.toggle("display-none");
-    })
+    });
 
     //Close top ten modal on press of "DONE" on the modal
     document.getElementById("close-top-ten").addEventListener("click", function() {
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         setTimeout(function() {closeTopTenButton.classList.toggle("button");}, 200);
         document.getElementById("top-ten-modal").classList.toggle("display-none");
-    })
+    });
     
     // Mute or unmute the sound
     document.getElementById("mute-button").addEventListener("click", function() {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.setAttribute("data-mute-status", "unmuted");
                 this.innerHTML = '<img class="mute-icon" data-mute-status="unmuted" src="assets/images/game-interface-unmuted.svg" alt="Mute button">';
             }
-        }
+        };
 
         setTimeout(muteButtonChange, 100);
     });
@@ -90,12 +90,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Sort the top ten array
-        topTen.sort(function (a, b){return b[1] - a[1]});
+        // Semi colon reported missing in jshint but causes an error here if put in so is omitted
+        topTen.sort(function (a, b) {return b[1] - a[1]});
 
         // Call function to build the top ten table on the top ten modal
         buildTopTen(topTen);
-    }) ()
-})
+    }) ();
+});
 
 /**
  * Starts game and hides then shows start button 
@@ -106,7 +107,7 @@ function startButton() {
     // this refers to the button that triggered the event handler and was passed to startButton
     this.classList.toggle("visibility-hidden");
     // Show the start button after 200ms so looks clicked
-    setTimeout(function() {button.classList.toggle("visibility-hidden")}, 200);
+    setTimeout(function() {button.classList.toggle("visibility-hidden");}, 200);
     
     //Cover the start button with a blank without start written on it whilst in play
     setTimeout(function() {document.getElementById("start-blank").classList.toggle("visibility-hidden");}, 200);
@@ -154,7 +155,7 @@ const getMuteStatus = () => {
     } else {
         return 0.1;
     }
-}
+};
 
 /**
  * Makes the button look likes its being pressed by hiding it to show a smaller
@@ -196,7 +197,7 @@ function buildTopTen(topTen) {
             rowConstruct.appendChild(tableElements);
         }
         table[0].appendChild(rowConstruct); // Append the new table onto the top ten modal
-        console.log("build top ten")
+        console.log("build top ten");
     }
 }
 
@@ -280,7 +281,8 @@ function checkScore(finalScore) {
                 document.getElementById("player-name").value = "";
 
                 //Sort the array with the new score
-                topTen.sort(function (a, b){return b[1] - a[1]});
+                // Semi colon reported missing in jshint but causes an error here if put in so is omitted
+                topTen.sort((a, b) => {return b[1] - a[1]});
                 console.log("Sorted array " + topTen);
 
                 //Update the top ten table
