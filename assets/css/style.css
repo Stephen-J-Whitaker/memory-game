@@ -96,8 +96,25 @@ main {
 
 .name-entry-form {
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.name-entry-input {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    font-weight: 400;
+    color: rgba(204, 204, 204, 0.8);
+}
+
+.name-entry-button {
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: var(--main-interface-colour);
+    color: rgb(204, 204, 204);
 }
 
 /* Instructions section styling */
@@ -225,6 +242,8 @@ footer {
 .mute-icon {
     width: 100%;
 }
+
+/* Media queries */
 
 /* Turn screen modal for when device is in landscape and too narrow for the game interface */
 .turn-screen-modal {

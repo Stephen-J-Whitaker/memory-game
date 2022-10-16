@@ -32,7 +32,7 @@
         <!-- Nav element used because a new area opens to obscure the game area making 
             opening the instructions a navigation function -->
         <nav class="instructions-bar game-width game-position">
-            <button id="instructions-button">
+            <button id="instructions-button" class="button">
                 Show Instructions
             </button>
         </nav>
@@ -46,7 +46,7 @@
                 <span id="current-score" class="current-score">0</span>
             </div>
             <!-- Top ten -->
-            <button id="top-ten-button" class="top-ten-button">Top ten</button>
+            <button id="top-ten-button" class="top-ten-button button">Top ten</button>
         </div>
         <!-- Svg inserted inline into html so that full access with css and javascript is possible as the svg is inserted into the document -->
         <svg class="game-button-interface" aria-label="Coloured buttons for game" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="107.898mm" height="107.898mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 10006.89 10006.89">
@@ -124,7 +124,7 @@
                 </tr>
             </table>
         </div>
-        <button id="close-top-ten">DONE</button>
+        <button id="close-top-ten" class="button">DONE</button>
     </section>
     <!-- Enter name modal -->
 
@@ -138,8 +138,8 @@
         </div>
         <!-- form added to handle validation -->
         <form class="name-entry-form" id="top-ten-name-form">
-            <input type="text" id="player-name" class="name-entry-input" pattern="[A-Za-z\s]+" placeholder="Your Name" maxlength="15" title="The name should only contain letters." required>
-            <button id="submit-top-ten-name" class="name-entry-button" type="submit">DONE</button>
+            <input type="text" id="player-name" class="name-entry-input" pattern="[A-Za-z\s]+" placeholder="Your Name" maxlength="15" title="The name should only contain letters" required>
+            <button id="submit-top-ten-name" class="name-entry-button button" type="submit">DONE</button>
         </form>
     </section>
     <script src="assets/js/game-script.js"></script>
