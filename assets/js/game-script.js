@@ -355,8 +355,6 @@ function gameStart() {
     // Create audio context and set as interactive for low latency
     const sound = new AudioContext({latencyHint: "interactive"});
 
-    tone(300, sound);
-
     const gameArray = [];
     let timeout;
     let counter = 0;
