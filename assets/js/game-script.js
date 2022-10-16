@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-        setTimeout(muteButtonChange, 200);
+        setTimeout(muteButtonChange, 100);
     });
 
     // Start the game on click of start button

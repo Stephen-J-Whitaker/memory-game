@@ -127,8 +127,9 @@ main {
 
 .top-ten-table {
     text-transform: uppercase;
-    color: rgb(61, 61, 61);
-    font-size: large;
+    color: rgb(44, 44, 44);
+    font-family: var(--main-content-font-family);
+    font-size: 400;
     width: 75%;
 }
 
@@ -323,6 +324,11 @@ footer {
     z-index: 3;
     font-size: xx-large;
     text-align: center;
+    font-family: var(--main-content-font-family);
+}
+
+.turn-screen-text {
+    color: rgb(48, 48, 48);
 }
 
 .turn-screen-modal-text {
