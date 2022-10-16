@@ -15,18 +15,26 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("close-top-ten").addEventListener("click", () => {
         document.getElementById("top-ten-modal").classList.toggle("display-none");
     })
-
+    
     // Mute or unmute the sound
     document.getElementById("mute-button").addEventListener("click", function() {
-        if (this.getAttribute("data-mute-status") === "unmuted") {
-            console.log(this);
-            this.setAttribute("data-mute-status", "muted");
-            this.innerHTML = '<img class="mute-icon" data-mute-status="muted" src="assets/images/game-interface-muted.svg" alt="Mute button">';
-        } else {
-            console.log(this);
-            this.setAttribute("data-mute-status", "unmuted");
-            this.innerHTML = '<img class="mute-icon" data-mute-status="unmuted" src="assets/images/game-interface-unmuted.svg" alt="Mute button">';
+        let muteButton = this;
+        this.classList.toggle("button");
+
+        let muteButtonChange = () => {
+            muteButton.classList.toggle("button");
+            if (this.getAttribute("data-mute-status") === "unmuted") {
+                console.log(this);
+                this.setAttribute("data-mute-status", "muted");
+                this.innerHTML = '<img class="mute-icon" data-mute-status="muted" src="assets/images/game-interface-muted.svg" alt="Mute button">';
+            } else {
+                console.log(this);
+                this.setAttribute("data-mute-status", "unmuted");
+                this.innerHTML = '<img class="mute-icon" data-mute-status="unmuted" src="assets/images/game-interface-unmuted.svg" alt="Mute button">';
+            }
         }
+
+        setTimeout(muteButtonChange, 200);
     });
 
     // Start the game on click of start button
