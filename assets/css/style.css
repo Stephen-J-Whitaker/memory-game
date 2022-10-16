@@ -121,7 +121,12 @@ main {
     font-size: large;
     font-weight: 400;
     margin-top: 30px;
-    color: rgb(41, 41, 41);
+    color: var(--main-interface-colour);
+    outline: none;
+}
+
+.name-entry-input:focus {
+    box-shadow: 0 0 5px 1px var(--main-interface-colour);
 }
 
 .name-entry-button {
