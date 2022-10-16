@@ -2,17 +2,32 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     // Triggers dropdown of instructions on click
-    document.getElementById("instructions-button").addEventListener("click", () => {
+    document.getElementById("instructions-button").addEventListener("click", function() {
+        let instructionsButton = this;
+        //Make button look pressed down by styling border
+        this.classList.toggle("button");
+
+        setTimeout(function() {instructionsButton.classList.toggle("button");}, 200);
         document.getElementById("instructions").classList.toggle("hide-instructions");
     })
 
     //Show top ten modal when top ten button pressed
-    document.getElementById("top-ten-button").addEventListener("click", () => {
+    document.getElementById("top-ten-button").addEventListener("click", function() {
+        let topTenButton = this;
+        //Make button look pressed down by styling border
+        this.classList.toggle("button");
+
+        setTimeout(function() {topTenButton.classList.toggle("button");}, 200);
         document.getElementById("top-ten-modal").classList.toggle("display-none");
     })
 
     //Close top ten modal on press of "DONE" on the modal
-    document.getElementById("close-top-ten").addEventListener("click", () => {
+    document.getElementById("close-top-ten").addEventListener("click", function() {
+        let closeTopTenButton = this;
+        //Make button look pressed down by styling border
+        this.classList.toggle("button");
+
+        setTimeout(function() {closeTopTenButton.classList.toggle("button");}, 200);
         document.getElementById("top-ten-modal").classList.toggle("display-none");
     })
     
@@ -20,8 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("mute-button").addEventListener("click", function() {
         let muteButton = this;
         this.classList.toggle("button");
-
+ 
         let muteButtonChange = () => {
+            //Make button look pressed down by styling border
             muteButton.classList.toggle("button");
             if (this.getAttribute("data-mute-status") === "unmuted") {
                 console.log(this);

@@ -32,7 +32,7 @@
         <!-- Nav element used because a new area opens to obscure the game area making 
             opening the instructions a navigation function -->
         <nav class="instructions-bar game-width game-position">
-            <button id="instructions-button" class="button">
+            <button id="instructions-button" class="button button-down">
                 Show Instructions
             </button>
         </nav>
@@ -101,7 +101,7 @@
     </main>
     <!-- Footer -->
     <footer class="game-width game-position">
-        <button id="mute-button" class="mute-button mute-button-down button" data-mute-status="muted" aria-label="Mute button">
+        <button id="mute-button" class="mute-button button-down button" data-mute-status="muted" aria-label="Mute button">
             <!-- Mute and unmute buttons sourced from Font Awesome : https://fontawesome.com/ -->
             <img class="mute-icon" src="assets/images/game-interface-muted.svg" alt="Mute button">
         </button>
@@ -124,7 +124,7 @@
                 </tr>
             </table>
         </div>
-        <button id="close-top-ten" class="button">DONE</button>
+        <button id="close-top-ten" class="button-down button">Done</button>
     </section>
     <!-- Enter name modal -->
     <section id="name-entry-modal" class="name-entry-modal display-none">
@@ -136,7 +136,7 @@
         <!-- form added to handle validation -->
         <form class="name-entry-form" id="top-ten-name-form">
             <input type="text" id="player-name" class="name-entry-input" pattern="[A-Za-z\s]+" placeholder="Your Name" maxlength="15" title="The name should only contain letters" required>
-            <button id="submit-top-ten-name" class="name-entry-button button" type="submit">DONE</button>
+            <button id="submit-top-ten-name" class="name-entry-button button-down button" type="submit">DONE</button>
         </form>
     </section>
     <script src="assets/js/game-script.js"></script>
