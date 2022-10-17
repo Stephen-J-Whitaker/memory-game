@@ -451,7 +451,7 @@ function gameStart() {
             removeListeners();
             
             //Call game sequence to add another element to the array
-            setTimeout(gameSequence(), 200);
+            setTimeout(gameSequence, 500);
 
         // Else the player submitted the wrong answer so do the following
         } else {
