@@ -405,6 +405,16 @@ footer {
 
 }
 
+/* Add media query for narrow portrait screens */
+@media screen and (max-height: 450px) {
+
+    .entry-modal-input h2,
+    .entry-modal-input p {
+        margin: 0;
+    }
+
+}
+
 /* Add media query to handle mobile when landscape */
 @media screen and (max-height: 350px) and (orientation: landscape) {
     
