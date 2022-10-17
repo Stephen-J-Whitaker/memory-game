@@ -5,7 +5,7 @@
     --main-interface-colour: rgb(88, 88, 88);
     --game-interface-width: 50%;
     --button-background-colour: rgb(90, 90, 90);
-    --button-font-colour: rgba(204, 204, 204, 0.8);
+    --button-font-colour: rgba(226, 226, 226, 0.9);
     --dark-font-colour: rgb(70, 70, 70);
     /* Lato font imported from Google Fonts : https://fonts.google.com/ */
     --main-content-font-family: Arial, Lato, Helvetica, sans-serif;
@@ -33,7 +33,7 @@ body {
 
 h2,
 p {
-    color: rgb(61, 61, 61);
+    color: rgb(49, 49, 49);
 }
 
 h2 {
@@ -84,7 +84,7 @@ header {
     font-weight: 900;
     font-size: xx-large;
     text-align: center;
-    color: rgb(204, 204, 204);
+    color: rgba(230, 230, 230, 0.75);
 }
 
 /* Main styling */
