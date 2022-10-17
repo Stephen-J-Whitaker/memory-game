@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const topTen = [];
         let localStorageKey;
         let arrayCounter = 0;
-        const localStorageContent = [];
 
         topTen.length = 0;
 
@@ -262,7 +261,7 @@ function checkScore(finalScore) {
         document.getElementById("top-ten-name-form").addEventListener("submit", nameInput, {signal : abortSignal.signal});
         
         /**
-         * Act of the submission of the top ten player name
+         * Act on the submission of the top ten player name
          */
         function nameInput(thisEvent) {
             //Prevent default form action of call page
