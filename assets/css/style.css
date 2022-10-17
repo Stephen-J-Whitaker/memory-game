@@ -417,7 +417,7 @@ footer {
 }
 
 /* Add media query to handle mobile when landscape */
-@media screen and (max-height: 300px) and (orientation: landscape) {
+@media screen and (max-height: 200px) and (orientation: landscape) {
     
     .turn-screen-modal {
         display: flex;
