@@ -112,6 +112,7 @@ main {
     box-sizing: border-box;
     bottom: 75px;
     height: calc(100% - 100px - 75px);
+    overflow: auto;
 }
 
 .top-ten-header {
@@ -416,7 +417,7 @@ footer {
 }
 
 /* Add media query to handle mobile when landscape */
-@media screen and (max-height: 350px) and (orientation: landscape) {
+@media screen and (max-height: 300px) and (orientation: landscape) {
     
     .turn-screen-modal {
         display: flex;
