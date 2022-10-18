@@ -440,7 +440,7 @@ footer {
         bottom: auto;
     }
 
-    .top-ten-button
+    .top-ten-button,
     .name-entry-button {
         margin-bottom: 10px;
     }
