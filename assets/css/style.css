@@ -107,7 +107,7 @@ main {
     justify-content: center;
     position: absolute;
     background-color: grey;
-    z-index: 2;
+    z-index: 3;
     border: 3px outset rgb(138, 138, 138);
     box-sizing: border-box;
     bottom: 75px;
@@ -320,7 +320,7 @@ footer {
     height: 100%;
     width: 100%;
     background-color: var(--main-interface-colour);
-    z-index: 3;
+    z-index: 4;
     font-size: xx-large;
     text-align: center;
     font-family: var(--main-content-font-family);
@@ -429,4 +429,18 @@ footer {
         display: none;
     }
 
+}
+
+/* Add media query to handle very small screens */
+@media screen and (max-height: 750px) {
+
+    .top-ten-modal,
+    .name-entry-modal {
+        height: auto;
+        bottom: auto;
+    }
+
+    .top-ten-button {
+        margin-bottom: 10px;
+    }
 }
