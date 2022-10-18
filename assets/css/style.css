@@ -434,12 +434,15 @@ footer {
 /* Add media query to handle very small screens */
 @media screen and (max-height: 750px) {
 
-    .top-ten-modal,
-    .name-entry-modal {
+    .top-ten-modal {
         height: auto;
         bottom: auto;
     }
 
+    .name-entry-modal {
+        height: 100%;
+        bottom: auto;
+    }
     .top-ten-button,
     .name-entry-button {
         margin-bottom: 10px;
