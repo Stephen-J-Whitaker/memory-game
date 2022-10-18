@@ -403,7 +403,6 @@ footer {
         width: 50vw;
         right: calc((100% / 2) - (50vw / 2));
     }
-
 }
 
 /* Add media query for narrow portrait screens */
@@ -413,7 +412,6 @@ footer {
     .entry-modal-input p {
         margin: 0;
     }
-
 }
 
 /* Add media query to handle mobile when landscape */
@@ -428,21 +426,17 @@ footer {
     .instructions-content {
         display: none;
     }
-
 }
 
 /* Add media query to handle very small screens */
 @media screen and (max-height: 750px) {
 
+    .name-entry-modal,
     .top-ten-modal {
-        height: auto;
+        min-height: 100%;
         bottom: auto;
     }
 
-    .name-entry-modal {
-        height: 100%;
-        bottom: auto;
-    }
     .top-ten-button,
     .name-entry-button {
         margin-bottom: 10px;
