@@ -109,6 +109,9 @@ function startButton() {
     //Cover the start button with a blank without start written on it whilst in play
     setTimeout(function() {document.getElementById("start-blank").classList.toggle("visibility-hidden");}, 200);
 
+    //Show the current score
+    document.getElementById("current-score-container").classList.toggle("visibility-hidden");
+
     //Timeout set short to ensure IOS web audio remains unlocked after user interaction
     setTimeout(gameStart, 100);
 }
@@ -207,6 +210,9 @@ function checkScore(finalScore) {
     const abortSignal = new AbortController();
 
     let topTenTableRows = document.getElementsByTagName("tr");
+
+    //Hide the current score
+    document.getElementById("current-score-container").classList.toggle("visibility-hidden");
 
     // Pull the data from the current top ten table into an array 
     for (let i = 1; i < 11; ++i) {

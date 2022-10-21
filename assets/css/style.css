@@ -291,7 +291,7 @@ th {
     visibility: hidden;
 }
 
-/* Dont display component on click style */
+/* Dont display component */
 .display-none {
     display: none;
 }
