@@ -40,11 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
             //Make button look pressed down by styling border
             muteButton.classList.toggle("button");
             if (this.getAttribute("data-mute-status") === "unmuted") {
-                console.log(this);
                 this.setAttribute("data-mute-status", "muted");
                 this.innerHTML = '<img class="mute-icon" data-mute-status="muted" src="assets/images/game-interface-muted.svg" alt="Mute button">';
             } else {
-                console.log(this);
                 this.setAttribute("data-mute-status", "unmuted");
                 this.innerHTML = '<img class="mute-icon" data-mute-status="unmuted" src="assets/images/game-interface-unmuted.svg" alt="Mute button">';
             }
@@ -68,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // Prepopulate the top ten array in case no data in local storage
         for (let i = 0; i < 10; ++i) {
             topTen.push(["Empty Slot", 0]);
-            console.log(topTen);
         }
         
         // If there is any data in the local storage then retrieve it into topTen array
@@ -132,7 +129,6 @@ function tone(frequency, sound) {
     let volume = sound.createGain();
     //Set the gain value
     volume.gain.value = getMuteStatus();
-    console.log("current gain" + volume.gain.value);
 
     //Connect sound to the gain node
     tone.connect(volume);
@@ -197,7 +193,6 @@ function buildTopTen(topTen) {
             rowConstruct.appendChild(tableElements);
         }
         table[0].appendChild(rowConstruct); // Append the new table onto the top ten modal
-        console.log("build top ten");
     }
 }
 
@@ -216,19 +211,14 @@ function checkScore(finalScore) {
 
     // Pull the data from the current top ten table into an array 
     for (let i = 1; i < 11; ++i) {
-        console.log(topTenTableRows[i].getElementsByTagName("td")[1]);
         tableRow = [topTenTableRows[i].getElementsByTagName("td")[1].innerText, topTenTableRows[i].getElementsByTagName("td")[2].innerText];
         topTen.push(tableRow);
-        console.log(topTen);
     }
 
     // If the final score is greater than the lowest score from the old top then then replace
     // the lowest score and ask the user to enter their name
     if (finalScore > parseInt(topTen[9][1])) {
         topTen[9][1] = finalScore;
-        console.log(topTen[9][1]);
-        
-        console.log("get name");
 
         // Get the players name
         getName(); 
@@ -252,7 +242,6 @@ function checkScore(finalScore) {
      * Get the name of the person entering the top ten
      */
     function getName() {
-        console.log("in get name");
 
         // Display name entry modal
         document.getElementById("name-entry-modal").classList.toggle("display-none");
@@ -275,7 +264,6 @@ function checkScore(finalScore) {
                 alert("Please enter your name");
             } else {
                 topTen[9][0] = topTenName; // Add the new name to the score array
-                console.log(topTen);
 
                 //Remove the listener as no longer needed
                 abortSignal.abort(); 
@@ -283,10 +271,9 @@ function checkScore(finalScore) {
                 // Clear the name input box
                 document.getElementById("player-name").value = "";
 
-                //Sort the array with the new score
+                // Sort the array with the new score
                 // Semi colon reported missing in jshint but causes an error here if put in so is omitted
                 topTen.sort((a, b) => {return b[1] - a[1]});
-                console.log("Sorted array " + topTen);
 
                 //Update the top ten table
                 updateTopTenTable(topTen);
@@ -302,12 +289,6 @@ function checkScore(finalScore) {
             }
         }
     }
-    console.log("top ten " + topTen);
-    console.log("Hello from in checkscore");
-    console.log(finalScore);
-
-    console.log("top ten " + topTen);
-    console.log("final score " + finalScore);
 }
 
 /**
@@ -399,11 +380,9 @@ function gameStart() {
      * and responds appropriately
      */
     function checkAnswer() {
-        console.log(gameArray);
 
         //Clear the timout because a button was pressed
         clearTimeout(timeout);
-        console.log(this);
         let buttonPressed;
         switch (this.id) {
             case "yellow" :
@@ -420,24 +399,13 @@ function gameStart() {
                 break;
         }  
 
-        console.log(buttonPressed + " buttonPressed");
-
-        console.log("game array" + gameArray[counter].number);
-        console.log(counter + "counter");
-        console.log(gameArray.length + "game array length");
-
         // Hide and show button and play tone
         buttonPress(buttonPressed, sound);
 
         // If the random data in the game array is exactly equal to the button pressed and not at the end of the 
         // game array then do the following
         if ((parseInt(gameArray[counter].number) === buttonPressed.number) && (counter < (gameArray.length - 1))) {
-            console.log(counter + "counter");
             ++counter;
-
-            console.log(gameArray.length + "gamearray length");
-
-            console.log("correct button pressed and but not at end of array");
 
             //Set a timeout to end game if no user input for 10 seconds
             timeout = setTimeout(gameTimeout, 10000);
@@ -450,7 +418,6 @@ function gameStart() {
             //Update the score
             setScore(++score);
 
-            console.log("correct button pressed and at end of array");
             //remove coloured button listeners as about to run a game sequence and no buttons are to be pressed
             removeListeners();
             
@@ -460,11 +427,8 @@ function gameStart() {
         // Else the player submitted the wrong answer so do the following
         } else {
             
-            console.log("user input" + buttonPressed.number);
             //Remove listeners
             removeListeners();
-
-            console.log("game end due to wrong answer " + score);
 
             //Check the final score against score board
             setTimeout(checkScore(score), 300);
@@ -476,7 +440,6 @@ function gameStart() {
      */
     function gameTimeout() {
 
-        console.log("Timeout called : counter " + counter);
         //Remove the listeners for the coloured buttons
         removeListeners();
         
