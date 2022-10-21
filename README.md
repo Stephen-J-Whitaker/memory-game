@@ -2,19 +2,32 @@
 
 ![Responsive mockup]()
 
-# **Contents**
+## **Contents**
 
 1 [Project Initiation](#1-project-initiation)
+
 2 [Game Development](#2-game-development)
+
 3 [Features](#3-features)
+
 4 [Testing](#4-testing)
+
 5 [Project Sign Off](#5-project-sign-off)
+
 6 [Releases](#6-releases)
+
 7 [Deployment](#7-deployment)
+
 8 [Technologies Use](#8-technologies-used)
+
 9 [Credits](#9-credits)
 
 ## **1. Project Initiation**
+1. User stories
+2. User story acceptance criteria
+3. Features
+4. Feature acceptance criteria
+
 
 ## **2. Game Development**
 - ### **Game Functionalilty Development**

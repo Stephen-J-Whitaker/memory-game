@@ -65,8 +65,6 @@ document.addEventListener("DOMContentLoaded", function() {
         let localStorageKey;
         let arrayCounter = 0;
 
-        topTen.length = 0;
-
         // Prepopulate the top ten array in case no data in local storage
         for (let i = 0; i < 10; ++i) {
             topTen.push(["Empty Slot", 0]);
