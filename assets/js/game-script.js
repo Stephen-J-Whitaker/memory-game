@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", function() {
         //Make button look pressed down by styling border
         this.classList.toggle("button");
 
+        if (this.innerText === "Show Instructions") {
+            this.innerText = "Hide Instructions"
+        } else {
+            this.innerText = "Show Instructions"
+        } 
+
         setTimeout(function() {instructionsButton.classList.toggle("button");}, 200);
         document.getElementById("instructions").classList.toggle("hide-instructions");
     });
