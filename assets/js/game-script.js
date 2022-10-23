@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
         this.classList.toggle("button");
 
         if (this.innerText === "Show Instructions") {
-            this.innerText = "Hide Instructions"
+            this.innerText = "Hide Instructions";
         } else {
-            this.innerText = "Show Instructions"
+            this.innerText = "Show Instructions";
         } 
 
         setTimeout(function() {instructionsButton.classList.toggle("button");}, 200);
@@ -90,7 +90,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Sort the top ten array
-        // Semi colon reported missing in jshint but causes an error here if put in so is omitted
         topTen.sort(function (a, b) {return b[1] - a[1]});
 
         // Call function to build the top ten table on the top ten modal
@@ -281,7 +280,6 @@ function checkScore(finalScore) {
                 document.getElementById("player-name").value = "";
 
                 // Sort the array with the new score
-                // Semi colon reported missing in jshint but causes an error here if put in so is omitted
                 topTen.sort((a, b) => {return b[1] - a[1]});
 
                 //Update the top ten table
