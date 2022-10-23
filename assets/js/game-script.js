@@ -215,6 +215,9 @@ function checkScore(finalScore) {
     //Hide the current score
     document.getElementById("current-score-container").classList.toggle("visibility-hidden");
 
+    // Reset the current score to 0 ready for next game
+    setScore(0);
+
     // Pull the data from the current top ten table into an array 
     for (let i = 1; i < 11; ++i) {
         tableRow = [topTenTableRows[i].getElementsByTagName("td")[1].innerText, topTenTableRows[i].getElementsByTagName("td")[2].innerText];
