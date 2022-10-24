@@ -31,7 +31,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
 ## **1. Project Initiation**
 - [User Stories](docs/pdfs/readme-user-stories.pdf)
-- [User story acceptance criteria](docs/pdfs/readme-user-story-acceptance-criteria.pdf)
+- [User stories acceptance criteria](docs/pdfs/readme-user-stories-acceptance-criteria.pdf)
 - Features
 - Feature acceptance criteria
 
