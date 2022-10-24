@@ -66,6 +66,14 @@ The game is extremely easy to learn for those who are new to it and the combinat
       
       The SVG 'Start' button for the game uses the font 'Eras Bold ITC' sourced from within [Corel Draw](https://www.coreldraw.com/en/). The font is embedded as 'curves' in the SVG of the button to ensure it's always correctly positioned and scaled relative to the start button when the interface resizes in response to different screen sizes. It also removes the necessity to import the entire font into the site or create an additional external dependency. 
 
+  - ### Colour Scheme
+
+     The colour scheme for the site components was selected such that the button interface, consisting of a vibrant yellow, red, blue and green button would not clash with the other components of the site. Tones of grey are used for the site giving it a ‘clean’, modern and familiar appearance. 
+     
+     The header and footer have been given a linear gradient to give it the appearance of curved metal to give the site depth and the background for the main game interface is given a brushed metal appearance with linear gradient to complement the header and the footer. The metallic finish is intended to modernise the game slightly and add interest for the user. The site was designed with a mobile first approach and the game interface design helps ’transform’ the user phone appearance from their phone into ‘Memory Game’ helping to immerse them in the experience of playing it.
+
+    The colour of the font was chosen such that should linear gradient fail and fall back to grey, the site would retain maximum accessibility with sufficient contrast between the text and the background colour. The linear gradients and text were arranged such that text on top of the linear gradient would always positioned where contrast between background and text would always ensure maximum accessibility.
+
   - ### Layout
   - ### User feedback
 
