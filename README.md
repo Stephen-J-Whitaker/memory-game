@@ -30,10 +30,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
 9 [Credits](#9-credits)
 
 ## **1. Project Initiation**
-- [User Stories](docs/pdfs/readme-user-stories.pdf)
+- [User Stories and features](docs/pdfs/readme-user-stories.pdf)
 - [User stories acceptance criteria](docs/pdfs/readme-user-stories-acceptance-criteria.pdf)
-- Features
-- Feature acceptance criteria
+- [Features acceptance criteria](docs/pdfs/readme-features-acceptance-criteria.pdf)
 
 ## **2. Game Development**
 - ### **Game Functionalilty Development**
