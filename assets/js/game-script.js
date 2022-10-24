@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Sort the top ten array
-        topTen.sort(function (a, b) {return b[1] - a[1]});
+        topTen.sort(function (a, b) {return b[1] - a[1];});
 
         // Call function to build the top ten table on the top ten modal
         buildTopTen(topTen);
@@ -280,7 +280,7 @@ function checkScore(finalScore) {
                 document.getElementById("player-name").value = "";
 
                 // Sort the array with the new score
-                topTen.sort((a, b) => {return b[1] - a[1]});
+                topTen.sort((a, b) => {return b[1] - a[1];});
 
                 //Update the top ten table
                 updateTopTenTable(topTen);
