@@ -93,6 +93,32 @@ The game is extremely easy to learn for those who are new to it and the combinat
       The icons for the mute/unmute button were taken from [Font Awesome]( https://fontawesome.com/). They are SVG files referenced using the HTML ‘img’ element. The images are a familiar metaphor that will easily be identified as a mute/unmute button by the user.
 
   - ### Layout
+
+    - Header and Footer
+
+      The site is laid out in a traditional way with a header and footer that will be familiar to the user despite the fact its styled to look like a physical interface. 
+
+    - Instructions Dropdown
+    
+      The 'Instructions' dropdown is easy to find and is just below the header in a location that is commonly used for navigation elements. This should again be familiar to the user and help to make the site intuitive to use.
+
+    - Game Interface
+    
+      The main section of the site is the game interface and related item, the current score (when visible during play) and the button to activate the top ten modal.
+
+    - Mute/Unmute Button
+    
+      The footer holds the mute/unmute button as this is not a game feature as such, even though it mutes the game sound, it is considered an interface feature but not being a navigation item is believed to be more appropriately placed in the footer.
+
+    - Top Ten and Name Entry Modals
+
+      When visible, the top ten and name entry modals are positioned to intentionally obscure and prevent interaction with the game interface and Instructions drop down as using these at the same time as the modals is deemed unnecessary. The mute/unmute button can be visible and can be interacted with depending on the screen size. 
+    
+    - Responsiveness
+    
+      The layout is responsive and all elements resize in order to fit the screen on which they are displayed. The game is generally not compatible with landscape mobile devices with a small height and in these cases a modal requesting that the device be turned portrait is displayed.
+
+
   - ### User feedback
 
 ## **3. Features**
