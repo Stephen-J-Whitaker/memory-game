@@ -73,6 +73,24 @@ The game is extremely easy to learn for those who are new to it and the combinat
      The header and footer have been given a linear gradient to give it the appearance of curved metal to give the site depth and the background for the main game interface is given a brushed metal appearance with linear gradient to complement the header and the footer. The metallic finish is intended to modernise the game slightly and add interest for the user. The site was designed with a mobile first approach and the game interface design helps ’transform’ the user phone appearance from their phone into ‘Memory Game’ helping to immerse them in the experience of playing it.
 
     The colour of the font was chosen such that should linear gradient fail and fall back to grey, the site would retain maximum accessibility with sufficient contrast between the text and the background colour. The linear gradients and text were arranged such that text on top of the linear gradient would always positioned where contrast between background and text would always ensure maximum accessibility.
+      
+  - ### Images / Interface
+
+     All images used on the site are scalable vector graphics (SVG) to ensure that they remain sharp at all screen resolutions and sizes.
+     
+    - Favicon
+
+      ![Favicon](favicon.ico)
+      
+      The favicon for the site is a copy of the button interface to help add to the identity of the site. An SVG version of the favicon is available for browsers that support it to ensure the best possible image on high resolution screens. A standard favicon.ico is the fallback for the SVG version. The SVG and ICO favicons both have transparent backgrounds to ensure the colour scheme of the browser shows through where the circular button interface image isn’t present.
+
+    - Game pad
+
+      The SVG for the button interface is embedded in the html to ensure that it is fully accessible and manipulatable as part of the DOM. The site requires that the SVG be manipulated with both CSS and Javascript. Being part of interface it is also believed to be appropriate that it is embedded in the HTML in the correct location rather than referenced from elsewhere in the html in a separate ‘SVG’ specific area.
+    
+    - Mute/Unmute Button
+
+      The icons for the mute/unmute button were taken from [Font Awesome]( https://fontawesome.com/). They are SVG files referenced using the HTML ‘img’ element. The images are a familiar metaphor that will easily be identified as a mute/unmute button by the user.
 
   - ### Layout
   - ### User feedback
