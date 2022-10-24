@@ -30,14 +30,23 @@ The game is extremely easy to learn for those who are new to it and the combinat
 9 [Credits](#9-credits)
 
 ## **1. Project Initiation**
-- [User Stories and features](docs/pdfs/readme-user-stories.pdf)
-- [User stories acceptance criteria](docs/pdfs/readme-user-stories-acceptance-criteria.pdf)
-- [Features acceptance criteria](docs/pdfs/readme-features-acceptance-criteria.pdf)
+- User stories
+  
+  User stories were ascertained for the game along with the features required to satisfy the user stories. A feature list was developed that covered all of the user stories requirements and it was ensured that their was was no duplicated feature functionailty going into development.
+  - [User Stories](docs/pdfs/readme-user-stories.pdf)
+  - [User stories acceptance criteria](docs/pdfs/readme-user-stories-acceptance-criteria.pdf)
+  - [Feature list with acceptance criteria](docs/pdfs/readme-features-acceptance-criteria.pdf)
 
 ## **2. Game Development**
 - ### **Game Functionalilty Development**
 
-    - ### Wireframes
+    - ### Mockups
+       Mockups for the game were developed that incorporated all of the features identified during project initiation. 
+       
+       -  [Mobile mockups](docs/pdfs/readme-mobile-mockups.pdf)
+       -  [Tablet mockups](docs/pdfs/readme-tablet-mockups.pdf)
+       -  [Desktop mockups](docs/pdfs/readme-desktop-mockups.pdf)
+       -  [User interface flow](docs/pdfs/readme-user-interface-flow.pdf)
 
 - ### **Game Style Development**
 - ### Typography
