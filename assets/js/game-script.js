@@ -208,6 +208,16 @@ function checkScore(finalScore) {
     const topTen = [];
     let tableRow = [];
     const abortSignal = new AbortController();
+    
+    /**
+     * Commiserate player as not on the top ten
+     */
+        function commiserate() {
+        alert("Sorry to say you didn't make it to the top ten this time");
+
+        // Unblank start button
+        document.getElementById("start-blank").classList.toggle("visibility-hidden");
+    }
 
     let topTenTableRows = document.getElementsByTagName("tr");
 
@@ -234,16 +244,6 @@ function checkScore(finalScore) {
 
         //Call commiserate player from set timeout so happens after button flashed
         setTimeout(commiserate, 500);
-
-        /**
-         * Commiserate player as not on the top ten
-         */
-        function commiserate() {
-            alert("Sorry to say you didn't make it to the top ten this time");
-
-            // Unblank start button
-            document.getElementById("start-blank").classList.toggle("visibility-hidden");
-        }
     }
 
     /**
