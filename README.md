@@ -42,7 +42,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 ## **2. Game Development**
 - ### **Game Functionality Development**
 
-    - ### Mockups
+    - ### Interface Mockups
        Mockups for the game were developed that incorporated all of the features identified during project initiation. 
        
        -  [Mobile mockups](docs/pdfs/readme-mobile-mockups.pdf)
@@ -86,7 +86,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     - Game pad
 
-      The SVG for the button interface is embedded in the html to ensure that it is fully accessible and manipulatable as part of the DOM. The site requires that the SVG be manipulated with both CSS and Javascript. Being part of interface it is also believed to be appropriate that it is embedded in the HTML in the correct location rather than referenced from elsewhere in the html in a separate ‘SVG’ specific area.
+      The SVG for the button interface is embedded in the html to ensure that it is fully accessible and manipulatable as part of the DOM. The site requires that the SVG be manipulated with both CSS and JavaScript. Being part of interface it is also believed to be appropriate that it is embedded in the HTML in the correct location rather than referenced from elsewhere in the html in a separate ‘SVG’ specific area.
     
     - Mute/Unmute Button
 
@@ -117,16 +117,21 @@ The game is extremely easy to learn for those who are new to it and the combinat
     - Responsiveness
     
       The layout is responsive and all elements resize in order to fit the screen on which they are displayed. The game is generally not compatible with landscape mobile devices with a small height and in these cases a modal requesting that the device be turned portrait is displayed.
-
-
+  
   - ### User feedback
+
+- ### **JavaScript Logic / Game Algorithm Development**
+
+     An outline plan for the JavaScript code was produced containing some pseudo code. The code evolved during development but the structure remained largely the same as planned.
+
+    - [JavaScript pseudo code](docs/pdfs/readme-javascript-pseudo-code.pdf)
 
 ## **3. Features**
 ## **4. Testing**
 - ### **Code Validation**
 - #### **HTML Validation**
 - #### **CSS Validation**
-- #### **Javascript Validation**
+- #### **JavaScript Validation**
 - ### **Performance Tests**
 - ### **Functionality Tests**
 
