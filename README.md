@@ -120,6 +120,12 @@ The game is extremely easy to learn for those who are new to it and the combinat
   
   - ### User feedback
 
+    In line with the design ethos of keeping the game retro in style buttons are styled to look like physical push buttons. The user knows that the button has been pressed either by the fact that a change in the interface takes place, such as a modal closes or the instructions dropdown opens, for example, or by a momentary change in the appearance of the button that was clicked. 
+
+    In the case of the mute/unmute button, the ‘outset’ border is momentarily replaced with a solid border to make it look like the button is fully pushed within a recess when clicked. The symbol on the mute button also changes to indicate a change in mute state as feedback that the request to mute or unmute has been successful.
+
+    In the case of the coloured and start buttons, the top button SVG is momentarily hidden on click to reveal a smaller version underneath. This gives the button the appearance of being pressed in. The smaller momentarily revealed coloured buttons are also a brighter colour so they appear lit up when clicked and, if the game is unmuted, the click event triggers a tone which is a game feature but also acts as feedback to the user of a successfully administered ‘click’.
+
 - ### **JavaScript Logic / Game Algorithm Development**
 
      An outline plan for the JavaScript code was produced containing some pseudo code. The code evolved during development but the structure remained largely the same as planned.
