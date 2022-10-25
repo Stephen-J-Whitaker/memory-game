@@ -176,10 +176,12 @@ The game is extremely easy to learn for those who are new to it and the combinat
     Clicking the button, or touching it on a touch sensitive device, triggers a JavaScript class toggle triggers resulting in a transition that ‘slides’ the instruction panel open. The instruction panel, like the rest of the site, is responsive. Should the panel become too small to house the text on a particular screen, the text becomes scrollable and smaller on small screens. The instructions are part of the index.html page and as such opening and closing the panel does not trigger a page refresh. This design choice was made to add to the enjoyment and simplicity of using the site. It also adds to the site cohesion by keeping all functionality within one page adding to the effect of it appearing to be a physical device.
 
     - Closed Instruction dropdown bar
-    ![Closed Instructions](docs/images/readme-closed-Instructions.jpg)
+
+      ![Closed Instructions](docs/images/readme-closed-Instructions.jpg)
 
     - Open Instructions dropdown bar
-    ![Open Instructions](docs/images/readme-open-instructions.jpg)
+
+      ![Open Instructions](docs/images/readme-open-instructions.jpg)
 
 ## **4. Testing**
 - ### **Code Validation**
