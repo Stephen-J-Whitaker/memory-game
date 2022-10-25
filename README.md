@@ -35,6 +35,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 - User stories
   
   User stories were ascertained for the game along with the features required to satisfy the user stories. A feature list was developed that covered all of the user stories requirements and it was ensured that there was no duplicated feature functionality going into development.
+
   - [User Stories](docs/pdfs/readme-user-stories.pdf)
   - [User stories acceptance criteria](docs/pdfs/readme-user-stories-acceptance-criteria.pdf)
   - [Feature list with acceptance criteria](docs/pdfs/readme-features-acceptance-criteria.pdf)
@@ -44,6 +45,8 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     - ### Interface Mockups
        Mockups for the game were developed that incorporated all of the features identified during project initiation. 
+
+       The site design was developed to incorporate the features such that the use of the interface would be intuitive to a new user. All functionality is present within a single html page and is easy to find.
        
        -  [Mobile mockups](docs/pdfs/readme-mobile-mockups.pdf)
        -  [Tablet mockups](docs/pdfs/readme-tablet-mockups.pdf)
@@ -122,7 +125,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     In line with the design ethos of keeping the game retro in style buttons are styled to look like physical push buttons. The user knows that the button has been pressed either by the fact that a change in the interface takes place, such as a modal closes or the instructions dropdown opens, for example, or by a momentary change in the appearance of the button that was clicked. 
 
-    In the case of the mute/unmute button, the ‘outset’ border is momentarily replaced with a solid border to make it look like the button is fully pushed within a recess when clicked. The symbol on the mute button also changes to indicate a change in mute state as feedback that the request to mute or unmute has been successful.
+    In the case of the mute/unmute button and the Instructions Show/Hide buttons, the ‘outset’ border is momentarily replaced with a solid border to make it look like the button is fully pushed within a recess when clicked. The symbol on the mute button also changes to indicate a change in mute state as feedback that the request to mute or unmute has been successful. In the case of the instructions dropdown and in addition to the button style change, the button text toggles between Show Instructions and Hide Instructions, as appropriate, and the instructions drop down opens and closes.
 
     In the case of the coloured and start buttons, the top button SVG is momentarily hidden on click to reveal a smaller version underneath. This gives the button the appearance of being pressed in. The smaller momentarily revealed coloured buttons are also a brighter colour so they appear lit up when clicked and, if the game is unmuted, the click event triggers a tone which is a game feature but also acts as feedback to the user of a successfully administered ‘click’.
 
@@ -133,6 +136,24 @@ The game is extremely easy to learn for those who are new to it and the combinat
     - [JavaScript pseudo code](docs/pdfs/readme-javascript-pseudo-code.pdf)
 
 ## **3. Features**
+
+  Features are combined and arranged within the game site in the way that was considered to be the most efficient and intuitive manner. Links to the feature list with acceptance criteria are provided. Multiple user stories are dependent on each of the features below and links to the dependent user stories and their respective acceptance criteria are provided.
+
+  - Landing Page [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game Landing Page' (ID 1)]
+
+    - The 'Game Landing Page' [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of all the [user stories](docs/pdfs/readme-user-stories.pdf)
+    - Implemented in [index.html](index.html)
+
+    The game landing page (home page) is the users welcome to the site. It is designed to have the appearance of a physical, retro game and the bright colourful buttons are intended to be eye catching and stimulate the curiosity of the site visitor. 
+
+    The styled buttons on the site are again intended to appeal to the visitor’s curiosity. Clicking the buttons and exploring the interactions with the site that are possible is part of the fun of using it. 
+  
+    The page is uncluttered and simple so as not to overwhelm the user and also to ensure that it is as intuitive to use as possible and quick to 'pick up and play' for returners to the site. The site has only one html page and so all functionality is provided by index.html meaning that navigation is simple and fast adding to the users enjoyment of the site.
+
+    The landing page is responsive and rescales for the screen it is loaded onto. It was designed with a mobile first approach and gives the appearance of transforming the users mobile phone, into a retro, standalone memory game.
+
+    ![Game Landing Page](docs/images/readme-game-landing-page.jpg)
+
 ## **4. Testing**
 - ### **Code Validation**
 - #### **HTML Validation**
