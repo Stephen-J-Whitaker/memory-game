@@ -139,7 +139,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
   Features are combined and arranged within the game site in the way that was considered to be the most efficient and intuitive manner. Links to the feature list with acceptance criteria are provided. Multiple user stories are dependent on each of the features below and links to the dependent user stories and their respective acceptance criteria are provided.
 
-  - Landing Page [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game Landing Page' (ID 1)]
+  - Landing Page [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game Landing Page' (ID 1)]
 
     - The 'Game Landing Page' [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of all the [user stories](docs/pdfs/readme-user-stories.pdf)
     - Implemented in [index.html](index.html)
@@ -153,6 +153,21 @@ The game is extremely easy to learn for those who are new to it and the combinat
     The landing page is responsive and rescales for the screen it is loaded onto. It was designed with a mobile first approach and gives the appearance of transforming the users mobile phone, into a retro, standalone memory game.
 
     ![Game Landing Page](docs/images/readme-game-landing-page.jpg)
+
+  - Instructions Dropdown [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Instructions' (ID 3)]
+
+    -  The 'Instructions' (ID 3) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1 and 3](docs/pdfs/readme-user-stories.pdf).
+    - Implemented in [index.html](index.html)
+
+    The instructions panel provides a concise, easy to read and follow set of instructions for new users of the game although it is quickly accessible should a returning player need a reminder of how to play.
+
+    The instructions bar is the only nav section of the site. The button on the instructions dropdown bar uses to site wide common button style and using JavaScript class toggle triggers a transition that ‘slides’ the instruction panel open. The instruction panel, like the rest of the site, is responsive. Should the panel become too small to house the text on a particular screen, the text becomes scrollable. The instructions are part of the index.html page and as such opening and closing the panel does not trigger a page refresh. This design choice was made to add to the enjoyment and simplicity of using the site. It also adds to the site cohesion by keeping all functionality within one page adding to the effect of it appearing to be a physical device.
+
+    - Closed Instruction dropdown bar
+    ![Closed Instructions](docs/images/readme-closed-Instructions.jpg)
+
+    - Open Instructions dropdown bar
+    ![Open Instructions](docs/images/readme-open-instructions.jpg)
 
 ## **4. Testing**
 - ### **Code Validation**
