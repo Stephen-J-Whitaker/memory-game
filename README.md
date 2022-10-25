@@ -154,11 +154,13 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     ![Game Landing Page](docs/images/readme-game-landing-page.jpg)
 
-      - Header
+      - Header and Logo
 
         The header’s function is to immediately inform the site visitor that the site is a memory game. The use of the header is to conform with current web practices and feel familiar to the user to help them feel at ease when interacting with the site.
 
-        The logo is eye catching and bold and the Orbitron font from [Google Fonts](https://fonts.google.com/) was selected to give the site a retro game appearance. The background of the header is a linear gradient to give the appearance of curved metal adding to the effect of appearing like a physical retro game. The header is responsive to fit onto different screen sizes and the logo slightly reduces in size on smaller screens.
+        The header has an outset border to make it appear 3D standing out from device. The background of the header has a linear gradient to give the appearance of curved metal adding to the effect of appearing like a 3D physical retro game. The header is responsive to fit onto different screen sizes and the logo slightly reduces in size on smaller screens.
+
+        The logo is bold and eye catching and the Orbitron font from [Google Fonts](https://fonts.google.com/) was selected to give the site a retro game appearance. The font is off white which is aesthetically pleasing and is positioned within the linear gradient of the background such that there is always sufficient contrast between the background and the text for the necessary levels of accessibility.
 
         ![Header](docs/images/readme-header.jpg)
 
@@ -169,7 +171,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     The instructions panel provides a concise, easy to read and follow set of instructions for new users of the game although it is quickly accessible should a returning player need a reminder of how to play.
 
-    The instructions bar is the only nav section of the site. The button on the instructions dropdown bar uses to site wide common button style and using JavaScript class toggle triggers a transition that ‘slides’ the instruction panel open. The instruction panel, like the rest of the site, is responsive. Should the panel become too small to house the text on a particular screen, the text becomes scrollable and smaller on small screens. The instructions are part of the index.html page and as such opening and closing the panel does not trigger a page refresh. This design choice was made to add to the enjoyment and simplicity of using the site. It also adds to the site cohesion by keeping all functionality within one page adding to the effect of it appearing to be a physical device.
+    The instructions bar is the only nav section of the site. The button on the instructions dropdown bar uses to site wide common button style appearing like a push button that by momentarily replacing its outset border with a border appears to be pushed into a recess in response to an on click event. 
+    
+    Clicking the button, or touching it on a touch sensitive device, triggers a JavaScript class toggle triggers resulting in a transition that ‘slides’ the instruction panel open. The instruction panel, like the rest of the site, is responsive. Should the panel become too small to house the text on a particular screen, the text becomes scrollable and smaller on small screens. The instructions are part of the index.html page and as such opening and closing the panel does not trigger a page refresh. This design choice was made to add to the enjoyment and simplicity of using the site. It also adds to the site cohesion by keeping all functionality within one page adding to the effect of it appearing to be a physical device.
 
     - Closed Instruction dropdown bar
     ![Closed Instructions](docs/images/readme-closed-Instructions.jpg)
