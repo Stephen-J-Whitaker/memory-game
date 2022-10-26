@@ -139,7 +139,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
   Features are combined and arranged within the game site in the way that was considered to be the most efficient and intuitive manner. Links to the feature list with acceptance criteria are provided. Multiple user stories are dependent on each of the features below and links to the dependent user stories and their respective acceptance criteria are provided.
 
-  - Landing Page [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game Landing Page' (ID 1)]
+  - ### **Landing Page** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game Landing Page' (ID 1)]
 
     - The 'Game Landing Page' [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of all the [user stories](docs/pdfs/readme-user-stories.pdf)
     - Implemented in [index.html](index.html)
@@ -154,7 +154,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     ![Game Landing Page](docs/images/readme-game-landing-page.jpg)
 
-      - Header and Logo
+      - **Header and Logo**
 
         The header’s function is to immediately inform the site visitor that the site is a memory game. The use of the header is to conform with current web practices and feel familiar to the user to help them feel at ease when interacting with the site.
 
@@ -164,7 +164,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
         ![Header](docs/images/readme-header.jpg)
 
-  - Instructions Dropdown [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Instructions' (ID 3)]
+  - ### **Instructions Dropdown** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Instructions' (ID 3)]
 
     -  The 'Instructions' (ID 3) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1 and 3](docs/pdfs/readme-user-stories.pdf).
     - Implemented in [index.html](index.html)
@@ -182,6 +182,25 @@ The game is extremely easy to learn for those who are new to it and the combinat
     - Open Instructions dropdown bar
 
       ![Open Instructions](docs/images/readme-open-instructions.jpg)
+
+  - ### **Top Ten** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Top Ten Scores' (ID 4)]
+
+    - The 'Top Ten Scores' (ID 4) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
+    - Implemented in [index.html](index.html)
+
+    The ‘Top Ten Scores’ feature is a way for the user to keep track of their progress and compare their successes with those of others who have played the game in the same browser. This adds to the fun of the game and also makes it more likely that the player will return to the game as they can compete and attempt to better their position in the table.
+
+    The top ten button is prominently positioned, easy to recognise as a button, being styled like a physical push button and provides intuitive, quick access to the top ten table. The feedback to the user of a successful click of the button is the fact that the top ten modal opens.
+
+    ![Top Ten Button](docs/images/readme-top-ten-button.jpg)
+
+    The top ten modal contains the top ten highest scores achieved within the browser. It is populated with data from the local storage of the browser on navigating to the game. If the local storage of the browser is cleared then the top ten table resets.
+
+    The top ten modal is responsive and resizes as appropriate for the screen on which the game is being played. On all but the smallest screens sizes it was deemed most aesthetically pleasing to have the modal positioned and scale to leave the header and footer showing. On small screens where this is not possible the modal fills the screen.
+
+    ![Top Ten Modal](docs/images/readme-top-ten-modal.jpg)
+
+
 
 ## **4. Testing**
 - ### **Code Validation**
