@@ -206,7 +206,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
     - SVG Buttons pad implemented inline in [index.html](index.html)
     - Game algorithm implemented in [game-script.js](assets/js/game-script.js)
 
-    The game feature is the main function of the site. It provides the button pad and the algorithm required for the player to play the game.
+    The game feature is the main function of the site. It provides the button pad and the algorithm required for the player to play the memory game.
 
     #### **SVG Game Button Pad**
 
@@ -227,12 +227,26 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     All of the SVG clickable buttons have a role attribute with the value ‘button’ and an aria label to describe them in the event that the site is being used with screen reading technology, maximising accessibility.
 
+    The game pad is respinsive and rescales as necessary to fit the screen on which it is viewed. It will always retain the same shape and arrangement of the buttons as this is a key design feature of the game and helps the game retain its identity when viewed on devices of different sizes. 
+
     - **Game pad during play**
 
-    ![Game pad during play](docs/images/readme-button-pad-in-play.jpg)
+       ![Game pad during play](docs/images/readme-button-pad-in-play.jpg)
 
     #### **Game Algorithm**
 
+    The game algorithm is entirely implemented in JavaScript. It manipulates the SVG in the DOM and reads ‘click’ events that take place on the game button pad in order to implement the game. 
+
+
+    The game is simple and easy to learn for the uninitiated and fast to pick up and play for new players.
+
+
+    The game plays a tone and ‘flashes’ one of the buttons. When this flash is copied correctly by the player pressing the same button that was flashed, then another random button and corresponding tone is added to the sequence. If the player copies the whole sequence correctly then another button and tone is added and so on.
+
+    If the player doesn't copy the sequence correctly then the game ends and the score is passed to the check score algorithm.
+
+
+    If the player doesn’t press a coloured button within 10 the second timeout the game ends and the score is passed to the check score algorithm. 
 
 
 ## **4. Testing**
@@ -258,10 +272,15 @@ The game is extremely easy to learn for those who are new to it and the combinat
 ## **9. Credits**
 - ### **Content**
 
-- ### **External Dependencies**
+Font Awsome
+Google Fonts
 
 - ### **Other Sources**
 
 - ### **Acknowledgements**
+
+Inspired by simon game
+A special thank you to my mentor Maranatha Ilesanmi
+Thank you to all those who were kind enough to test the website and provide feedback
 
 ## [Back To Top](#Contents)
