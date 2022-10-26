@@ -175,11 +175,11 @@ The game is extremely easy to learn for those who are new to it and the combinat
     
     Clicking the button, or touching it on a touch sensitive device, triggers a JavaScript class toggle triggers resulting in a transition that ‘slides’ the instruction panel open. The instruction panel, like the rest of the site, is responsive. Should the panel become too small to house the text on a particular screen, the text becomes scrollable and smaller on small screens. The instructions are part of the index.html page and as such opening and closing the panel does not trigger a page refresh. This design choice was made to add to the enjoyment and simplicity of using the site. It also adds to the site cohesion by keeping all functionality within one page adding to the effect of it appearing to be a physical device.
 
-    - Closed Instruction dropdown bar
+    - **Closed Instruction dropdown bar**
 
       ![Closed Instructions](docs/images/readme-closed-Instructions.jpg)
 
-    - Open Instructions dropdown bar
+    - **Open Instructions dropdown bar**
 
       ![Open Instructions](docs/images/readme-open-instructions.jpg)
 
@@ -199,6 +199,39 @@ The game is extremely easy to learn for those who are new to it and the combinat
     The top ten modal is responsive and resizes as appropriate for the screen on which the game is being played. On all but the smallest screens sizes it was deemed most aesthetically pleasing to have the modal positioned and scale to leave the header and footer showing. On small screens where this is not possible the modal fills the screen.
 
     ![Top Ten Modal](docs/images/readme-top-ten-modal.jpg)
+
+  - ### **The Game** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game' (ID 4)]
+
+    - The 'Game' (ID 4) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
+    - SVG Buttons pad implemented inline in [index.html](index.html)
+    - Game algorithm implemented in [game-script.js](assets/js/game-script.js)
+
+    The game feature is the main function of the site. It provides the button pad and the algorithm required for the player to play the game.
+
+    #### **SVG Game Button Pad**
+
+    The button pad is a scalable vector graphic (SVG) produced in [Corel Draw](https://www.coreldraw.com/en/). The buttons are inspired by those of the ‘Simon’ game that originated in the 70s. There are four brightly coloured buttons that cover four slightly smaller version of the buttons that are a brighter tone of the same colour. In the centre of the button pad there is a start button that covers a slightly smaller version of the button. 
+
+    - **Button pad before game starts**
+
+       ![Game button pad](docs/images/readme-button-pad.jpg)
+
+    On occurrence of an on click event the top button that is clicked is hidden for a short period exposing the smaller version underneath creating the effect that is being pushed in and, in the case of the coloured buttons, lighting up due to the fact that the lower button is a brighter version of the same colour.
+
+
+    There is a third circle in the middle of the SVG button pad that is made visible and ‘blanks’ the start button during game play to prevent start being re-pressed.
+
+
+    For full access to the SVG in the document object model (DOM) with JavaScript and CSS, the SVG is embedded inline in the HTML. The SVG button pad was built in layers for easy identification, manipulation and styling of the various buttons when within the DOM.
+
+
+    All of the SVG clickable buttons have a role attribute with the value ‘button’ and an aria label to describe them in the event that the site is being used with screen reading technology, maximising accessibility.
+
+    - **Game pad during play**
+
+    ![Game pad during play](docs/images/readme-button-pad-in-play.jpg)
+
+    #### **Game Algorithm**
 
 
 
