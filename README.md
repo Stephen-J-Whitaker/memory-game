@@ -148,21 +148,29 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     The styled buttons on the site are again intended to appeal to the visitor’s curiosity. Clicking the buttons and exploring the interactions with the site that are possible is part of the fun of using it. 
   
-    The page is uncluttered and simple so as not to overwhelm the user and also to ensure that it is as intuitive to use as possible and quick to 'pick up and play' for returners to the site. The site has only one html page and so all functionality is provided by index.html meaning that navigation is simple and fast adding to the users enjoyment of the site.
+    The page is uncluttered and simple so as not to overwhelm the user and also to ensure that it is as intuitive to use as possible and quick to 'pick up and play' for returners to the site. The site has only one html page and so all functionality is provided by index.html meaning that navigation is simple and fast adding to the users enjoyment of the site. All interface features that are to be found on the landing page are detailed below.
 
-    The landing page is responsive and rescales for the screen it is loaded onto. It was designed with a mobile first approach and gives the appearance of transforming the users mobile phone, into a retro, standalone memory game.
+    The landing page is responsive and rescales for the screen it is loaded onto. It was designed with a mobile first approach and gives the appearance of transforming the users mobile phone, into a retro, standalone memory game. On larger screens it fills the full height to the viewport but has a contstrained width.
 
     ![Game Landing Page](docs/images/readme-game-landing-page.jpg)
 
-      - **Header and Logo**
+      - **Header, Logo and Footer**
 
         The header’s function is to immediately inform the site visitor that the site is a memory game. The use of the header is to conform with current web practices and feel familiar to the user to help them feel at ease when interacting with the site.
 
-        The header has an outset border to make it appear 3D standing out from device. The background of the header has a linear gradient to give the appearance of curved metal adding to the effect of appearing like a 3D physical retro game. The header is responsive to fit onto different screen sizes and the logo slightly reduces in size on smaller screens.
+        The header and footer have an outset border to make them appear 3D standing out from device. The background of the header and footer is a linear gradient to give the appearance of curved metal adding to the effect of appearing like a 3D physical retro game. Both the header and footer are responsive to fit onto different screen sizes and the logo slightly reduces in size on smaller screens.
 
         The logo is bold and eye catching and the Orbitron font from [Google Fonts](https://fonts.google.com/) was selected to give the site a retro game appearance. The font is off white which is aesthetically pleasing and is positioned within the linear gradient of the background such that there is always sufficient contrast between the background and the text for the necessary levels of accessibility.
 
-        ![Header](docs/images/readme-header.jpg)
+        - **Header and Logo**
+
+          ![Header and Logo](docs/images/readme-header.jpg)
+
+        - **Footer**
+           
+          The footer houses the mute/unmute button which is used to mute and unmute game tones during play.
+
+          ![Footer](docs/images/readme-footer.jpg)
 
   - ### **Instructions Dropdown** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Instructions' (ID 3)]
 
@@ -200,7 +208,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     ![Top Ten Modal](docs/images/readme-top-ten-modal.jpg)
 
-  - ### **The Game** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game' (ID 4)]
+  - ### **The Game** [[Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game' (ID 4)]
 
     - The 'Game' (ID 4) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
     - SVG Buttons pad implemented inline in [index.html](index.html)
@@ -248,6 +256,10 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     If the player doesn’t press a coloured button within 10 the second timeout the game ends and the score is passed to the check score algorithm. 
 
+  - ### **Game Tones** [[Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game tones' (ID 8)]
+
+    - The 'Game tones' (ID 8) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
+    - Web audio game tones are implemented in [game-script.js](assets/js/game-script.js)
 
 ## **4. Testing**
 - ### **Code Validation**
