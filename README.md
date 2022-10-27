@@ -211,7 +211,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     The top ten modal contains the top ten highest scores achieved within the browser. It is populated with data from the local storage of the browser on navigating to the game. If the local storage of the browser is cleared then the top ten table resets.
 
-    The top ten modal is responsive and resizes as appropriate for the screen on which the game is being played. On all but the smallest screens sizes it was deemed most aesthetically pleasing to have the modal positioned and scale to leave the header and footer showing. On small screens where this is not possible the modal fills the screen.
+    The top ten modal is responsive and resizes as appropriate for the screen on which the game is being played. On all but the smallest screens sizes it is deemed most aesthetically pleasing to have the modal positioned and scaled to leave the header and footer showing. On small screens where this is not possible the modal fills the screen.
 
     ![Top Ten Modal](docs/images/readme-top-ten-modal.jpg)
 
@@ -311,9 +311,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
       ![Unmuted button](docs/images/readme-unmuted-button.jpg)
 
-  - ### **Current Score** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Current score' (ID 6)]
+  - ### **Current Score** [[Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Current score' (ID 6)]
 
-    - The 'Current Score' (ID 6) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
+    - The 'Current Score' (ID 6) [Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
     - Current Score display is implemented in [index.html](index.html)
     - Current score functionailty is implemented in [game-script.js](assets/js/game-script.js) 
 
@@ -325,12 +325,40 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
       ![Current score display](docs/images/readme-current-score.jpg)
 
-  - ### **Update Top Ten** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Update Top Ten' (ID 7)]
+  - ### **Update Top Ten** [[Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Update Top Ten' (ID 7)]
 
-    - The 'Update Top Ten' (ID 7) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
+    - The 'Update Top Ten' (ID 7) [Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
     - Update Top Ten functionailty is implemented in [game-script.js](assets/js/game-script.js)
 
+    The ‘update top ten’ data feature provides the player a means of measuring and tracking their success both against themselves and others that play the game in the same browser (assuming the browser’s local storage doesn’t get cleared between visits to the game site). The feature adds to the fun of the game giving players something more than simply playing it to entice them back. They will return and play more in the hope of achieving better scores and climbing the leader board. Even on first visiting the site, before the leader board is fully populated, it can be fun to fill it with scores.
 
+    The ‘update top ten’ data feature is primarily an algorithm that, at the end of the game (when the player copies the sequence incorrectly or doesn’t press a coloured button within the 10 second timeout), checks the score achieved by the player against the current top ten table. 
+
+    The checkScore function pulls the top ten table data out and pushes it into an array for the score comparison to take place. If the score is lower than or equal to the lowest score from the top ten table then an ‘alert’ is triggered commiserating the player. On clicking ok on the alert box, the alert closes and the game is reset ready for the player to press start again.
+
+    - **Player commiserations aler**
+
+      ![Commiserate player alert](docs/images/readme-commiserate-player-alert.jpg)
+
+    If the new score is higher than the current lowest score from the table then the name entry modal is made visible. The modal congratulates the player and waits for the player to enter their name and press ‘done’. 
+
+    The majority of the name input validation takes place in HTML using a form. The form’s default action is prevented in JavaScript to ensure that the index.html does not reload on submission of the form. The form’s name entry input box of type ‘text’ validates that the box is not empty, using the required attribute and it limits the name length to 15 upper and/or lowercase letters and spaces. 
+
+    In some browsers in the event that the input value fails validation, the title attribute value is displayed in addition to the browsers default message to the user. In this case the title has been used to augment the browsers default message with some of the criteria that the name should meet. Some browsers also display this title on hovering over the name entry input box as a prompt to the user. 
+
+    JavaScript is used to carry out an additional check that the name input box string is not empty prior to the progressing through the function.
+
+    On pressing ‘done’ on the name entry modal with a valid string present in the name entry input box, the nameInput function updates the top ten array with the new name against the new score, sorts the array content so that the new score entry is in the correct position in the top ten array and then displays the top ten modal with the new table data in it for the player to review their position in the scoreboard. 
+
+    The updateTopTenTable function that updates the top ten table with the new data also updates the browsers local storage with the data for future reference should the player close the browser or tab and revisit the site another day in which case the data would be pulled from the local store to populate the top ten table. 
+
+    Lastly, the start button is un-blanked so that the player can play again if they wish to.
+
+    The name entry modal is responsive and resizes as appropriate for the screen on which the game is being played. On all but the smallest screens sizes it is deemed most aesthetically pleasing to have the modal positioned and scaled to leave the header and footer showing. On small screens where this is not possible the modal fills the screen.
+
+    - **Name entry modal**
+
+      ![Name entry modal](docs/images/readme-enter-name-modal.jpg)
 
 ## **4. Testing**
 - ### **Code Validation**
