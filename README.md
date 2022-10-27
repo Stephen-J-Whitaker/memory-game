@@ -555,12 +555,19 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
 ## **9. Credits**
 - ### **Content**
-
+  - All code was written by the author, [Stephen Whitaker](https://github.com/Stephen-J-Whitaker)
+  - The fonts "Orbitron" and Lato were sourced on [Google Fonts](https://fonts.google.com/about)
+  - The mute/unmute button speaker SVG icons were taken from [Font Awesome](https://fontawesome.com/)
 
 - ### **Other Sources**
-
+  - Guidance on the markdown and structure to produce the readme was obtained from :
+    - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)
+    - [Markdown for readme](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 - ### **Acknowledgements**
 
+  - Memory Game is inspired by 'Simon', a memory game invented in the 1970s by the company Milton Bradley (now Hasbro)
+  - A special thank you to my mentor Maranatha Ilesanmi
+  - Thank you to all those who were kind enough to test the website and provide feedback
 
 ## [Back To Top](#Contents)
