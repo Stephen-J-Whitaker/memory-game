@@ -317,9 +317,13 @@ The game is extremely easy to learn for those who are new to it and the combinat
     - Current Score display is implemented in [index.html](index.html)
     - Current score functionailty is implemented in [game-script.js](assets/js/game-script.js) 
 
-    - **Current score display**
+  The current score display is visible during game play. It provides the user with a reminder of the number of sequences they have successfully copied or to put it another way, rounds they have won.
 
-    ![]()
+  The current score display is positioned and coloured to ensure the required contrast between the linear gradient background behind it and the text of the current score display is sufficient for the required levels of accessibility to be achieved.
+
+  - **Current score display**
+
+      ![Current score display](docs/images/readme-current-score.jpg)
 
   - ### **Update Top Ten** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Update Top Ten' (ID 7)]
 
