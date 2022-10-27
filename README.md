@@ -270,6 +270,16 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     It was decided to use web audio tones that are generated within the browser, as opposed to playing an audio file, to minimise latency between the flash and the tone being produced which would negatively impact the players enjoyment of the game. Web audio is well supported by all major, modern browsers on mobile and desktop and so was considered a low risk approach to implementation of game sounds. 
 
+    - **Game button tone frequencies:**
+
+      | Button colour | Tone frequency|
+      |---|---|
+      | Yellow | 400 Hz |
+      | Green | 500 Hz|
+      | Blue | 600 Hz |
+      | Red | 700 Hz |
+
+
   - ### **Mute/Unmute button** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Mute/Unmute button' (ID 2)]
 
     - The 'Mute/Unmute button' (ID 2) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1 and 2](docs/pdfs/readme-user-stories.pdf).
@@ -294,7 +304,17 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
       ![Unmuted button](docs/images/readme-unmuted-button.jpg)
 
-  
+   - ### **Current Score** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Mute/Unmute button' (ID 2)]
+
+    - The 'Mute/Unmute button' (ID 2) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1 and 2](docs/pdfs/readme-user-stories.pdf).
+    - Mute/Unmute button is implemented in [index.html](index.html)
+    - Mute/Unmute button functionailty is implemented in [game-script.js](assets/js/game-script.js)
+
+  - ### **Update Top Ten** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Mute/Unmute button' (ID 2)]
+
+    - The 'Mute/Unmute button' (ID 2) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1 and 2](docs/pdfs/readme-user-stories.pdf).
+    - Mute/Unmute button is implemented in [index.html](index.html)
+    - Mute/Unmute button functionailty is implemented in [game-script.js](assets/js/game-script.js) 
 
 ## **4. Testing**
 - ### **Code Validation**
