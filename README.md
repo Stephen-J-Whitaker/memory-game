@@ -280,7 +280,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
     - **Game button tone frequencies:**
 
       | Button colour | Tone frequency|
-      |---|---|
+      |---------------|---------------|
       | Yellow | 400 Hz |
       | Green | 500 Hz|
       | Blue | 600 Hz |
@@ -388,7 +388,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
 - ### **Performance Tests**
 
-    Site performance tests were carried out using the Google Chrome Dev tool Lighthouse performance test feature
+    Site performance tests were carried out using the Google Chrome Dev tools Lighthouse performance test feature
 
     ![Site performance test results](docs/images/readme-performance-tests-results.jpg)
 
@@ -424,15 +424,28 @@ The game is extremely easy to learn for those who are new to it and the combinat
       - Note: The site has not yet been tested on Linux based desktop operating systems. 
 
 
-  - Responsiveness
+- ### **Responsiveness**
 
     In addition to the responsive tests carried out as part of the scheduled test plan detailed above, the site was also tested extensively in Google Chrome DevTools and on various mobile devices. 
 
     - **Responsiveness tests carried out in Chrome DevTools**
 
-      ![Chrome DevTools responsiveness test results](docs/images/readme-responsiveness-test-results.jpg) 
+      ![Chrome DevTools responsiveness test results](docs/images/readme-responsiveness-test-results.jpg)
+
+    - **Responsiveness Examples**
+      
+      The images at the following link provide some examples of how the site responds to different screen sizes. 
+
+      - [Responsiveness examples](docs/pdfs/readme-responsiveness-examples.pdf)
+
+- ### **Other testing**
+
+  The site was made available to a number of people throughout the development process to ensure that it was tested across as many platforms and screen resolutions as possible and that it functioned as required.
 
 - ### **Bugs Found and Resolved or Current**
+
+
+
 
 ## **5. Project Sign Off**
 
