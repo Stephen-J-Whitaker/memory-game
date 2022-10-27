@@ -424,7 +424,13 @@ The game is extremely easy to learn for those who are new to it and the combinat
       - Note: The site has not yet been tested on Linux based desktop operating systems. 
 
 
-- Responsiveness
+  - Responsiveness
+
+    In addition to the responsive tests carried out as part of the scheduled test plan detailed above, the site was also tested extensively in Google Chrome DevTools and on various mobile devices. 
+
+    - **Responsiveness tests carried out in Chrome DevTools**
+
+      ![Chrome DevTools responsiveness test results](docs/images/readme-responsiveness-test-results.jpg) 
 
 - ### **Bugs Found and Resolved or Current**
 
