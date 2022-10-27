@@ -394,6 +394,13 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
 - ### **Functionality Tests**
 
+  Tests were carried out on the ['Memory Game'](https://stephen-j-whitaker.github.io/memory-game/) site deployed on GitHub Pages.
+
+    - [User story acceptance test results](docs/pdfs/readme-user-story-acceptance-test-results.pdf)
+
+    - [Feature acceptance test results](docs/pdfs/readme-feature-acceptance-test-results.pdf)
+
+      - Note: The site has not yet been tested on Linux based desktop operating systems. 
 
 
 - Responsiveness
