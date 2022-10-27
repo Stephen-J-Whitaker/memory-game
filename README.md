@@ -398,30 +398,26 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     - [User story 1 acceptance test results](docs/pdfs/readme-user-story-1-acceptance-test-results.pdf)
 
-        <details>
-        <summary>User story 1 demonstration (click to expand)</summary>
+        <details><summary>User story 1 demonstration (click to expand)</summary>
+        
         ![User story 1 demonstration](docs/images/readme-user-story-1-and-3-demonstration.gif)
         </details>
-        <br>
 
     - [User story 2 acceptance test results](docs/pdfs/readme-user-story-2-acceptance-test-results.pdf)
 
-        <details>
-        <summary>User story 2 demonstration (click to expand)</summary>
+        <details><summary>User story 2 demonstration (click to expand)</summary>
+        
         ![User story 2 demonstration](docs/images/readme-user-story-2-demonstration.gif)
         </details>
-        <br>
 
     - [User story 3 acceptance test results](docs/pdfs/readme-user-story-3-acceptance-test-results.pdf)
  
-      <details>
-      <summary>User story 3 demonstration (click to expand)</summary>
+      <details><summary>User story 3 demonstration (click to expand)</summary>
+      
       ![User story 3 demonstration](docs/images/readme-user-story-1-and-3-demonstration.gif)
       </details>
 
         - Note: Game tones are a key feature required to satisfy user story 3. They cannot be demonstrated here.
-        
-      <br>
 
     - [Feature acceptance test results](docs/pdfs/readme-feature-acceptance-test-results.pdf)
 
