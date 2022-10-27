@@ -276,7 +276,25 @@ The game is extremely easy to learn for those who are new to it and the combinat
     - Mute/Unmute button is implemented in [index.html](index.html)
     - Mute/Unmute button functionailty is implemented in [game-script.js](assets/js/game-script.js)
 
+    The mute/unmute button gives the player the option of whether or not to have game tones. 
 
+    The game is muted on navigating to the site to avoid sound that isn’t wanted by the player if game sound effects are inappropriate for the environment they're in. 
+
+    The mute/unmute button is easy to find and prominently placed in a common location for such a feature, the footer of the web page. It uses common metaphors to both identify it as a mute/unmute button and to communicate the mute state. 
+
+    Implementation is by means of a gain node connected in between the oscillator node, that creates the sine wave game button tone, and the sound destination.  When muted the gain value is set to 0 and when unmuted, the gain node value is set to 0.1 to ensure the tones are an appropriate volume. 
+
+    Clicking the mute/unmuted button triggers a function call that toggles between the mute and unmuted state and swaps the icon along with its ‘data-mute-status’ attribute accordingly. The getMuteStatus() function is responsible for checking the value of the ‘data-mute-status’ attribute in the icon image element of the icon that is currently showing on the mute/unmute button and then setting the gain value to as required. 
+
+    - **When muted the button displays an icon of a speaker with a cross next to it**
+
+      ![Muted button](docs/images/readme-muted-button.jpg)
+
+    - **When unmuted the button displays an icon of a speaker with sound waves emanating from it**
+
+      ![Unmuted button](docs/images/readme-unmuted-button.jpg)
+
+  
 
 ## **4. Testing**
 - ### **Code Validation**
