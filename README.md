@@ -141,7 +141,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
   - ### **Landing Page** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game Landing Page' (ID 1)]
 
-    - The 'Game Landing Page' [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of all the [user stories](docs/pdfs/readme-user-stories.pdf)
+    - The 'Game Landing Page' (ID 1) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of all the [user stories](docs/pdfs/readme-user-stories.pdf)
     - Implemented in [index.html](index.html)
 
     The game landing page (home page) is the users welcome to the site. It is designed to have the appearance of a physical, retro game and the bright colourful buttons are intended to be eye catching and stimulate the curiosity of the site visitor. 
@@ -150,9 +150,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
   
     The page is uncluttered and simple so as not to overwhelm the user and also to ensure that it is as intuitive to use as possible and quick to 'pick up and play' for returners to the site. The site has only one html page and so all functionality is provided by index.html meaning that navigation is simple and fast adding to the users enjoyment of the site. All interface features that are to be found on the landing page are detailed below.
 
-    The landing page is responsive and rescales for the screen it is loaded onto. It was designed with a mobile first approach and gives the appearance of transforming the users mobile phone, into a retro, standalone memory game. On larger screens it fills the full height to the viewport but has a contstrained width.
-
     ![Game Landing Page](docs/images/readme-game-landing-page.jpg)
+    
+    The landing page is responsive and rescales for the screen it is loaded onto. It was designed with a mobile first approach and gives the appearance of transforming the users mobile phone, into a retro, standalone memory game. On larger screens it fills the full height to the viewport but has a contstrained width.
 
       - **Header, Logo and Footer**
 
@@ -171,6 +171,13 @@ The game is extremely easy to learn for those who are new to it and the combinat
           The footer houses the mute/unmute button which is used to mute and unmute game tones during play.
 
           ![Footer](docs/images/readme-footer.jpg)
+
+
+    - **Turn device portrait modal**
+
+      In a landscape orientation, the screen of small mobile devices may become too small to display all of the essential features of the game. In order to handle this event there is a media query that makes a ‘turn device portrait’ modal visible should the screen meet certain dimension criteria and be wider than it is tall (i.e. landscape). 
+
+      ![Turn device portrait modal](docs/images/readme-turn-device-portrait-modal.jpg)
 
   - ### **Instructions Dropdown** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Instructions' (ID 3)]
 
@@ -208,9 +215,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     ![Top Ten Modal](docs/images/readme-top-ten-modal.jpg)
 
-  - ### **The Game** [[Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game' (ID 4)]
+  - ### **The Game** [[Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game' (ID 5)]
 
-    - The 'Game' (ID 4) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
+    - The 'Game' (ID 5) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
     - SVG Buttons pad implemented inline in [index.html](index.html)
     - Game algorithm implemented in [game-script.js](assets/js/game-script.js)
 
@@ -304,17 +311,22 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
       ![Unmuted button](docs/images/readme-unmuted-button.jpg)
 
-   - ### **Current Score** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Mute/Unmute button' (ID 2)]
+  - ### **Current Score** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Current score' (ID 6)]
 
-    - The 'Mute/Unmute button' (ID 2) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1 and 2](docs/pdfs/readme-user-stories.pdf).
-    - Mute/Unmute button is implemented in [index.html](index.html)
-    - Mute/Unmute button functionailty is implemented in [game-script.js](assets/js/game-script.js)
+    - The 'Current Score' (ID 6) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
+    - Current Score display is implemented in [index.html](index.html)
+    - Current score functionailty is implemented in [game-script.js](assets/js/game-script.js) 
 
-  - ### **Update Top Ten** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Mute/Unmute button' (ID 2)]
+    - **Current score display**
 
-    - The 'Mute/Unmute button' (ID 2) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1 and 2](docs/pdfs/readme-user-stories.pdf).
-    - Mute/Unmute button is implemented in [index.html](index.html)
-    - Mute/Unmute button functionailty is implemented in [game-script.js](assets/js/game-script.js) 
+    ![]()
+
+  - ### **Update Top Ten** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Update Top Ten' (ID 7)]
+
+    - The 'Update Top Ten' (ID 7) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
+    - Update Top Ten functionailty is implemented in [game-script.js](assets/js/game-script.js)
+
+
 
 ## **4. Testing**
 - ### **Code Validation**
