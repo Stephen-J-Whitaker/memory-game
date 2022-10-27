@@ -37,8 +37,8 @@ The game is extremely easy to learn for those who are new to it and the combinat
   User stories were ascertained for the game along with the features required to satisfy the user stories. A feature list was developed that covered all of the user stories requirements and it was ensured that there was no duplicated feature functionality going into development.
 
   - [User Stories](docs/pdfs/readme-user-stories.pdf)
-  - [User stories acceptance criteria](docs/pdfs/readme-user-stories-acceptance-criteria.pdf)
-  - [Feature list with acceptance criteria](docs/pdfs/readme-features-acceptance-criteria.pdf)
+  - [User stories acceptance criteria](docs/pdfs/readme-user-story-acceptance-criteria.pdf)
+  - [Feature list with acceptance criteria](docs/pdfs/readme-feature-acceptance-criteria.pdf)
 
 ## **2. Game Development**
 - ### **Game Functionality Development**
@@ -360,19 +360,51 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
       ![Name entry modal](docs/images/readme-enter-name-modal.jpg)
 
+  - ### **Potential future features**
+
+    - Keyboard arrow keys could be used to play the game in place of a mouse.
+    - The player could select differents sets of sound effects to use.
+    - The player could be presented with game colour theme options.
+      
 ## **4. Testing**
 - ### **Code Validation**
-- #### **HTML Validation**
-- #### **CSS Validation**
-- #### **JavaScript Validation**
+  - #### **HTML Validation**
+
+    The website HTML was validated using [The W3C Markup Validation Service](https://validator.w3.org/#validate_by_uri)
+
+    ![HTML validator test results](docs/images/readme-html-validator-test-results.jpg)
+
+  - #### **CSS Validation**
+
+    The website CSS was validated using [The W3C CSS Validation Service - Jigsaw](https://jigsaw.w3.org/css-validator/)
+
+    ![CSS validator test results](docs/images/readme-css-validator-test-results.jpg)
+
+  - #### **JavaScript Validation**
+
+    The website JavaScript was validated using [JSHint, a JavaScript Code Quality Tool](https://jshint.com/)
+
+    ![JavaScript validator test results](docs/images/readme-javascript-validator-test-results.jpg)
+
 - ### **Performance Tests**
+
+    Site performance tests were carried out using the Google Chrome Dev tool Lighthouse performance test feature
+
+    ![Site performance test results](docs/images/readme-performance-tests-results.jpg)
+
 - ### **Functionality Tests**
+
+
 
 - Responsiveness
 
 - ### **Bugs Found and Resolved or Current**
 
 ## **5. Project Sign Off**
+
+  When all a user story acceptance tests have passed and all of the features on which those user stories are dependant on pass, then the user story as a whole is deemed to have passed. The overall acceptance test status of the user stories along with the statuses of its feature dependencies are summarised in the following sign off sheet.
+
+  ![]()
 
 ## **6. Releases**
 
