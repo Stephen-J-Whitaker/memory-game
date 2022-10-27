@@ -138,7 +138,8 @@
         </div>
         <!-- form added to handle validation -->
         <form class="name-entry-form" id="top-ten-name-form">
-            <input type="text" id="player-name" class="name-entry-input" pattern="[A-Za-z\s]+" placeholder="Your Name" maxlength="15" title="The name should only contain letters" required>
+            <!-- Title used on hovering over input box or in event of validation failure to augment browser message asking user to match the requested format -->
+            <input type="text" id="player-name" class="name-entry-input" pattern="[A-Za-z\s]+" placeholder="Your Name" maxlength="15" title="The name should only contain letters and spaces" required>
             <button id="submit-top-ten-name" class="name-entry-button button-down button" type="submit">DONE</button>
         </form>
     </section>
