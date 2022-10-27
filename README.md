@@ -501,20 +501,66 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
   <br> 
 
+  - **The live site can be found** [**HERE**](https://stephen-j-whitaker.github.io/memory-game/)
+
 ## **8. Technologies Used**
+
+  - CSS
+
+  - HTML
+
+  - JavaScript
+
+  - [Corel Draw](https://www.coreldraw.com/en/) : Used for developing the mockups for the website and SVG game pad interface
+
+  - IOS : Used to create screen grabbed movies for user story demonstrations
+
+  - [Adobe Express]( https://www.adobe.com/express/feature/video/convert/video-to-gif): Used to create user story demonstration gifs from mov files
+
+  - [Microsoft Excel](https://www.microsoft.com/en-ie/microsoft-365/excel) : Used for documenting features and recording test results
+
+  - [Chrome](https://www.google.com/intl/en_ie/chrome/) : Used for research, development and testing (including DevTools and Lighthouse test suite)
+
+  - [Safari](https://www.apple.com/safari/) : Used for testing
+
+  - [Opera](https://www.opera.com/) : Used for testing
+
+  - [Edge](https://www.microsoft.com/en-us/edge) : Used for testing
+
+  - [Firefox](https://www.mozilla.org/en-US/firefox/new/) : Used for testing
+
+  - [Notepad++](https://notepad-plus-plus.org/downloads/) : Used for text file editing
+
+  - [GitPod](https://www.gitpod.io/) : Used for product development and testing
+
+  - [GitHub](https://github.com/) : Used for accessing committed code repositories and hosting the completed product online
+
+  - [Git](https://git-scm.com/): Used for code version control
+
+  - [Google Fonts](https://fonts.google.com/about) : Used for fonts "Orbitron" and Lato
+
+  - [Font Awesome](https://fontawesome.com/) : Used to source mute/unmute button speaker SVG icons
+
+  - [The W3C Markup Validation Service](https://validator.w3.org/#validate_by_uri) : Used to validate the website HTML
+
+  - [The W3C CSS Validation Service - Jigsaw](https://jigsaw.w3.org/css-validator/) : Used to validate the website CSS
+
+  - [JSHint, a JavaScript Code Quality Tool](https://jshint.com/): Used to validate the website JavaScript
+
+  - Windows 10 snipping tool for creating screen grabbed jpeg files for the readme
+
+  - [Code institute student template for GitPod]( https://github.com/Code-Institute-Org/gitpod-full-template): Used to install the necessary IDE tools and set up GitPod as required
+
+  - [Am I Responsive]( https://ui.dev/amiresponsive): Used to create the responsiveness mockup used at the top of this readme file
 
 ## **9. Credits**
 - ### **Content**
 
-Font Awsome
-Google Fonts
 
 - ### **Other Sources**
 
+
 - ### **Acknowledgements**
 
-Inspired by simon game
-A special thank you to my mentor Maranatha Ilesanmi
-Thank you to all those who were kind enough to test the website and provide feedback
 
 ## [Back To Top](#Contents)
