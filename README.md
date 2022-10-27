@@ -245,16 +245,17 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     The game algorithm is entirely implemented in JavaScript. It manipulates the SVG in the DOM and reads ‘click’ events that take place on the game button pad in order to implement the game. 
 
-
     The game is simple and easy to learn for the uninitiated and fast to pick up and play for new players.
 
+    A simplified description of the game algorithm is that the game starts by pushing a random button colour object into an array and then plays this ‘flash’ and tone to the player. After playing the first button ‘flash’ and tone, the game waits for the user to copy the flash tone and checks the colour of the button that the user clicks against the first and currently only array value. 
 
-    The game plays a tone and ‘flashes’ one of the buttons. When this flash is copied correctly by the player pressing the same button that was flashed, then another random button and corresponding tone is added to the sequence. If the player copies the whole sequence correctly then another button and tone is added and so on.
-
-    If the player doesn't copy the sequence correctly then the game ends and the score is passed to the check score algorithm.
+    If the player gets a sequence entry wrong or the user doesn’t press a coloured button within the 10 second timeout then the game ends and the score is checked against the top ten table. The timeout is present only when the game is waiting for the player to copy the sequence and it resets after each correct button click performed by the player.
 
 
-    If the player doesn’t press a coloured button within 10 the second timeout the game ends and the score is passed to the check score algorithm. 
+    If the player successfully copies the first flash tone, the game pushes a new random button colour object into the array and then iterates through this array demonstrating the newly augmented sequence to the player before waiting for the user to copy it. When the player clicks a button the game checks the users button clicks against the array. The first click is checked against the first array value and if the button clicked was correct then the array counter (index) is incremented. After the next click the users button selection is checked against the array value at the new array index position and if this second click was correct then the array counter/index is incremented again and the game waits for input. This wait for input, check input against array, increment counter and wait cycle is repeated until the user doesn’t click within the timeout, clicks the wrong button or the end of the array is reached, in which case another button colour object is pushed into the game array and the game goes back to a waiting for player coloured button input state.  
+
+    The algorithm has no maximum game array length set and so the game can continue indefinitely until the player gets the sequence wrong or doesn’t click a button within the 10 second timeout that is present when the game is waiting for the player to copy the sequence.
+
 
   - ### **Game Tones** [[Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game tones' (ID 8)]
 
@@ -268,6 +269,13 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
 
     It was decided to use web audio tones that are generated within the browser, as opposed to playing an audio file, to minimise latency between the flash and the tone being produced which would negatively impact the players enjoyment of the game. Web audio is well supported by all major, modern browsers on mobile and desktop and so was considered a low risk approach to implementation of game sounds. 
+
+  - ### **Mute/Unmute button** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Mute/Unmute button' (ID 2)]
+
+    - The 'Mute/Unmute button' (ID 2) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1 and 2](docs/pdfs/readme-user-stories.pdf).
+    - Mute/Unmute button is implemented in [index.html](index.html)
+    - Mute/Unmute button functionailty is implemented in [game-script.js](assets/js/game-script.js)
+
 
 
 ## **4. Testing**
