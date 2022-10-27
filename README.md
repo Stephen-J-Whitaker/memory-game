@@ -261,6 +261,15 @@ The game is extremely easy to learn for those who are new to it and the combinat
     - The 'Game tones' (ID 8) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
     - Web audio game tones are implemented in [game-script.js](assets/js/game-script.js)
 
+    The optional web audio game tones feature serves two purposes. It adds to the fun for all players who choose not to mute the tones but it also enables more engaging game play for users who are visually impaired satisfying user story 3’s requirements.
+
+
+    Each coloured button has a different sine wave frequency tone associated with it that both augments and provides an alternative to the colour of the button as a means of identifying the button that was flashed in the sequence or clicked by the user. The tone sounds momentarily on click of a coloured button and also when the game is demonstrating the sequences to be copied to the player.
+
+
+    It was decided to use web audio tones that are generated within the browser, as opposed to playing an audio file, to minimise latency between the flash and the tone being produced which would negatively impact the players enjoyment of the game. Web audio is well supported by all major, modern browsers on mobile and desktop and so was considered a low risk approach to implementation of game sounds. 
+
+
 ## **4. Testing**
 - ### **Code Validation**
 - #### **HTML Validation**
