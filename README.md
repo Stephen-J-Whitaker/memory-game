@@ -444,21 +444,62 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
 - ### **Bugs Found and Resolved or Current**
 
-|Bug|Resolution|
-|---|----------|
-|Web audio wouldn't play tones on Apple IOS unless in direct response to a user interaction with the site. | The audio context creation was moved from the tone function to the gameStart function that is called in response to the user pressing 'start'|
-|The current score wasn't resetting at the end of a game|The function call setScore(0) was added into the checkScore function that is called at the end of a game. Set score update the current score span inner text to 0 resetting it|
-|The SVG start button was resulting in low Chrome DevTools Lighthouse accessibility scores|Adding the missing role attribute of button resolved this issue.|
+  |Bug|Resolution|
+  |---|----------|
+  |Web audio wouldn't play tones on Apple IOS unless in direct response to a user interaction with the site. | The audio context creation was moved from the tone function to the gameStart function that is called in response to the user pressing 'start'|
+  |The current score wasn't resetting at the end of a game|The function call setScore(0) was added into the checkScore function that is called at the end of a game. Set score update the current score span inner text to 0 resetting it|
+  |The SVG start button was resulting in low Chrome DevTools Lighthouse accessibility scores|Adding the missing role attribute of button resolved this issue.|
 
 ## **5. Project Sign Off**
 
   When all a user story acceptance tests have passed and all of the features on which those user stories are dependant on pass, then the user story as a whole is deemed to have passed. The overall acceptance test status of the user stories along with the statuses of its feature dependencies are summarised in the following sign off sheet.
 
-  ![]()
+  ![Project sign off](docs/pdfs/readme-project-sign-off.pdf)
 
 ## **6. Releases**
 
+- ###  Version 1.0 First release : Date 
+
 ## **7. Deployment**
+
+  The website is hosted by [GitHub Pages](https://pages.github.com/) from the main branch of the [memory-game Git repository](https://github.com/Stephen-J-Whitaker/memory-game)
+
+  **The deployment procedure is as follows:**
+
+  <details><summary>1. In GitHub On the memory-game repository page select settings (click to expand)</summary>
+ 
+  ![Deployment step 1](docs/images/readme-deployment-1of5.jpg)
+  </details>
+
+  <br>
+
+  <details><summary>2. In settings select the ‘Pages’ option (click to expand)</summary>
+ 
+  ![Deployment step 2](docs/images/readme-deployment-2of5.jpg)
+  </details>
+
+  <br>
+
+  <details><summary>3. In the GitHub Pages window, ensure ‘Deploy from a branch’ is selected in the ‘Source’ dropdown under the ‘Source’ heading and then select the ‘main’ branch and ‘root’ directory from the ‘Branch’ dropdown selector under the ‘Branch’ heading. When these are selected, press save to initiate the build of the site (click to expand)</summary>
+ 
+  ![Deployment step 3](docs/images/readme-deployment-3of5.jpg)
+  </details>
+
+  <br>
+
+  <details><summary>4. After save is pressed in the previous step, GitHub Pages will state “Your GitHub Pages site is currently being built from the main branch” where it previously stated “GitHub Pages is currently disabled” (click to expand)</summary>
+ 
+  ![Deployment step 4](docs/images/readme-deployment-4of5.jpg)
+  </details>
+
+  <br>
+
+   <details><summary>5. GitHub will take a short period to build the site. After a short period, press F5 to refresh the page and the link to the deployed site will be shown. If it is not yet shown, wait another short period then try pressing F5 to refresh the page again. Repeat this wait and refresh procedure until the link is show. (click to expand)</summary>
+ 
+  ![Deployment step 5](docs/images/readme-deployment-5of5.jpg)
+  </details>
+
+  <br> 
 
 ## **8. Technologies Used**
 
