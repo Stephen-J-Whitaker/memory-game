@@ -454,7 +454,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
   When all a user story acceptance tests have passed and all of the features on which those user stories are dependant on pass, then the user story as a whole is deemed to have passed. The overall acceptance test status of the user stories along with the statuses of its feature dependencies are summarised in the following sign off sheet.
 
-  ![Project sign off](docs/pdfs/readme-project-sign-off.pdf)
+  - [Project sign off](docs/pdfs/readme-project-sign-off.pdf)
 
 ## **6. Releases**
 
