@@ -374,7 +374,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
   - ### **Potential future features**
 
-    - Keyboard arrow keys could be used to play the game as an option in addition to use of a mouse on desktop computers.
+    - Keyboard arrow keys could be used to play the game as an option in addition to the use of a mouse on desktop computers.
     - The player could select differents sets of sound effects to use.
     - The player could be presented with game colour theme options.
     - Difficulty settings could be implemented that shorten the game timeout feature or increase the rate at which the sequence is demonstrated to the player.
@@ -413,7 +413,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
         <details><summary>User story 1 demonstration (click to expand)</summary>
         
-        ![User story 1 demonstration](docs/images/readme-user-story-1-and-3-demonstration.gif)
+        ![User story 1 demonstration](docs/images/readme-user-story-1-demonstration.gif)
         </details>
 
     - [User story 2 acceptance test results](docs/pdfs/readme-user-story-2-acceptance-test-results.pdf)
@@ -427,7 +427,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
  
       <details><summary>User story 3 demonstration (click to expand)</summary>
       
-      ![User story 3 demonstration](docs/images/readme-user-story-1-and-3-demonstration.gif)
+      ![User story 3 demonstration](docs/images/readme-user-story-3-demonstration.gif)
       </details>
 
         - Note: Game tones are a key feature required to satisfy user story 3. They cannot be demonstrated here.
