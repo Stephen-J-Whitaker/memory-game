@@ -54,6 +54,44 @@ The game is extremely easy to learn for those who are new to it and the combinat
        -  [User interface flow](docs/pdfs/readme-user-interface-flow.pdf)
 
 - ### **Game Style Development**
+  - ### Layout
+
+    The layout, as well as conforming to current conventions by having a header, footer and main section, orders features in terms of their priority and these features are placed where they will provide the best user experience. 
+
+    The instructions are just under the header and are easy to find and access. Then there are the current score (when the game is in play) where it can be seen easily whilst the player is interacting with the button pad below it. The top ten is next to the current score where, again it is quickly accessible after checking the instructions, if necessary, to see who the player has to beat and how high a score they require to get into the top ten table.
+
+    The button pad is large, approximately central and responsive. The buttons are large and easy to interact with and are brightly coloured for easy identification. They also form part of the sites identity, the favicon for the site is a copy of the game button pad.
+
+    The footer contains the mute/unmute button. Most likely to be used once or twice only during a site visit it is located in a very accessible location but in the least prominent position of all the features.
+
+    - **Interface layout**
+
+      ![Interface layout](docs/images/readme-layout.jpg)
+
+    - Header and Footer
+
+      The site is laid out in a traditional way with a header and footer that will be familiar to the user despite the fact its styled to look like a physical interface. 
+
+    - Instructions Dropdown
+    
+      The 'Instructions' dropdown is easy to find and is just below the header in a location that is commonly used for navigation elements. This should again be familiar to the user and help to make the site intuitive to use.
+
+    - Game Interface
+    
+      The main section of the site is the game interface and related item, the current score (when visible during play) and the button to activate the top ten modal.
+
+    - Mute/Unmute Button
+    
+      The footer holds the mute/unmute button as this is not a game feature as such, even though it mutes the game sound, it is considered an interface feature but not being a navigation item is believed to be more appropriately placed in the footer.
+
+    - Top Ten and Name Entry Modals
+
+      When visible, the top ten and name entry modals are positioned to intentionally obscure and prevent interaction with the game interface and Instructions drop down as using these at the same time as the modals is deemed unnecessary. The mute/unmute button can be visible and can be interacted with depending on the screen size. 
+    
+    - Responsiveness
+    
+      The layout is responsive and all elements resize in order to fit the screen on which they are displayed. The game is generally not compatible with landscape mobile devices with a small height and in these cases a modal requesting that the device be turned portrait is displayed.
+      
   - ### Typography
     A limited set of fonts was used for the site in an attempt to ensure that the site retained a coherent feel where none of the sections looked out of place contributing to the user's enjoyment of the site.
     
@@ -94,33 +132,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
     - Mute/Unmute Button
 
       The icons for the mute/unmute button were taken from [Font Awesome]( https://fontawesome.com/). They are SVG files referenced using the HTML ‘img’ element. The images are a familiar metaphor that will easily be identified as a mute/unmute button by the user.
-
-  - ### Layout
-
-    - Header and Footer
-
-      The site is laid out in a traditional way with a header and footer that will be familiar to the user despite the fact its styled to look like a physical interface. 
-
-    - Instructions Dropdown
-    
-      The 'Instructions' dropdown is easy to find and is just below the header in a location that is commonly used for navigation elements. This should again be familiar to the user and help to make the site intuitive to use.
-
-    - Game Interface
-    
-      The main section of the site is the game interface and related item, the current score (when visible during play) and the button to activate the top ten modal.
-
-    - Mute/Unmute Button
-    
-      The footer holds the mute/unmute button as this is not a game feature as such, even though it mutes the game sound, it is considered an interface feature but not being a navigation item is believed to be more appropriately placed in the footer.
-
-    - Top Ten and Name Entry Modals
-
-      When visible, the top ten and name entry modals are positioned to intentionally obscure and prevent interaction with the game interface and Instructions drop down as using these at the same time as the modals is deemed unnecessary. The mute/unmute button can be visible and can be interacted with depending on the screen size. 
-    
-    - Responsiveness
-    
-      The layout is responsive and all elements resize in order to fit the screen on which they are displayed. The game is generally not compatible with landscape mobile devices with a small height and in these cases a modal requesting that the device be turned portrait is displayed.
-  
+ 
   - ### User feedback
 
     In line with the design ethos of keeping the game retro in style buttons are styled to look like physical push buttons. The user knows that the button has been pressed either by the fact that a change in the interface takes place, such as a modal closes or the instructions dropdown opens, for example, or by a momentary change in the appearance of the button that was clicked. 
