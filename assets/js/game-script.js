@@ -255,7 +255,7 @@ function checkScore(finalScore) {
         document.getElementById("name-entry-modal").classList.toggle("display-none");
 
         //Personalise top ten modal message
-        document.getElementById("top-ten-message").innerText = `You're score of ${finalScore} gets you in the top ten!`;
+        document.getElementById("top-ten-message").innerText = `Your score of ${finalScore} gets you in the top ten!`;
 
         // Add listener to get new top ten name when modal button pressed.
         // Abort signal to clear submit button event listener when no longer needed
