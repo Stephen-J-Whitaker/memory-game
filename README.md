@@ -58,7 +58,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     The layout, as well as conforming to current conventions by having a header, footer and main section, orders features in terms of their priority and these features are placed where they will provide the best user experience. 
 
-    The instructions are just under the header and are easy to find and access. Then there are the current score (when the game is in play) where it can be seen easily whilst the player is interacting with the button pad below it. The top ten is next to the current score where, again it is quickly accessible after checking the instructions, if necessary, to see who the player has to beat and how high a score they require to get into the top ten table.
+    The instructions are just under the header and are easy to find and access. Then there is the current score (when the game is in play) where it can be seen easily whilst the player is interacting with the button pad below it. The top ten is next to the current score where, again it is quickly accessible after checking the instructions, if checking the instructions was necessary, to see who the player has to beat and how high a score they require to get into the top ten table.
 
     The button pad is large, approximately central and responsive. The buttons are large and easy to interact with and are brightly coloured for easy identification. They also form part of the sites identity, the favicon for the site is a copy of the game button pad.
 
@@ -78,7 +78,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     - Game Interface
     
-      The main section of the site is the game interface and related item, the current score (when visible during play) and the button to activate the top ten modal.
+      The main section of the site is the game interface and related items, the current score (when visible during play) and the button to activate the top ten modal.
 
     - Mute/Unmute Button
     
@@ -93,7 +93,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
       The layout is responsive and all elements resize in order to fit the screen on which they are displayed. The game is generally not compatible with landscape mobile devices with a small height and in these cases a modal requesting that the device be turned portrait is displayed.
 
   - ### Typography
-    A limited set of fonts was used for the site in an attempt to ensure that the site retained a coherent feel where none of the sections looked out of place contributing to the user's enjoyment of the site.
+    To contribute to the user's enjoyment of the site, a limited set of fonts was used for the site in an attempt to ensure that the site retained a coherent feel where none of the sections looked out of place.
     
     - Logo
     
@@ -113,7 +113,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
      
      The header and footer have been given a linear gradient to give it the appearance of curved metal to give the site depth and the background for the main game interface is given a brushed metal appearance with linear gradient to complement the header and the footer. The metallic finish is intended to modernise the game slightly and add interest for the user. The site was designed with a mobile first approach and the game interface design helps ’transform’ the user phone appearance from their phone into ‘Memory Game’ helping to immerse them in the experience of playing it.
 
-    The colour of the font was chosen such that should linear gradient fail and fall back to grey, the site would retain maximum accessibility with sufficient contrast between the text and the background colour. The linear gradients and text were arranged such that text on top of the linear gradient would always positioned where contrast between background and text would always ensure maximum accessibility.
+    The colour of the font was chosen such that should linear gradient fail and fall back to grey, the site would retain maximum accessibility with sufficient contrast between the text and the background colour. The linear gradients and text were arranged such that text on top of the linear gradient would always be positioned where contrast between background and text would ensure maximum accessibility.
       
   - ### Images / Interface
 
@@ -127,7 +127,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     - Game pad
 
-      The SVG for the button interface is embedded in the html to ensure that it is fully accessible and manipulatable as part of the DOM. The site requires that the SVG be manipulated with both CSS and JavaScript. Being part of interface it is also believed to be appropriate that it is embedded in the HTML in the correct location rather than referenced from elsewhere in the html in a separate ‘SVG’ specific area.
+      The SVG for the button interface is embedded in the HTML to ensure that it is fully accessible and manipulatable as part of the DOM. The site requires that the SVG be manipulated with both CSS and JavaScript. Being part of interface it is also believed to be appropriate that it is embedded in the HTML in the correct location rather than referenced from elsewhere in the HTML in a separate ‘SVG’ specific area.
     
     - Mute/Unmute Button
 
@@ -135,9 +135,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
  
   - ### User feedback
 
-    In line with the design ethos of keeping the game retro in style buttons are styled to look like physical push buttons. The user knows that the button has been pressed either by the fact that a change in the interface takes place, such as a modal closes or the instructions dropdown opens, for example, or by a momentary change in the appearance of the button that was clicked. 
+    In line with the design ethos of keeping the game retro in style buttons are styled to look like physical push buttons. The user knows that the button has been pressed either by the fact that a change in the interface takes place, such as a modal closes or the instructions dropdown opens, or by a momentary change in the appearance of the button that was clicked. 
 
-    In the case of the mute/unmute button and the Instructions Show/Hide buttons, the ‘outset’ border is momentarily replaced with a solid border to make it look like the button is fully pushed within a recess when clicked. The symbol on the mute button also changes to indicate a change in mute state as feedback that the request to mute or unmute has been successful. In the case of the instructions dropdown and in addition to the button style change, the button text toggles between Show Instructions and Hide Instructions, as appropriate, and the instructions drop down opens and closes.
+    In the case of the mute/unmute button and the Instructions Show/Hide buttons, the ‘outset’ border is momentarily replaced with a solid border to make it look like the button is fully pushed within a recess when clicked. The symbol on the mute button also changes to indicate a change in mute state as feedback that the request to mute or unmute has been successful. In the case of the instructions dropdown and in addition to the button style change, the button text toggles between 'Show Instructions' and 'Hide Instructions', as appropriate, and the instructions drop down opens and closes.
 
     In the case of the coloured and start buttons, the top button SVG is momentarily hidden on click to reveal a smaller version underneath. This gives the button the appearance of being pressed in. The smaller momentarily revealed coloured buttons are also a brighter colour so they appear lit up when clicked and, if the game is unmuted, the click event triggers a tone which is a game feature but also acts as feedback to the user of a successfully administered ‘click’.
 
@@ -151,9 +151,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
   Features are combined and arranged within the game site in the way that was considered to be the most efficient and intuitive manner. Links to the feature list with acceptance criteria are provided. Multiple user stories are dependent on each of the features below and links to the dependent user stories and their respective acceptance criteria are provided.
 
-  - ### **Landing Page** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game Landing Page' (ID 1)]
+  - ### **Landing Page** [[Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) 'Game Landing Page' (ID 1)]
 
-    - The 'Game Landing Page' (ID 1) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of all the [user stories](docs/pdfs/readme-user-stories.pdf)
+    - The 'Game Landing Page' (ID 1) [Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) is a dependency of all the [user stories](docs/pdfs/readme-user-stories.pdf)
     - Implemented in [index.html](index.html)
 
     The game landing page (home page) is the users welcome to the site. It is designed to have the appearance of a physical, retro game and the bright colourful buttons are intended to be eye catching and stimulate the curiosity of the site visitor. 
@@ -191,9 +191,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
       ![Turn device portrait modal](docs/images/readme-turn-device-portrait-modal.jpg)
 
-  - ### **Instructions Dropdown** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Instructions' (ID 3)]
+  - ### **Instructions Dropdown** [[Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) 'Instructions' (ID 3)]
 
-    -  The 'Instructions' (ID 3) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1 and 3](docs/pdfs/readme-user-stories.pdf).
+    -  The 'Instructions' (ID 3) [Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) is a dependency of [user stories 1 and 3](docs/pdfs/readme-user-stories.pdf).
     - Implemented in [index.html](index.html)
 
     The instructions panel provides a concise, easy to read and follow set of instructions for new users of the game although it is quickly accessible should a returning player need a reminder of how to play.
@@ -210,9 +210,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
       ![Open Instructions](docs/images/readme-open-instructions.jpg)
 
-  - ### **Top Ten** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Top Ten Scores' (ID 4)]
+  - ### **Top Ten** [[Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) 'Top Ten Scores' (ID 4)]
 
-    - The 'Top Ten Scores' (ID 4) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
+    - The 'Top Ten Scores' (ID 4) [Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
     - Implemented in [index.html](index.html)
 
     The ‘Top Ten Scores’ feature is a way for the user to keep track of their progress and compare their successes with those of others who have played the game in the same browser. This adds to the fun of the game and also makes it more likely that the player will return to the game as they can compete and attempt to better their position in the table.
@@ -227,9 +227,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     ![Top Ten Modal](docs/images/readme-top-ten-modal.jpg)
 
-  - ### **The Game** [[Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game' (ID 5)]
+  - ### **The Game** [[Data Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) 'Game' (ID 5)]
 
-    - The 'Game' (ID 5) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
+    - The 'Game' (ID 5) [Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
     - SVG Buttons pad implemented inline in [index.html](index.html)
     - Game algorithm implemented in [game-script.js](assets/js/game-script.js)
 
@@ -276,9 +276,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
     The algorithm has no maximum game array length set and so the game can continue indefinitely until the player gets the sequence wrong or doesn’t click a button within the 10 second timeout that is present when the game is waiting for the player to copy the sequence.
 
 
-  - ### **Game Tones** [[Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Game tones' (ID 8)]
+  - ### **Game Tones** [[Data Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) 'Game tones' (ID 8)]
 
-    - The 'Game tones' (ID 8) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
+    - The 'Game tones' (ID 8) [Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
     - Web audio game tones are implemented in [game-script.js](assets/js/game-script.js)
 
     The optional web audio game tones feature serves two purposes. It adds to the fun for all players who choose not to mute the tones but it also enables more engaging game play for users who are visually impaired satisfying user story 3’s requirements.
@@ -299,9 +299,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
       | Red | 700 Hz |
 
 
-  - ### **Mute/Unmute button** [[Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Mute/Unmute button' (ID 2)]
+  - ### **Mute/Unmute button** [[Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) 'Mute/Unmute button' (ID 2)]
 
-    - The 'Mute/Unmute button' (ID 2) [Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1 and 2](docs/pdfs/readme-user-stories.pdf).
+    - The 'Mute/Unmute button' (ID 2) [Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) is a dependency of [user stories 1 and 2](docs/pdfs/readme-user-stories.pdf).
     - Mute/Unmute button is implemented in [index.html](index.html)
     - Mute/Unmute button functionailty is implemented in [game-script.js](assets/js/game-script.js)
 
@@ -323,9 +323,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
       ![Unmuted button](docs/images/readme-unmuted-button.jpg)
 
-  - ### **Current Score** [[Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Current score' (ID 6)]
+  - ### **Current Score** [[Data Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) 'Current score' (ID 6)]
 
-    - The 'Current Score' (ID 6) [Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
+    - The 'Current Score' (ID 6) [Data Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
     - Current Score display is implemented in [index.html](index.html)
     - Current score functionailty is implemented in [game-script.js](assets/js/game-script.js) 
 
@@ -337,9 +337,9 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
       ![Current score display](docs/images/readme-current-score.jpg)
 
-  - ### **Update Top Ten** [[Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) 'Update Top Ten' (ID 7)]
+  - ### **Update Top Ten** [[Data Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) 'Update Top Ten' (ID 7)]
 
-    - The 'Update Top Ten' (ID 7) [Data Feature](docs/pdfs/readme-features-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
+    - The 'Update Top Ten' (ID 7) [Data Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) is a dependency of [user stories 1, 2 and 3](docs/pdfs/readme-user-stories.pdf).
     - Update Top Ten functionailty is implemented in [game-script.js](assets/js/game-script.js)
 
     The ‘update top ten’ data feature provides the player a means of measuring and tracking their success both against themselves and others that play the game in the same browser (assuming the browser’s local storage doesn’t get cleared between visits to the game site). The feature adds to the fun of the game giving players something more than simply playing it to entice them back. They will return and play more in the hope of achieving better scores and climbing the leader board. Even on first visiting the site, before the leader board is fully populated, it can be fun to fill it with scores.
