@@ -3,7 +3,7 @@ The [‘Memory Game’](https://stephen-j-whitaker.github.io/memory-game/) is a 
 
 The Memory game plays a tone and ‘flashes’ one of the buttons and this should be copied by the player within a fixed period of time else the game will end. If the player successfully presses the same button, then another random button and corresponding tone is added to the sequence. If the player copies the whole sequence correctly then another button and tone is added and so on until the player copies the sequence incorrectly.
 
-The game is what would be classed as a ‘retro’ game and it is designed to appeal to both new players who have not yet discovered the game and those who remember it from years gone by. For those that love the game ‘Memory Game’ will bring the game, that has traditionally been based on hardware implementations, into the realm of the world wide web where it can be enjoyed anywhere and anytime there is a connection to the internet. The interface is intuitive to new players and familiar to previous players and it’s hoped that it will give as much pleasure as the original, physical, game gave, and indeed still gives to so many today. 
+The game is what would be classed as a ‘retro’ game and it's designed to appeal to both new players, who have not yet discovered the game and those who remember it from years gone by eliciting positive nostalgic feelings. For those that love the game ‘Memory Game’ will bring the game, that has traditionally been based on hardware implementations, into the realm of the world wide web where it can be enjoyed anywhere and anytime there is a connection to the internet. The interface is intuitive to new players and familiar to previous players and it’s hoped that it will give as much pleasure as the original, physical, game gave, and indeed still gives to so many today. 
 
 The game is extremely easy to learn for those who are new to it and the combination of light and sound not only adds to the fun but also the games accessibility to those who are visually impaired. 
 
@@ -91,7 +91,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
     - Responsiveness
     
       The layout is responsive and all elements resize in order to fit the screen on which they are displayed. The game is generally not compatible with landscape mobile devices with a small height and in these cases a modal requesting that the device be turned portrait is displayed.
-      
+
   - ### Typography
     A limited set of fonts was used for the site in an attempt to ensure that the site retained a coherent feel where none of the sections looked out of place contributing to the user's enjoyment of the site.
     
@@ -377,6 +377,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
     - Keyboard arrow keys could be used to play the game in place of a mouse.
     - The player could select differents sets of sound effects to use.
     - The player could be presented with game colour theme options.
+    - Difficulty settings could be implemented that shorten the game timeout feature or increase the rate at which the sequence is demonstrated to the player.
       
 ## **4. Testing**
 - ### **Code Validation**
@@ -461,6 +462,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
   |Web audio wouldn't play tones on Apple IOS unless in direct response to a user interaction with the site. | The audio context creation was moved from the tone function to the gameStart function that is called in response to the user pressing 'start'|
   |The current score wasn't resetting at the end of a game|The function call setScore(0) was added into the checkScore function that is called at the end of a game. Set score update the current score span inner text to 0 resetting it|
   |The SVG start button was resulting in low Chrome DevTools Lighthouse accessibility scores|Adding the missing role attribute of button resolved this issue.|
+  |Game coloured buttons were appearing pressed and flashing at the wrong time.|The syntax of one of the setTimeout function calls was incorrect resulting in the timeout not being applied and the code 'getting ahead' of the screen rendering. The setTimeout function call syntax was corrected and the issue was resolved|
 
 ## **5. Project Sign Off**
 
@@ -557,7 +559,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
   - [The W3C CSS Validation Service - Jigsaw](https://jigsaw.w3.org/css-validator/) : Used to validate the website CSS
 
-  - [JSHint, a JavaScript Code Quality Tool](https://jshint.com/): Used to validate the website JavaScript
+  - [JSHint, a JavaScript Code Quality Tool (linter)](https://jshint.com/): Used to validate and check the styling of the website JavaScript
 
   - Windows 10 snipping tool for creating screen grabbed jpeg files for the readme
 
