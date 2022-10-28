@@ -164,7 +164,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     ![Game Landing Page](docs/images/readme-game-landing-page.jpg)
     
-    The landing page is responsive and rescales for the screen it is loaded onto. It was designed with a mobile first approach and gives the appearance of transforming the users mobile phone, into a retro, standalone memory game. On larger screens it fills the full height to the viewport but has a contstrained width.
+    The landing page is responsive and rescales for the screen it is loaded onto. It was designed with a mobile first approach and gives the appearance of transforming the users mobile phone, into a retro, standalone memory game. On larger screens it fills the full height to the viewport but has a contstrained width. The landing page is responsive and, whenever possible dependent on screen size, resizes to display all site features.
 
       - **Header, Logo and Footer**
 
