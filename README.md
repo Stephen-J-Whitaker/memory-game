@@ -472,7 +472,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
 ## **6. Releases**
 
-- ###  Version 1.0 First release : Date 
+- ###  Version 1.0 First release : Date 28/10/2022
 
 ## **7. Deployment**
 
@@ -527,7 +527,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
   - [Corel Draw](https://www.coreldraw.com/en/) : Used for developing the mockups for the website and SVG game pad interface
 
-  - IOS : Used to create screen grabbed movies for user story demonstrations
+  - Apple IOS : Used to create screen grabbed movies for user story demonstrations
 
   - [Adobe Express]( https://www.adobe.com/express/feature/video/convert/video-to-gif): Used to create user story demonstration gifs from mov files
 
