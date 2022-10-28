@@ -460,7 +460,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
   |Bug|Resolution|
   |---|----------|
   |Web audio wouldn't play tones on Apple IOS unless in direct response to a user interaction with the site. | The audio context creation was moved from the tone function to the gameStart function that is called in response to the user pressing 'start'|
-  |The current score wasn't resetting at the end of a game|The function call setScore(0) was added into the checkScore function that is called at the end of a game. Set score update the current score span inner text to 0 resetting it|
+  |The current score wasn't resetting at the end of a game|The function call setScore(0) was added into the checkScore function that is called at the end of a game. Set score updates the current score span inner text to 0 resetting it|
   |The SVG start button was resulting in low Chrome DevTools Lighthouse accessibility scores|Adding the missing role attribute of button resolved this issue.|
   |Game coloured buttons were appearing pressed and flashing at the wrong time.|The syntax of one of the setTimeout function calls was incorrect resulting in the timeout not being applied and the code 'getting ahead' of the screen rendering. The setTimeout function call syntax was corrected and the issue was resolved|
 
