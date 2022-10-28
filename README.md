@@ -254,7 +254,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     All of the SVG clickable buttons have a role attribute with the value ‘button’ and an aria label to describe them in the event that the site is being used with screen reading technology, maximising accessibility.
 
-    The game pad is respinsive and rescales as necessary to fit the screen on which it is viewed. It will always retain the same shape and arrangement of the buttons as this is a key design feature of the game and helps the game retain its identity when viewed on devices of different sizes. 
+    The game pad is responsive and rescales as necessary to fit the screen on which it is viewed. It will always retain the same shape and arrangement of the buttons as this is a key design feature of the game and helps the game retain its identity when viewed on devices of different sizes. 
 
     - **Game pad during play**
 
@@ -303,7 +303,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     - The 'Mute/Unmute button' (ID 2) [Feature](docs/pdfs/readme-feature-acceptance-criteria.pdf) is a dependency of [user stories 1 and 2](docs/pdfs/readme-user-stories.pdf).
     - Mute/Unmute button is implemented in [index.html](index.html)
-    - Mute/Unmute button functionailty is implemented in [game-script.js](assets/js/game-script.js)
+    - Mute/Unmute button functionality is implemented in [game-script.js](assets/js/game-script.js)
 
     The mute/unmute button gives the player the option of whether or not to have game tones. 
 
@@ -362,7 +362,7 @@ The game is extremely easy to learn for those who are new to it and the combinat
 
     On pressing ‘done’ on the name entry modal with a valid string present in the name entry input box, the nameInput function updates the top ten array with the new name against the new score, sorts the array content so that the new score entry is in the correct position in the top ten array and then displays the top ten modal with the new table data in it for the player to review their position in the scoreboard. 
 
-    The updateTopTenTable function that updates the top ten table with the new data also updates the browsers local storage with the data for future reference should the player close the browser or tab and revisit the site another day in which case the data would be pulled from the local store to populate the top ten table. 
+    The updateTopTenTable function that updates the top ten table with the new data also updates the browsers local storage with the data for future reference should the player close the browser or tab and revisit the site another day in which case the data would be pulled from the local storage to populate the top ten table. 
 
     Lastly, the start button is un-blanked so that the player can play again if they wish to.
 
